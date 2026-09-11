@@ -1,21 +1,52 @@
-# API keys / environment variables
+# =========================
+# Environment / secrets
+# =========================
 .env
 .env.*
 !.env.example
 
+# =========================
 # Python
+# =========================
 __pycache__/
 *.py[cod]
-.ipynb_checkpoints/
-
-# Virtual environment
+*$py.class
+*.so
+.Python
 .venv/
 venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
 
-# Data generated during crawling
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# VS Code / IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Project-generated data
+# =========================
+hormuz_2026_data/
 *_partial.csv
 *.xlsx
 
-# OS / editor
-.DS_Store
-.vscode/
+# =========================
+# Temporary / logs
+# =========================
+*.log
+*.tmp
