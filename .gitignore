@@ -1,0 +1,21 @@
+# API keys / environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environment
+.venv/
+venv/
+
+# Data generated during crawling
+*_partial.csv
+*.xlsx
+
+# OS / editor
+.DS_Store
+.vscode/
