@@ -1,0 +1,10 @@
+{
+  "stage": "before_any_deletion",
+  "failed_probe": "queuelib.FifoMemoryQueue",
+  "error": "AttributeError: module queuelib has no attribute FifoMemoryQueue",
+  "root_cause": "The new cleanup test used a submodule class as a top-level export.",
+  "local_source_evidence": "vendor/queuelib/__init__.py exports disk queues, PriorityQueue and RoundRobinQueue; vendor/queuelib/queue.py defines FifoMemoryQueue at line 71.",
+  "correction": "importlib.import_module('queuelib.queue').FifoMemoryQueue()",
+  "files_deleted_at_failure": 0,
+  "existing_package_files_modified": false
+}

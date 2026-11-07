@@ -1,0 +1,15 @@
+{
+  "status": "?? PROJECT_FILE_INVENTORY.csv\n?? docs/project_structure_review/absolute_path_references.csv\n?? docs/project_structure_review/baseline.json\n?? docs/project_structure_review/content_hashes.json\n?? docs/project_structure_review/deletion_candidates.csv\n?? docs/project_structure_review/duplicate_groups.json\n?? docs/project_structure_review/folder_sizes.csv\n?? docs/project_structure_review/git_snapshot_before.json\n?? docs/project_structure_review/path_references.csv\n?? docs/project_structure_review/reference_scan_scope.json\n?? docs/project_structure_review/survey.py\n?? docs/project_structure_review/survey_summary.json\n",
+  "tracked": [
+    ".env.example",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "docs/data_cleanup_20261102.json",
+    "docs/data_collection_criteria_v1.md",
+    "hormuz_textminig.ipynb",
+    "hormuz_textminig_v2.ipynb"
+  ],
+  "ignored_count": 7227,
+  "error": ""
+}

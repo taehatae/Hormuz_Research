@@ -1,0 +1,3119 @@
+{
+  "baseline_files": 7323,
+  "baseline_directories": 1617,
+  "baseline_bytes": 3228726875,
+  "top_folders": {
+    "hormuz_2026_data": {
+      "files": 7225,
+      "bytes": 3227887603
+    },
+    ".git": {
+      "files": 88,
+      "bytes": 415465
+    },
+    "(root)": {
+      "files": 7,
+      "bytes": 354864
+    },
+    "docs": {
+      "files": 2,
+      "bytes": 68899
+    },
+    ".vscode": {
+      "files": 1,
+      "bytes": 44
+    }
+  },
+  "data_subfolders": {
+    "(other)": {
+      "files": 119,
+      "bytes": 2748400215
+    },
+    "hormuz_2026_data/metadata_selection_20261107_01": {
+      "files": 41,
+      "bytes": 272486968
+    },
+    "hormuz_2026_data/body_collection_pilot_20261102_01": {
+      "files": 7076,
+      "bytes": 142598796
+    },
+    "hormuz_2026_data/candidate_status_analysis_20261031": {
+      "files": 26,
+      "bytes": 59921125
+    },
+    "hormuz_2026_data/benchmark_html_cache": {
+      "files": 17,
+      "bytes": 3600518
+    },
+    "hormuz_2026_data/quality_audit_20261107_01": {
+      "files": 23,
+      "bytes": 1135731
+    },
+    "hormuz_2026_data/media_verification_pilot_proposal_20261031": {
+      "files": 19,
+      "bytes": 433905
+    },
+    "hormuz_2026_data/ai_label_review_20261031": {
+      "files": 2,
+      "bytes": 149617
+    }
+  },
+  "types": {
+    ".csv": {
+      "files": 71,
+      "bytes": 3058260224
+    },
+    ".py": {
+      "files": 3244,
+      "bytes": 44967815
+    },
+    ".pyd": {
+      "files": 83,
+      "bytes": 38505472
+    },
+    ".gz": {
+      "files": 942,
+      "bytes": 38059802
+    },
+    ".html": {
+      "files": 80,
+      "bytes": 15606543
+    },
+    ".dll": {
+      "files": 9,
+      "bytes": 9568848
+    },
+    ".json": {
+      "files": 1481,
+      "bytes": 7824103
+    },
+    "(none)": {
+      "files": 601,
+      "bytes": 5003549
+    },
+    ".exe": {
+      "files": 34,
+      "bytes": 2783690
+    },
+    ".chm": {
+      "files": 1,
+      "bytes": 2642781
+    },
+    ".txt": {
+      "files": 337,
+      "bytes": 1172673
+    },
+    ".h": {
+      "files": 94,
+      "bytes": 887115
+    },
+    ".pxi": {
+      "files": 27,
+      "bytes": 596342
+    },
+    ".pem": {
+      "files": 7,
+      "bytes": 506401
+    },
+    ".ipynb": {
+      "files": 2,
+      "bytes": 352804
+    },
+    ".lib": {
+      "files": 4,
+      "bytes": 343048
+    },
+    ".pyx": {
+      "files": 8,
+      "bytes": 295596
+    },
+    ".md": {
+      "files": 23,
+      "bytes": 203411
+    },
+    ".xsl": {
+      "files": 8,
+      "bytes": 159651
+    },
+    ".pxd": {
+      "files": 21,
+      "bytes": 150988
+    },
+    ".pyi": {
+      "files": 58,
+      "bytes": 138088
+    },
+    ".jsonl": {
+      "files": 2,
+      "bytes": 111272
+    },
+    ".c": {
+      "files": 1,
+      "bytes": 79499
+    },
+    ".glade": {
+      "files": 1,
+      "bytes": 77126
+    },
+    ".log": {
+      "files": 17,
+      "bytes": 71284
+    },
+    ".gif": {
+      "files": 9,
+      "bytes": 49618
+    },
+    ".cfg": {
+      "files": 6,
+      "bytes": 46674
+    },
+    ".properties": {
+      "files": 1,
+      "bytes": 43334
+    },
+    ".apache": {
+      "files": 3,
+      "bytes": 31708
+    },
+    ".sample": {
+      "files": 14,
+      "bytes": 25827
+    },
+    ".htm": {
+      "files": 14,
+      "bytes": 25161
+    },
+    ".types": {
+      "files": 1,
+      "bytes": 20392
+    },
+    ".rng": {
+      "files": 1,
+      "bytes": 19046
+    },
+    ".g": {
+      "files": 1,
+      "bytes": 18052
+    },
+    ".apache2": {
+      "files": 1,
+      "bytes": 11358
+    },
+    ".tmpl": {
+      "files": 10,
+      "bytes": 9342
+    },
+    ".rst": {
+      "files": 3,
+      "bytes": 7077
+    },
+    ".bmp": {
+      "files": 3,
+      "bytes": 7030
+    },
+    ".rc": {
+      "files": 1,
+      "bytes": 6474
+    },
+    ".js": {
+      "files": 4,
+      "bytes": 6130
+    },
+    ".bsd": {
+      "files": 3,
+      "bytes": 4220
+    },
+    ".message": {
+      "files": 1,
+      "bytes": 3834
+    },
+    ".pys": {
+      "files": 5,
+      "bytes": 3297
+    },
+    ".no_trailing_newline": {
+      "files": 2,
+      "bytes": 3170
+    },
+    ".asp": {
+      "files": 5,
+      "bytes": 2194
+    },
+    ".hjson": {
+      "files": 1,
+      "bytes": 2127
+    },
+    ".idl": {
+      "files": 1,
+      "bytes": 1916
+    },
+    ".pack": {
+      "files": 1,
+      "bytes": 1538
+    },
+    ".zsh": {
+      "files": 1,
+      "bytes": 1371
+    },
+    ".idx": {
+      "files": 1,
+      "bytes": 1184
+    },
+    ".sct": {
+      "files": 1,
+      "bytes": 1098
+    },
+    ".mit": {
+      "files": 1,
+      "bytes": 1046
+    },
+    ".vbs": {
+      "files": 3,
+      "bytes": 941
+    },
+    ".pth": {
+      "files": 3,
+      "bytes": 799
+    },
+    ".ico": {
+      "files": 1,
+      "bytes": 766
+    },
+    ".xml": {
+      "files": 1,
+      "bytes": 628
+    },
+    ".pyw": {
+      "files": 1,
+      "bytes": 556
+    },
+    ".typed": {
+      "files": 55,
+      "bytes": 323
+    },
+    ".bugfix": {
+      "files": 1,
+      "bytes": 208
+    },
+    ".doc": {
+      "files": 1,
+      "bytes": 168
+    },
+    ".example": {
+      "files": 1,
+      "bytes": 74
+    },
+    ".rev": {
+      "files": 1,
+      "bytes": 68
+    },
+    ".misc": {
+      "files": 4,
+      "bytes": 1
+    }
+  },
+  "largest": [
+    {
+      "path": "hormuz_2026_data/05_extraction_candidates_v2.csv",
+      "bytes": 1861820890,
+      "mtime_ns": 1791184461999474700,
+      "modified_at": "2026-10-05T07:14:21.999475+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/01_newscatcher_raw.csv",
+      "bytes": 884016978,
+      "mtime_ns": 1789120719309058600,
+      "modified_at": "2026-09-11T09:58:39.309059+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/metadata_selection_20261107_01/selection_decision_ledger.csv",
+      "bytes": 226674035,
+      "mtime_ns": 1794043216345363500,
+      "modified_at": "2026-11-07T09:20:16.345364+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/candidate_status_analysis_20261031/04_row_selection_audit.csv",
+      "bytes": 50161018,
+      "mtime_ns": 1793380177229963900,
+      "modified_at": "2026-10-30T17:09:37.229964+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/metadata_selection_20261107_01/raw_record_correspondence.csv.gz",
+      "bytes": 22041285,
+      "mtime_ns": 1794043179146012100,
+      "modified_at": "2026-11-07T09:19:39.146012+00:00",
+      "extension": ".gz",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/metadata_selection_20261107_01/media_inventory.csv",
+      "bytes": 11267347,
+      "mtime_ns": 1794043217512160400,
+      "modified_at": "2026-11-07T09:20:17.512160+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cryptography/hazmat/bindings/_rust.pyd",
+      "bytes": 9897472,
+      "mtime_ns": 1793547696908204400,
+      "modified_at": "2026-11-01T15:41:36.908204+00:00",
+      "extension": ".pyd",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/metadata_selection_20261107_01/media_selection_candidates.csv",
+      "bytes": 7917599,
+      "mtime_ns": 1794043217718037800,
+      "modified_at": "2026-11-07T09:20:17.718038+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PIL/_avif.cp314-win_amd64.pyd",
+      "bytes": 7890432,
+      "mtime_ns": 1793547668499912700,
+      "modified_at": "2026-11-01T15:41:08.499913+00:00",
+      "extension": ".pyd",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/psycopg2_binary.libs/libcrypto-3-x64-eddd5cd0ea085eb2a059fda9439cd528.dll",
+      "bytes": 5357568,
+      "mtime_ns": 1793547667835891200,
+      "modified_at": "2026-11-01T15:41:07.835891+00:00",
+      "extension": ".dll",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/candidate_status_analysis_20261031/09_media_review_checklist.csv",
+      "bytes": 5042078,
+      "mtime_ns": 1793380179298638000,
+      "modified_at": "2026-10-30T17:09:39.298638+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/etree.cp314-win_amd64.pyd",
+      "bytes": 4087296,
+      "mtime_ns": 1793547670631912400,
+      "modified_at": "2026-11-01T15:41:10.631912+00:00",
+      "extension": ".pyd",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PIL/_imaging.cp314-win_amd64.pyd",
+      "bytes": 2654208,
+      "mtime_ns": 1793547668499912700,
+      "modified_at": "2026-11-01T15:41:08.499913+00:00",
+      "extension": ".pyd",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PyWin32.chm",
+      "bytes": 2642781,
+      "mtime_ns": 1793547660677381300,
+      "modified_at": "2026-11-01T15:41:00.677381+00:00",
+      "extension": ".chm",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PIL/_imagingft.cp314-win_amd64.pyd",
+      "bytes": 2247168,
+      "mtime_ns": 1793547668515543000,
+      "modified_at": "2026-11-01T15:41:08.515543+00:00",
+      "extension": ".pyd",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/objectify.cp314-win_amd64.pyd",
+      "bytes": 1754624,
+      "mtime_ns": 1793547670644923200,
+      "modified_at": "2026-11-01T15:41:10.644923+00:00",
+      "extension": ".pyd",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/scintilla.dll",
+      "bytes": 1501696,
+      "mtime_ns": 1793547660708633400,
+      "modified_at": "2026-11-01T15:41:00.708633+00:00",
+      "extension": ".dll",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/metadata_selection_20261107_01/country_region_coverage.csv",
+      "bytes": 1461349,
+      "mtime_ns": 1794043279529458900,
+      "modified_at": "2026-11-07T09:21:19.529459+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/candidate_status_analysis_20261031/08_domain_month_counts.csv",
+      "bytes": 1380843,
+      "mtime_ns": 1793380178349074200,
+      "modified_at": "2026-10-30T17:09:38.349074+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/endpoints.json",
+      "bytes": 1253495,
+      "mtime_ns": 1793547697996707100,
+      "modified_at": "2026-11-01T15:41:37.996707+00:00",
+      "extension": ".json",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/candidate_status_analysis_20261031/10_domain_country_source_details.csv",
+      "bytes": 1243686,
+      "mtime_ns": 1793380179425346100,
+      "modified_at": "2026-10-30T17:09:39.425346+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/metadata_selection_20261107_01/country_media_distribution.csv",
+      "bytes": 1188000,
+      "mtime_ns": 1794043219518496700,
+      "modified_at": "2026-11-07T09:20:19.518497+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/05_extractor_benchmark_sample.csv",
+      "bytes": 1137963,
+      "mtime_ns": 1791184462030725900,
+      "modified_at": "2026-10-05T07:14:22.030726+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/win32ui.pyd",
+      "bytes": 1027584,
+      "mtime_ns": 1793547660721640800,
+      "modified_at": "2026-11-01T15:41:00.721641+00:00",
+      "extension": ".pyd",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/psycopg2_binary.libs/libssl-3-x64-32894a46d81a567da6ad8a3a2d30bb70.dll",
+      "bytes": 877568,
+      "mtime_ns": 1793547667851517000,
+      "modified_at": "2026-11-01T15:41:07.851517+00:00",
+      "extension": ".dll",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/_brotli.cp314-win_amd64.pyd",
+      "bytes": 872960,
+      "mtime_ns": 1793547653050181200,
+      "modified_at": "2026-11-01T15:40:53.050181+00:00",
+      "extension": ".pyd",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/html/77b98cd70b9467e0.html",
+      "bytes": 820546,
+      "mtime_ns": 1793548013180101100,
+      "modified_at": "2026-11-01T15:46:53.180101+00:00",
+      "extension": ".html",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/candidate_status_analysis_20261031/06_media_name_counts.csv",
+      "bytes": 792080,
+      "mtime_ns": 1793380178097471300,
+      "modified_at": "2026-10-30T17:09:38.097471+00:00",
+      "extension": ".csv",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32_system32/pythoncom314.dll",
+      "bytes": 694272,
+      "mtime_ns": 1793547660797155200,
+      "modified_at": "2026-11-01T15:41:00.797155+00:00",
+      "extension": ".dll",
+      "symlink": false
+    },
+    {
+      "path": "hormuz_2026_data/metadata_selection_20261107_01/media_daily_counts.csv.gz",
+      "bytes": 682885,
+      "mtime_ns": 1794043218796683500,
+      "modified_at": "2026-11-07T09:20:18.796684+00:00",
+      "extension": ".gz",
+      "symlink": false
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/extractor.log",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/recheck_console.log",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/recheck_final_console.log",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/4098a275ff923d82.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/5d43ecb4b8362552.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/6632616ecc6aa625.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/7739515d513f11a6.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/797485cab2ea369e.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/ago/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiohappyeyeballs/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiosignal/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/anyio/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/anyio/streams/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/anyio/_backends/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/anyio/_core/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/attr/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/attrs/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/automat/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/automat/_test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/resources/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/vendored/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/bs4/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cchardet/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cchardet/cli/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/certifi/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/certifi/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/chardet/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/chardet/cli/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/chardet/metadata/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/charset_normalizer/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cryptography/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cssselect/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elastic_transport/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/feedparser/namespaces/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/feedparser/parsers/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/feedparser_sgmllib/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/filelock/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/idna/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/itemadapter/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/itemloaders/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect/utils/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect-1.0.9.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/includes/__init__.pxd",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/includes/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/includes/extlibs/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/includes/libexslt/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/includes/libxml/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/includes/libxslt/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml_html_clean/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/crawler/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/examples/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/helper_classes/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/helper_classes/sub_classes/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/pipeline/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/pipeline/extractor/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/pipeline/extractor/comparer/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/pipeline/extractor/extractors/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/news_please-1.6.16.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/OpenSSL/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/parsel/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PIL/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/platformdirs/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/protego/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pymysql/constants/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/pywin/dialogs/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/pywin/docking/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/pywin/framework/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/pywin/framework/editor/color/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/pywin/mfc/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/pywin/tools/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/redis/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/redis/asyncio/http/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/redis/asyncio/multidb/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/redis/auth/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/redis/http/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/redis/multidb/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/requests/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/requests_file/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy/core/_http2/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy/downloadermiddlewares/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy/extensions/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy/spidermiddlewares/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy/templates/project/module/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy/utils/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/service_identity/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/compat/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/.lock",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/autocommand-2.2.2.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/backports/tarfile/compat/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/importlib_metadata/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/importlib_metadata/compat/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco/context/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco/functools/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco.text-4.0.0.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco_context-6.1.0.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/more_itertools/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/more_itertools-10.8.0.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging-26.3.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/platformdirs/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/platformdirs-4.4.0.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/tomli-2.4.0.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/wheel-0.46.3.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/zipp/compat/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/zipp-3.23.0.dist-info/REQUESTED",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/sniffio/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/sniffio/_tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/soupsieve/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/tldextract/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/newsfragments/10146.misc",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/persisted/newsfragments/9831.misc",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/runner/newsfragments/11681.misc",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/urllib3/contrib/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/w3lib/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32com/demos/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32com/servers/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/axscript/demos/client/wsh/blank.pys",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/axscript/server/__init__.py"
+      ],
+      "extra_copy_bytes": 0
+    },
+    {
+      "bytes": 1072,
+      "sha256": "5780e1fd9875bdee63dfb76c3ad8d2ad3a4e888ee4d8df9fdf73a5b9b7821493",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/04978728f215316c.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/04978728f215316c.provenance.json"
+      ],
+      "extra_copy_bytes": 1072
+    },
+    {
+      "bytes": 822,
+      "sha256": "a32a9b22bd5e118d72c40f434c07f439b3397fd0e506ee566e8617625ca48bf3",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/0c2b3befec8e400c.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/0c2b3befec8e400c.provenance.json"
+      ],
+      "extra_copy_bytes": 822
+    },
+    {
+      "bytes": 826,
+      "sha256": "f32646c38357da2ffdba0b5de46b1ea57f96f31a6f3d63aa625a21d6b6aca26f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/141b3a3a290dbebf.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/141b3a3a290dbebf.provenance.json"
+      ],
+      "extra_copy_bytes": 826
+    },
+    {
+      "bytes": 796,
+      "sha256": "5be966263a161840c3fbc8d8b44dc4228d009f8a2cb909e670df3dfeff503615",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/151dd21cf7a0cbfb.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/151dd21cf7a0cbfb.provenance.json"
+      ],
+      "extra_copy_bytes": 796
+    },
+    {
+      "bytes": 892,
+      "sha256": "895ae69b70ab583805d7b31419a511595fadf1b8534ce2149789c83fb1557322",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/1d87ddd12c8e8d6e.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/1d87ddd12c8e8d6e.provenance.json"
+      ],
+      "extra_copy_bytes": 892
+    },
+    {
+      "bytes": 1018,
+      "sha256": "c651395c53ad24bb1f468ffa810931f722e4bb81e4346e54b57992a0d66f1bb6",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/1db0809a6a73e457.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/1db0809a6a73e457.provenance.json"
+      ],
+      "extra_copy_bytes": 1018
+    },
+    {
+      "bytes": 866,
+      "sha256": "b70080e12969f717c5f20daae922cab4e0eb2bb5e1c82900212cc64c166b4977",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/22b6bb34f0ae7608.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/22b6bb34f0ae7608.provenance.json"
+      ],
+      "extra_copy_bytes": 866
+    },
+    {
+      "bytes": 994,
+      "sha256": "168757acd5fb997425ad239d6ce9915aa07bbdb6a7d62330b97b14e95f7a976e",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/28a7293497ccb3ab.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/28a7293497ccb3ab.provenance.json"
+      ],
+      "extra_copy_bytes": 994
+    },
+    {
+      "bytes": 780,
+      "sha256": "1e02b156bdae2ec6bb828c38d4ced7334264732540ee50beb3b785a527e7e573",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/3112154e4c1f7e86.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/3112154e4c1f7e86.provenance.json"
+      ],
+      "extra_copy_bytes": 780
+    },
+    {
+      "bytes": 910,
+      "sha256": "6bca3c4e182e6eed2fd813c2fea406f6d48869c286f8dd78998000e63ec279d5",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/315ff41b0ad9091d.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/315ff41b0ad9091d.provenance.json"
+      ],
+      "extra_copy_bytes": 910
+    },
+    {
+      "bytes": 848,
+      "sha256": "8f6142d244a0fa3c26a3eeee59f5568f46e6d426051932aaea7c4da851195f8a",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/3b3609672f5b1df8.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/3b3609672f5b1df8.provenance.json"
+      ],
+      "extra_copy_bytes": 848
+    },
+    {
+      "bytes": 943,
+      "sha256": "c97f3155c7bf0f239b60b6a84d07f4a06504f90774e44295917eff4ef029d005",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/3c5d81d7c42c8458.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/3c5d81d7c42c8458.provenance.json"
+      ],
+      "extra_copy_bytes": 943
+    },
+    {
+      "bytes": 853,
+      "sha256": "759a7e3525067c59c1c9031aac22669e7d952fdfe8dc344326a225b5cd482ec0",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/3d3088a5cf633ab2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/3d3088a5cf633ab2.provenance.json"
+      ],
+      "extra_copy_bytes": 853
+    },
+    {
+      "bytes": 879,
+      "sha256": "6e7e470d7dc27e6af5e5b69fb237733a78eaae97f9b0e77d481f133346a56e04",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/3f52fe405cb47c04.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/3f52fe405cb47c04.provenance.json"
+      ],
+      "extra_copy_bytes": 879
+    },
+    {
+      "bytes": 878,
+      "sha256": "cc990f0fe184d866d51b35cdb286acebbed2a4f9af6abeb94a7ea054bd3efb2b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/405af890b230c993.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/405af890b230c993.provenance.json"
+      ],
+      "extra_copy_bytes": 878
+    },
+    {
+      "bytes": 744,
+      "sha256": "c37f05a2df6871e205ca5021ed61d7011ed16f82690e58429b5df33df16303df",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/4098a275ff923d82.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/4098a275ff923d82.provenance.json"
+      ],
+      "extra_copy_bytes": 744
+    },
+    {
+      "bytes": 788,
+      "sha256": "0fb71043f604e233271c01d4924fd206027c0d87adb7bd3695518563e0d8d8ed",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/43743fbed61af1ba.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/43743fbed61af1ba.provenance.json"
+      ],
+      "extra_copy_bytes": 788
+    },
+    {
+      "bytes": 730,
+      "sha256": "58f907f9e1404e7c58c66bab51bb4a72a4d94318c0b7e0141fe0fadd66369ebc",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/48a932fa97339d0b.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/48a932fa97339d0b.provenance.json"
+      ],
+      "extra_copy_bytes": 730
+    },
+    {
+      "bytes": 779,
+      "sha256": "ebeb239f88612c9eed4d4561a8fc03c821e432f6574ee7d86080efa7ee2efb67",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/5ad0d2f9f9368ec5.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/5ad0d2f9f9368ec5.provenance.json"
+      ],
+      "extra_copy_bytes": 779
+    },
+    {
+      "bytes": 904,
+      "sha256": "1621d33b9293bc36a69d70b759c4026cf7b2017aaa6b275a924d859b41b63691",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/5d43ecb4b8362552.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/5d43ecb4b8362552.provenance.json"
+      ],
+      "extra_copy_bytes": 904
+    },
+    {
+      "bytes": 887,
+      "sha256": "50cb8a223002c21a38d24ec162bc799104dae1d6743ad9c2025c4d1f89a95eee",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/5e3ecaafa285ec07.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/5e3ecaafa285ec07.provenance.json"
+      ],
+      "extra_copy_bytes": 887
+    },
+    {
+      "bytes": 928,
+      "sha256": "1619325ccc3e4911592b54768d1a5337f067dee4842a558bde0bd373f97eb84c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/6632616ecc6aa625.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/6632616ecc6aa625.provenance.json"
+      ],
+      "extra_copy_bytes": 928
+    },
+    {
+      "bytes": 872,
+      "sha256": "6f2eb9c90297a184c30f19ee90cfdc533382f81d1710e0405e86f41a48211b7f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/668c0a29262505ac.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/668c0a29262505ac.provenance.json"
+      ],
+      "extra_copy_bytes": 872
+    },
+    {
+      "bytes": 730,
+      "sha256": "6dc5bc68bab5f7866da6258a6b3dc2b21733bc9caa8c3d921071e6e7e4390e27",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/6f5bc844afb782ba.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/6f5bc844afb782ba.provenance.json"
+      ],
+      "extra_copy_bytes": 730
+    },
+    {
+      "bytes": 796,
+      "sha256": "30a38df5743606e18e914c7dc406460276d1bd8470f52e86e400cc172974b709",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/7739515d513f11a6.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/7739515d513f11a6.provenance.json"
+      ],
+      "extra_copy_bytes": 796
+    },
+    {
+      "bytes": 1006,
+      "sha256": "cf541a570618b8fd91c27e25e5d57b0184f272ad7fe5f8b490035bb7444d6319",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/77b98cd70b9467e0.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/77b98cd70b9467e0.provenance.json"
+      ],
+      "extra_copy_bytes": 1006
+    },
+    {
+      "bytes": 716,
+      "sha256": "3520d95164871d19061a06d78f876a91ac69188c196c0b69ec249c4594587928",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/77eb6696f17e5ed1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/77eb6696f17e5ed1.provenance.json"
+      ],
+      "extra_copy_bytes": 716
+    },
+    {
+      "bytes": 860,
+      "sha256": "c4919af00547b977e4bb340ba8d92abf08235a2cdb9837e0bf5880af661d293b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/780086804e54bc26.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/780086804e54bc26.provenance.json"
+      ],
+      "extra_copy_bytes": 860
+    },
+    {
+      "bytes": 731,
+      "sha256": "335a2e04a9eb2498dc8e8a64902fd204b0826448027c3ce90e44dbbd8a385445",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/797485cab2ea369e.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/797485cab2ea369e.provenance.json"
+      ],
+      "extra_copy_bytes": 731
+    },
+    {
+      "bytes": 730,
+      "sha256": "cfba8671bb6d2ad6bd24af94cf1048886277148ed975a11e87e22af158153cc1",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/7d8d0a56728f0a1d.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/7d8d0a56728f0a1d.provenance.json"
+      ],
+      "extra_copy_bytes": 730
+    },
+    {
+      "bytes": 818,
+      "sha256": "0385cb089ce0875a35a061eb71ba7785cf4dbf23e89e9b23faa30cf8c93bad7c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/7f6474f394fca108.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/7f6474f394fca108.provenance.json"
+      ],
+      "extra_copy_bytes": 818
+    },
+    {
+      "bytes": 895,
+      "sha256": "9261687d6a0d00be891258ec95c7ae2a8aa2ff79ac9088cf18f353e454ce3ab2",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/946629d222d07e46.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/946629d222d07e46.provenance.json"
+      ],
+      "extra_copy_bytes": 895
+    },
+    {
+      "bytes": 988,
+      "sha256": "4766486a5dc963841d1fa244b4c8be836ec310851220f412ab10fddb2190652f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/9655a07f4b1cf569.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/9655a07f4b1cf569.provenance.json"
+      ],
+      "extra_copy_bytes": 988
+    },
+    {
+      "bytes": 847,
+      "sha256": "ac282423fa921823ebcd76864acdf3d7684778807b8daa032bc0aa7d19012ee7",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/a1f5e73fa0d2f608.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/a1f5e73fa0d2f608.provenance.json"
+      ],
+      "extra_copy_bytes": 847
+    },
+    {
+      "bytes": 1009,
+      "sha256": "ba6edbb09f814a61fcb84cb85bed0145bcabeb0ee310aafe8af9ee2978d3b6ce",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/a6adf147de58fe61.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/a6adf147de58fe61.provenance.json"
+      ],
+      "extra_copy_bytes": 1009
+    },
+    {
+      "bytes": 959,
+      "sha256": "d69583202e0cf7db1605811747612fe4c8650734c958d4288d23b5aef5e5edff",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/acdf4c0fb83ecbd2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/acdf4c0fb83ecbd2.provenance.json"
+      ],
+      "extra_copy_bytes": 959
+    },
+    {
+      "bytes": 931,
+      "sha256": "a39827eb0a3ef70b08592be6c5d411fbce1b8210be816a16ba509c51a7702fc2",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/af4568f5e8835dc9.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/af4568f5e8835dc9.provenance.json"
+      ],
+      "extra_copy_bytes": 931
+    },
+    {
+      "bytes": 784,
+      "sha256": "10d1b8693f83baad4903c853eba9835e8ef38979d20c15a2278198ff3142b233",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/b10e3a5e5acde5bd.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/b10e3a5e5acde5bd.provenance.json"
+      ],
+      "extra_copy_bytes": 784
+    },
+    {
+      "bytes": 895,
+      "sha256": "721e7e9fb6b1941c4f73706da160add471af81314e24b20ae24160218cc4a502",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/b1fb1ee95fdb5377.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/b1fb1ee95fdb5377.provenance.json"
+      ],
+      "extra_copy_bytes": 895
+    },
+    {
+      "bytes": 769,
+      "sha256": "5244733bf39147b607714567e8eb0a45682ed7f19e661a8e51faad7f83144853",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/b49df4a02113766c.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/b49df4a02113766c.provenance.json"
+      ],
+      "extra_copy_bytes": 769
+    },
+    {
+      "bytes": 870,
+      "sha256": "e7f5869a877a12800f6aade39a0a4068968498ac5128f50d1673fd8915aee618",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/b8d4888b181182a6.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/b8d4888b181182a6.provenance.json"
+      ],
+      "extra_copy_bytes": 870
+    },
+    {
+      "bytes": 861,
+      "sha256": "30f4dbf2eba5c2819ecd20365151fdea8365c60a3ca83c9fa1ee1472e14a8743",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/c125bfaa8c6f4dfa.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/c125bfaa8c6f4dfa.provenance.json"
+      ],
+      "extra_copy_bytes": 861
+    },
+    {
+      "bytes": 827,
+      "sha256": "b9430bd9aab6677d9de4d4f484951d4d02002fa8b2e19d61e1008fe2bd6475a6",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/c30bc4d1cd0dd74d.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/c30bc4d1cd0dd74d.provenance.json"
+      ],
+      "extra_copy_bytes": 827
+    },
+    {
+      "bytes": 848,
+      "sha256": "99f3ab38f408b2ad187f81721efabfbb65b0c6437ba98be379d96e17a590a8b8",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/e6bfe7b76fd35dbe.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/e6bfe7b76fd35dbe.provenance.json"
+      ],
+      "extra_copy_bytes": 848
+    },
+    {
+      "bytes": 784,
+      "sha256": "ff4fdad5396c4194e6bd280a16228ec90c3502803ab2ae07783f3f289cfdfbc3",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/e88026cd993f488f.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/e88026cd993f488f.provenance.json"
+      ],
+      "extra_copy_bytes": 784
+    },
+    {
+      "bytes": 796,
+      "sha256": "33beb109592a4049cbfb4630f83861be4f320360783a7dac5aaf2cb2ef5e6d0e",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/eb2d8cf0a4d1c3fc.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/eb2d8cf0a4d1c3fc.provenance.json"
+      ],
+      "extra_copy_bytes": 796
+    },
+    {
+      "bytes": 876,
+      "sha256": "fa1f3cf5d73367457a83ff448ddd7efdb8d268abcc358a16382f1761bd7788cb",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/f2bee62590fc2240.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/f2bee62590fc2240.provenance.json"
+      ],
+      "extra_copy_bytes": 876
+    },
+    {
+      "bytes": 813,
+      "sha256": "03fec5b5d83efb6cf0945922132a7f079f8ce4155ec41e90d0edbce56ac648ce",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/fetch/f6f0337b3d535c30.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/html/f6f0337b3d535c30.provenance.json"
+      ],
+      "extra_copy_bytes": 813
+    },
+    {
+      "bytes": 3492,
+      "sha256": "df2d18a503609dcdf7c96fa9049462b2ee7b691a5a205a76df989fe2e9935a85",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/first_pass_records/0d8fee37d75f2f95.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/records/0d8fee37d75f2f95.json"
+      ],
+      "extra_copy_bytes": 3492
+    },
+    {
+      "bytes": 4230,
+      "sha256": "472397b4e05384b8b2e3c8a2680bc0cf47bd94228ae405813a429c725e65fc81",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/first_pass_records/3d3088a5cf633ab2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/records/3d3088a5cf633ab2.json"
+      ],
+      "extra_copy_bytes": 4230
+    },
+    {
+      "bytes": 4372,
+      "sha256": "91bd0cc59136b43f1d4c812da1e050b37f04f8fc21ab845c033abb461aa1cf27",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/first_pass_records/3f52fe405cb47c04.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/records/3f52fe405cb47c04.json"
+      ],
+      "extra_copy_bytes": 4372
+    },
+    {
+      "bytes": 4262,
+      "sha256": "ae36a4ec40bde5b3ed4b69537bca806bab4b0715145870329f547c6c8d4b514e",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/first_pass_records/5ad0d2f9f9368ec5.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/records/5ad0d2f9f9368ec5.json"
+      ],
+      "extra_copy_bytes": 4262
+    },
+    {
+      "bytes": 3433,
+      "sha256": "642872436a6259a27f4faf3e7f11db9cf790e7608a47c72a70e6353b2660b942",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/first_pass_records/9cfaecef4ba44be1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/records/9cfaecef4ba44be1.json"
+      ],
+      "extra_copy_bytes": 3433
+    },
+    {
+      "bytes": 4370,
+      "sha256": "803b2bef092ceebf533228e40e11195acca1833fd93ab3f8c4126136f34db8cb",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/first_pass_records/c125bfaa8c6f4dfa.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/records/c125bfaa8c6f4dfa.json"
+      ],
+      "extra_copy_bytes": 4370
+    },
+    {
+      "bytes": 3426,
+      "sha256": "ece95a9e630739d95edc4a339faa4d7f3b23bbd25fb9e52bd09fa32f1bcfd0d2",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/first_pass_records/f1514eb562245c48.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/records/f1514eb562245c48.json"
+      ],
+      "extra_copy_bytes": 3426
+    },
+    {
+      "bytes": 4191,
+      "sha256": "78001cd51a5e4b37b3bb224bed2b9a92cbfdcb150daaf6d80b2a77576a8479cf",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/first_pass_records/f6f0337b3d535c30.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/records/f6f0337b3d535c30.json"
+      ],
+      "extra_copy_bytes": 4191
+    },
+    {
+      "bytes": 5047,
+      "sha256": "33a7b64afdb5f2323ba64637312e3a2fae50c2dabc1387d614a889120d987bd6",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/page_evidence/3d3088a5cf633ab2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/page_evidence/f6f0337b3d535c30.json"
+      ],
+      "extra_copy_bytes": 5047
+    },
+    {
+      "bytes": 523,
+      "sha256": "8009bdee7e102be29e64ddad1716548d6572253dff04b8c359960c0a4a2a5b28",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/page_evidence/3f52fe405cb47c04.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/page_evidence/5ad0d2f9f9368ec5.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/page_evidence/c125bfaa8c6f4dfa.json"
+      ],
+      "extra_copy_bytes": 1046
+    },
+    {
+      "bytes": 4574,
+      "sha256": "d539a5e3c31a8c165dc37eeaef0e76f7eb9ecd5c9f450ba08327c563f44bc540",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/04978728f215316c.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/04978728f215316c.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 4574
+    },
+    {
+      "bytes": 1592,
+      "sha256": "aca35001a9fbc6c8eb7a836289c315f2e96b4855645d1751bd5bca2f3cc186f3",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/0c2b3befec8e400c.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/0c2b3befec8e400c.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 1592
+    },
+    {
+      "bytes": 3366,
+      "sha256": "51dcdd20a0e8261314e5ec540677138141dbba643c39247dc4a777062c414b96",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/141b3a3a290dbebf.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/141b3a3a290dbebf.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 3366
+    },
+    {
+      "bytes": 415,
+      "sha256": "f5b7548043d9c657e86ee4b277749ffda2353b30ffaba83a947f76a81ba62351",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/151dd21cf7a0cbfb.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/151dd21cf7a0cbfb.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/151dd21cf7a0cbfb.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 830
+    },
+    {
+      "bytes": 1706,
+      "sha256": "c5f34bdf62c8a13421d35e19c8ed4bbae0adfa2f118f599dc5c1c6c1ad167bf5",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/28a7293497ccb3ab.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/28a7293497ccb3ab.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/28a7293497ccb3ab.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 3412
+    },
+    {
+      "bytes": 378,
+      "sha256": "feaf96e8d921ab160a73e40f268ea31ab83e1989de7af767f3153d54e7141529",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/3b3609672f5b1df8.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/3b3609672f5b1df8.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/3b3609672f5b1df8.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 756
+    },
+    {
+      "bytes": 3387,
+      "sha256": "1b2cb3ecfec4e87b629865eddae7b3f7cc1244fb94e0105b5dcb80ad90cf0f72",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/3c5d81d7c42c8458.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/3c5d81d7c42c8458.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 3387
+    },
+    {
+      "bytes": 6364,
+      "sha256": "2927c8a585c7b10398a529a708817267fa477d49c42490d916ecb67769458756",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/43743fbed61af1ba.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/43743fbed61af1ba.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 6364
+    },
+    {
+      "bytes": 4248,
+      "sha256": "b1e2038173f15d3edd3770a632cc1fad92004cc0ce6079963359402eac86a77f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/48a932fa97339d0b.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/7d8d0a56728f0a1d.newsplease.txt"
+      ],
+      "extra_copy_bytes": 4248
+    },
+    {
+      "bytes": 5088,
+      "sha256": "8da73cba09bf868e19b675179005b7b6586978d26fd0529f489425ca64991218",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/48a932fa97339d0b.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/48a932fa97339d0b.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 5088
+    },
+    {
+      "bytes": 3164,
+      "sha256": "f22cd4507331e7bcc4c799672a3450db05d9bcb5faa3530607a4253eaf1e15c9",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/5e3ecaafa285ec07.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/5e3ecaafa285ec07.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 3164
+    },
+    {
+      "bytes": 7198,
+      "sha256": "e85204da66abc57b9d2cb2d62b6bda96c6855dd83a25c6bf35067b2be18e5640",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/6f5bc844afb782ba.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/6f5bc844afb782ba.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 7198
+    },
+    {
+      "bytes": 460,
+      "sha256": "83efebd6cf13e26ea4abd9e2d92c61c62538185ddedbe2d77843efe635acb8f0",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/77b98cd70b9467e0.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/77b98cd70b9467e0.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 460
+    },
+    {
+      "bytes": 472,
+      "sha256": "3a626654bf33b6f096de9985a030611a6f17d1ad0178a25e271697c7a4f2b520",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/77eb6696f17e5ed1.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/77eb6696f17e5ed1.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/77eb6696f17e5ed1.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 944
+    },
+    {
+      "bytes": 4866,
+      "sha256": "984cbebd3d0e07f1c9671099da5facd3dd8b2255897561c962b7211cd6b746fe",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/7d8d0a56728f0a1d.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/7d8d0a56728f0a1d.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 4866
+    },
+    {
+      "bytes": 3217,
+      "sha256": "6b41bef870f32e9055c8f221dac871972f38e1d2943e7936b5c07e9af676f3c2",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/7f6474f394fca108.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/7f6474f394fca108.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 3217
+    },
+    {
+      "bytes": 2982,
+      "sha256": "2d1b627c6614132f54df2c2f0b0d97288fc3a36594c374796a03a137f87f3431",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/9655a07f4b1cf569.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/9655a07f4b1cf569.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 2982
+    },
+    {
+      "bytes": 313,
+      "sha256": "a1c32bef75c4fd2c2c77878a314351a67fed7a34357be183e74849934dcb238f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/a1f5e73fa0d2f608.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/a1f5e73fa0d2f608.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 313
+    },
+    {
+      "bytes": 10985,
+      "sha256": "aa7165a71a84bf3fc7e5dd2797a6e415868ea4fe41455075dac3a8324f2257eb",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/a6adf147de58fe61.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/a6adf147de58fe61.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 10985
+    },
+    {
+      "bytes": 3041,
+      "sha256": "f51bfb8eff5e1d77d67d058cb80aa48a1ea37aec236e89715ff1809ac904a640",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/acdf4c0fb83ecbd2.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/acdf4c0fb83ecbd2.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 3041
+    },
+    {
+      "bytes": 1249,
+      "sha256": "24fe1fc8214fc818e5b40ead23e8acbafb9bc17c3d6ad04c3009e0b7cdb54fd9",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/b10e3a5e5acde5bd.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/b10e3a5e5acde5bd.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/b10e3a5e5acde5bd.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 2498
+    },
+    {
+      "bytes": 2440,
+      "sha256": "1ee32bb88d1dc28b005040f0509ffd1f107fb041b7f903af277172de20d763e0",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/b1fb1ee95fdb5377.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/b1fb1ee95fdb5377.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 2440
+    },
+    {
+      "bytes": 1126,
+      "sha256": "1aab20d27f25a3dd880daae495d8f323a07f6a40715ebc3da4c8097eeb31eb9b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/b49df4a02113766c.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/b49df4a02113766c.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/b49df4a02113766c.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 2252
+    },
+    {
+      "bytes": 1109,
+      "sha256": "bc7504e56b98965e4cef3d3d0c21b79b068c58d5a1620f45ea017a82a9c3d3aa",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/c30bc4d1cd0dd74d.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/c30bc4d1cd0dd74d.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/c30bc4d1cd0dd74d.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 2218
+    },
+    {
+      "bytes": 10179,
+      "sha256": "78f19b2ea61822e90d1a44e9641f709655e2958ec02e9228a88b4452a29515f3",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/e6bfe7b76fd35dbe.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/e6bfe7b76fd35dbe.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/e6bfe7b76fd35dbe.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 20358
+    },
+    {
+      "bytes": 1526,
+      "sha256": "974661a67fff916f691a5abfd606f9a5f78e8dc197a7fe0b4a44540212a8eef3",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/e88026cd993f488f.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/e88026cd993f488f.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/e88026cd993f488f.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 3052
+    },
+    {
+      "bytes": 1809,
+      "sha256": "1eecdbed9b573e01976679dc32b01920756f18a8cd9055f0c032bc2207f5245c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/eb2d8cf0a4d1c3fc.newsplease.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/eb2d8cf0a4d1c3fc.trafilatura_default.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/texts/eb2d8cf0a4d1c3fc.trafilatura_precision.txt"
+      ],
+      "extra_copy_bytes": 3618
+    },
+    {
+      "bytes": 1031,
+      "sha256": "ae4e2be48d3f1bdff1067028b836d9b22e23e5884a31b7169d5bc698625fb4b2",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/NOTICE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/readability_lxml-0.9.dist-info/licenses/NOTICE"
+      ],
+      "extra_copy_bytes": 1031
+    },
+    {
+      "bytes": 26925,
+      "sha256": "5ea2f23c7f00c3006bacf267183e816d8d4b6dc95ea57a4ddb0ff81de6d8719e",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/adodbapi/license.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32-312.dist-info/licenses/adodbapi/license.txt"
+      ],
+      "extra_copy_bytes": 26925
+    },
+    {
+      "bytes": 4,
+      "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/ago-0.1.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiohappyeyeballs-2.7.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiohttp-3.14.5.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiosignal-1.4.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/anyio-4.16.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/attrs-26.1.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/automat-25.4.16.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/beautifulsoup4-4.15.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3-1.43.123.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore-1.43.123.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/brotli-1.2.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/bs4-0.0.2.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/certifi-2026.10.23.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cffi-2.1.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/chardet-5.2.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/charset_normalizer-3.5.2.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/constantly-23.10.4.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cryptography-50.0.2.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cssselect-1.3.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/defusedxml-0.7.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/dotmap-1.3.30.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch-9.5.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elastic_transport-9.4.2.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/faust_cchardet-3.2.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/feedparser-6.0.14.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/feedparser_sgmllib-2.1.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/filelock-4.2.6.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/frozenlist-1.8.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson-3.1.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hurry_filesize-0.9.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink-21.0.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/idna-3.20.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental-24.11.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/itemadapter-0.14.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/itemloaders-1.5.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/jmespath-1.1.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect-1.0.9.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml-6.1.3.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml_html_clean-0.4.6.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/multidict-7.2.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newspaper4k-0.9.6.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/news_please-1.6.16.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging-26.3.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/parsel-1.12.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pillow-13.0.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/plac-1.4.7.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/platformdirs-4.14.2.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/propcache-0.5.4.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/protego-0.7.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/psycopg2_binary-2.9.13.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pycparser-3.12.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PyDispatcher-2.0.7.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pymysql-1.2.3.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pyopenssl-26.4.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/python_dateutil-2.9.0.post0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32-312.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pyyaml-6.0.3.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib-1.10.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/readability_lxml-0.9.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/redis-8.1.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/requests-2.34.2.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/requests_file-3.0.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/s3transfer-0.19.3.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy-2.19.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/service_identity-26.1.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools-84.2.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/six-1.17.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/sniffio-1.3.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/soupsieve-3.0.4.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/tldextract-5.4.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted-26.10.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/typing_extensions-4.16.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/urllib3-2.8.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/w3lib-2.5.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/warcio-1.8.2.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/yarl-1.25.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope_interface-8.7.dist-info/INSTALLER"
+      ],
+      "extra_copy_bytes": 304
+    },
+    {
+      "bytes": 91,
+      "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/ago-0.1.1.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elastic_transport-9.4.2.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/requests-2.34.2.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 182
+    },
+    {
+      "bytes": 13936,
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiohappyeyeballs-2.7.1.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/typing_extensions-4.16.0.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 13936
+    },
+    {
+      "bytes": 7,
+      "sha256": "b28c3db284f03fd4ff80401049587b19bf3ce79874e0dc2686cd967be2518193",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiohttp/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/frozenlist/py.typed"
+      ],
+      "extra_copy_bytes": 7
+    },
+    {
+      "bytes": 101,
+      "sha256": "f8868e546779e082b2f4ef1acdce705bd9cc24829ee8add213946b7906f8242d",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiohttp-3.14.5.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/charset_normalizer-3.5.2.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml-6.1.3.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pillow-13.0.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/propcache-0.5.4.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/psycopg2_binary-2.9.13.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/yarl-1.25.1.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 606
+    },
+    {
+      "bytes": 11313,
+      "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiohttp-3.14.5.dist-info/licenses/LICENSE.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/multidict-7.2.1.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 11313
+    },
+    {
+      "bytes": 91,
+      "sha256": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiosignal-1.4.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/news_please-1.6.16.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco_context-6.1.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/zipp-3.23.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 455
+    },
+    {
+      "bytes": 11332,
+      "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/aiosignal-1.4.0.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/frozenlist-1.8.0.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 11332
+    },
+    {
+      "bytes": 91,
+      "sha256": "98e75747d0b7c0c568bfb71263c3d8f970b3a374a6996087bc642be5cb09a1aa",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/anyio-4.16.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/certifi-2026.10.23.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hurry_filesize-0.9.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect-1.0.9.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml_html_clean-0.4.6.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pycparser-3.12.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools-84.2.1.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 546
+    },
+    {
+      "bytes": 87,
+      "sha256": "41c708c5adba6e097513ab8ccb9f1d7865a2fb469e22491a9e01dcc64da459fc",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/attrs-26.1.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/service_identity-26.1.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 87
+    },
+    {
+      "bytes": 87,
+      "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/beautifulsoup4-4.15.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/platformdirs-4.4.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 87
+    },
+    {
+      "bytes": 25576,
+      "sha256": "453dd1a2020102b3148510856a2bd6925d8db15670afd70d35dda172c5d4054e",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/bin/pywin32_postinstall.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32/scripts/pywin32_postinstall.py"
+      ],
+      "extra_copy_bytes": 25576
+    },
+    {
+      "bytes": 3847,
+      "sha256": "158be3c78ded85dbdb91669888b3135f7f51c6c14bd1cfb5a3ec58dae76506a0",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/bin/pywin32_testall.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32/scripts/pywin32_testall.py"
+      ],
+      "extra_copy_bytes": 3847
+    },
+    {
+      "bytes": 68469,
+      "sha256": "b4c1b500c60fda4b273d663afb797c0c1f8484ab1236d00ef581e1bc7a812aed",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/data/ec2/2014-10-01/resources-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/data/ec2/2015-03-01/resources-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/data/ec2/2015-04-15/resources-1.json"
+      ],
+      "extra_copy_bytes": 136938
+    },
+    {
+      "bytes": 76564,
+      "sha256": "48e7d85f67352a0be7c4c3b6142749a55e36ac958d33056194501786f50f4f30",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/data/ec2/2015-10-01/resources-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/data/ec2/2016-04-01/resources-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/data/ec2/2016-09-15/resources-1.json"
+      ],
+      "extra_copy_bytes": 153128
+    },
+    {
+      "bytes": 562,
+      "sha256": "1a44aaf96c5759f547bb548470cae525bce47f0f400a017751d08be9f3e94e66",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/dynamodb/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/ec2/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3/s3/__init__.py"
+      ],
+      "extra_copy_bytes": 1124
+    },
+    {
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3-1.43.123.dist-info/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore-1.43.123.dist-info/LICENSE.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE.APACHE"
+      ],
+      "extra_copy_bytes": 30522
+    },
+    {
+      "bytes": 91,
+      "sha256": "195f5a3138703ffe28342b6f102d9e737a9462eb6059e033925ae8ff49b85894",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/boto3-1.43.123.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore-1.43.123.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/s3transfer-0.19.3.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 182
+    },
+    {
+      "bytes": 44,
+      "sha256": "2b76fa9a06248adbdc79c4a5253fa257f1100139af3b24aceba88a248e6ac748",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/accessanalyzer/2019-11-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/account/2021-02-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/acm/2015-12-08/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/acm-pca/2017-08-22/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/amp/2020-08-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/amplify/2017-07-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/amplifyuibuilder/2021-08-11/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/apigateway/2015-07-09/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/appconfigdata/2021-11-11/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/appflow/2020-08-23/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/appintegrations/2020-07-29/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/application-insights/2018-11-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/applicationcostprofiler/2020-09-10/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/appmesh/2019-01-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/apprunner/2020-05-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/appstream/2016-12-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/appsync/2017-07-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/athena/2017-05-18/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/auditmanager/2017-07-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/autoscaling-plans/2018-01-06/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/backup/2018-11-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/backup-gateway/2021-01-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/billingconductor/2021-07-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/braket/2019-09-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/budgets/2016-10-20/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ce/2017-10-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/chime/2018-05-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/chime-sdk-identity/2021-04-20/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/chime-sdk-meetings/2021-07-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/chime-sdk-messaging/2021-05-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudcontrol/2021-09-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/clouddirectory/2016-05-10/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/clouddirectory/2017-01-11/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudformation/2010-05-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-01-28/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-08-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-09-07/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-09-29/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-11-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2017-10-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2018-06-18/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2018-11-05/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2019-03-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2020-05-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudhsm/2014-05-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudhsmv2/2017-04-28/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudsearch/2013-01-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudsearchdomain/2013-01-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudtrail/2013-11-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudwatch/2010-08-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codeartifact/2018-09-22/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codecommit/2015-04-13/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codedeploy/2014-10-06/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codeguru-reviewer/2019-09-19/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codeguruprofiler/2019-07-18/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codepipeline/2015-07-09/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codestar-connections/2019-12-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codestar-notifications/2019-10-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cognito-identity/2014-06-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cognito-idp/2016-04-18/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cognito-sync/2014-06-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/comprehend/2017-11-27/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/comprehendmedical/2018-10-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/compute-optimizer/2019-11-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/config/2014-11-12/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/connect/2017-08-08/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/connect-contact-lens/2020-08-21/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/connectparticipant/2018-09-07/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/customer-profiles/2020-08-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/databrew/2017-07-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/datapipeline/2012-10-29/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/datasync/2018-11-09/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/dax/2017-04-19/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/detective/2018-10-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/devops-guru/2020-12-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/directconnect/2012-10-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/discovery/2015-11-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/dlm/2018-01-12/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/docdb/2014-10-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/drs/2020-02-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ds/2015-04-16/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/dynamodb/2011-12-05/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ebs/2019-11-02/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2015-10-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ecr-public/2020-10-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/emr/2009-03-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/emr-containers/2020-10-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/es/2015-01-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/events/2015-10-07/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/firehose/2015-08-04/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/fis/2020-12-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/fms/2018-01-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/forecast/2018-06-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/forecastquery/2018-06-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/frauddetector/2019-11-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/gamelift/2015-10-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/globalaccelerator/2018-08-08/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/glue/2017-03-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/grafana/2020-08-18/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/greengrassv2/2020-11-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/groundstation/2019-05-23/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/guardduty/2017-11-28/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/health/2016-08-04/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/healthlake/2017-07-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/identitystore/2020-06-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/imagebuilder/2019-12-02/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/inspector2/2020-06-08/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iot/2015-05-28/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iot-data/2015-05-28/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iot-jobs-data/2017-09-29/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iotdeviceadvisor/2020-09-18/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iotsecuretunneling/2018-10-05/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iotsitewise/2019-12-02/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iotthingsgraph/2018-09-06/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iottwinmaker/2021-11-29/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iotwireless/2020-11-22/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ivs/2020-07-14/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ivschat/2020-07-14/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kafkaconnect/2021-09-14/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kendra/2019-02-03/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/keyspaces/2022-02-10/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis/2013-12-02/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis-video-archived-media/2017-09-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis-video-media/2017-09-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis-video-signaling/2019-12-04/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesisanalytics/2015-08-14/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesisanalyticsv2/2018-05-23/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesisvideo/2017-09-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lakeformation/2017-03-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lex-runtime/2016-11-28/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lexv2-models/2020-08-07/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lexv2-runtime/2020-08-07/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/license-manager/2018-08-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lightsail/2016-11-28/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/location/2020-11-19/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/logs/2014-03-28/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lookoutequipment/2020-12-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/machinelearning/2014-12-12/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/managedblockchain/2018-09-24/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/marketplace-catalog/2018-09-17/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/marketplace-entitlement/2017-01-11/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/marketplacecommerceanalytics/2015-07-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mediastore/2017-09-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mediastore-data/2017-09-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/memorydb/2021-01-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/meteringmarketplace/2016-01-14/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mgh/2017-05-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mgn/2020-02-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/migration-hub-refactor-spaces/2021-10-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/migrationhub-config/2019-06-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/migrationhubstrategy/2020-02-19/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mturk/2017-01-17/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mwaa/2020-07-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/neptune/2014-10-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/network-firewall/2020-11-12/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/networkmanager/2019-07-05/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/opensearch/2021-01-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/outposts/2019-12-03/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/personalize/2018-05-22/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/personalize-events/2018-03-22/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/personalize-runtime/2018-05-22/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/pi/2018-02-27/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/pinpoint/2016-12-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/pinpoint-email/2018-07-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/pinpoint-sms-voice-v2/2022-03-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/proton/2020-07-20/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/quicksight/2018-04-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ram/2018-01-04/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/rbin/2021-06-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/rds-data/2018-08-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/redshift/2012-12-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/redshift-data/2019-12-20/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/resiliencehub/2020-04-30/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/resource-groups/2017-11-27/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/resourcegroupstaggingapi/2017-01-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/route53-recovery-cluster/2019-12-02/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/route53domains/2014-05-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/route53resolver/2018-04-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/rum/2018-05-10/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/s3control/2018-08-20/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/s3outposts/2017-07-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemaker/2017-07-24/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemaker-a2i-runtime/2019-11-07/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemaker-edge/2020-09-23/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemaker-featurestore-runtime/2020-07-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemaker-runtime/2017-05-13/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/savingsplans/2019-06-28/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/securityhub/2018-10-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/service-quotas/2019-06-24/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/servicecatalog/2015-12-10/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/servicecatalog-appregistry/2020-06-24/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sesv2/2019-09-27/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/shield/2016-06-02/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/signer/2017-08-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/snow-device-management/2021-08-04/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sns/2010-03-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sqs/2012-11-05/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ssm/2014-11-06/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ssm-incidents/2018-05-10/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sso/2019-06-10/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sso-admin/2020-07-20/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sso-oidc/2019-06-10/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/stepfunctions/2016-11-23/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/support/2013-04-15/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/swf/2012-01-25/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/synthetics/2017-10-11/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/textract/2018-06-27/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/timestream-query/2018-11-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/timestream-write/2018-11-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/transcribe/2017-10-26/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/transfer/2018-11-05/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/translate/2017-07-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/voice-id/2021-09-27/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/wafv2/2019-07-29/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/wellarchitected/2020-03-31/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/wisdom/2020-10-19/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/workdocs/2016-05-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/workmail/2017-10-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/workmailmessageflow/2019-05-01/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/workspaces/2015-04-08/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/workspaces-web/2020-07-08/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/xray/2016-04-12/examples-1.json"
+      ],
+      "extra_copy_bytes": 9724
+    },
+    {
+      "bytes": 39,
+      "sha256": "7ec034fe6c02979ed414f8aac495162dbf4013b81df64a414f8c74ffa43b770c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/account/2021-02-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/aiops/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/amplifyuibuilder/2021-08-11/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/appfabric/2023-05-19/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/application-signals/2024-04-15/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/arc-zonal-shift/2022-10-30/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/artifact/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/backupsearch/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/bcm-dashboards/2025-08-18/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/bcm-pricing-calculator/2024-06-19/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/bcm-recommended-actions/2024-11-14/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/bedrock-agent/2023-06-05/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/bedrock-agent-runtime/2023-07-26/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/bedrock-agentcore/2024-02-28/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/billing/2023-09-07/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cleanrooms/2022-02-17/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cleanroomsml/2023-09-06/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codecatalyst/2022-09-28/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codeguru-security/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/compute-optimizer-automation/2025-09-22/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/connectcases/2022-10-03/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/connecthealth/2025-01-29/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/controlcatalog/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/controltower/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cost-optimization-hub/2022-07-26/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/dataexchange/2017-07-25/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/datazone/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/evs/2023-07-27/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/freetier/2023-09-07/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/geo-maps/2020-11-19/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/geo-places/2020-11-19/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/geo-routes/2020-11-19/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/grafana/2020-08-18/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iam-toolbox/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/internetmonitor/2021-06-03/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/invoicing/2024-12-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iotfleetwise/2021-06-17/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iottwinmaker/2021-11-29/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ivs-realtime/2020-07-14/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ivschat/2020-07-14/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kafkaconnect/2021-09-14/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/launch-wizard/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/license-manager-user-subscriptions/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mailmanager/2023-10-17/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/managedblockchain-query/2023-05-04/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/marketplace-agreement/2020-03-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/marketplace-discovery/2026-02-05/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/marketplace-reporting/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/medical-imaging/2023-07-19/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mgn/2020-02-26/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/migrationhuborchestrator/2021-08-28/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mpa/2022-07-26/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/mwaa-serverless/2024-07-26/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/network-security-manager/2025-10-30/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/networkflowmonitor/2023-04-19/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/networkmonitor/2023-08-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/notifications/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/notificationscontacts/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/nova-act/2025-08-22/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/observabilityadmin/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/odb/2024-08-20/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/opensearchserverless/2021-11-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/partnercentral-account/2025-04-04/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/partnercentral-benefits/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/partnercentral-channel/2024-03-18/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/partnercentral-revenue-measurement/2022-07-26/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/partnercentral-selling/2022-07-26/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/payment-cryptography/2021-09-14/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/payment-cryptography-data/2022-02-03/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/pca-connector-scep/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/pcs/2023-02-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/pinpoint-sms-voice-v2/2022-03-31/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/pipes/2015-10-07/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/pricing/2017-10-15/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/qapps/2023-11-27/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/qbusiness/2023-11-27/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/qconnect/2020-10-19/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/resource-explorer-2/2022-07-28/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/rolesanywhere/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/route53globalresolver/2022-09-27/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/rum/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/s3files/2025-05-05/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/s3tables/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/s3vectors/2025-07-15/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemakertrainingsessionruntime/2025-02-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/security-ir/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/securityagent/2025-09-06/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/signer-data/2017-08-25/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sso-admin/2020-07-20/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/supportauthz/2026-06-30/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/taxsettings/2018-05-10/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/trustedadvisor/2022-09-15/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/uxc/2024-07-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/verifiedpermissions/2021-12-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/vpc-lattice/2022-11-30/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/wickr/2024-02-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/workspaces-instances/2022-07-26/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/workspaces-web/2020-07-08/waiters-2.json"
+      ],
+      "extra_copy_bytes": 3783
+    },
+    {
+      "bytes": 1151,
+      "sha256": "9ccabff8c71892f9b2eca6af1b807d1d1afa39046dc18ff7e6c877f395d4159f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/apigateway/2015-07-09/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/apigatewayv2/2018-11-29/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 1151
+    },
+    {
+      "bytes": 23,
+      "sha256": "84843b01b2c1b18e1f3d234b54c834752e399ba72364a1538dba7764b878ce3f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/apigatewaymanagementapi/2018-11-29/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/appconfigdata/2021-11-11/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/appflow/2020-08-23/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/application-insights/2018-11-25/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/apprunner/2020-05-15/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/auditmanager/2017-07-25/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/bedrock-data-automation-runtime/2024-06-13/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/chime-sdk-identity/2021-04-20/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/chime-sdk-media-pipelines/2021-07-15/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/chime-sdk-meetings/2021-07-15/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/chime-sdk-messaging/2021-05-15/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudsearch/2013-01-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudsearchdomain/2013-01-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudtrail-data/2021-08-11/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codeconnections/2023-12-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/codestar-connections/2019-12-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cognito-sync/2014-06-30/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/comprehendmedical/2018-10-30/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/connect-contact-lens/2020-08-21/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/connectparticipant/2018-09-07/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/detective/2018-10-26/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/dlm/2018-01-12/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/dynamodbstreams/2012-08-10/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ebs/2019-11-02/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2-instance-connect/2018-04-02/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/eks-auth/2023-11-26/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/firehose/2015-08-04/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/forecastquery/2018-06-26/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/frauddetector/2019-11-15/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/geo-maps/2020-11-19/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/geo-places/2020-11-19/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/geo-routes/2020-11-19/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/inspector-scan/2023-08-08/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iot-jobs-data/2017-09-29/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iotdeviceadvisor/2020-09-18/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iotsecuretunneling/2018-10-05/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iottwinmaker/2021-11-29/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/iotwireless/2020-11-22/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ivschat/2020-07-14/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kendra/2019-02-03/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kendra-ranking/2022-10-19/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis-video-media/2017-09-30/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis-video-signaling/2019-12-04/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis-video-webrtc-storage/2018-05-10/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesisanalytics/2015-08-14/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lex-runtime/2016-11-28/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lexv2-runtime/2020-08-07/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lookoutequipment/2020-12-15/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/marketplace-deployment/2023-01-25/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/marketplace-reporting/2018-05-10/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/marketplacecommerceanalytics/2015-07-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/meteringmarketplace/2016-01-14/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/migrationhub-config/2019-06-30/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/neptunedata/2023-08-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/payment-cryptography-data/2022-02-03/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/personalize-events/2018-03-22/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/personalize-runtime/2018-05-22/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/rds-data/2018-08-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemaker-edge/2020-09-23/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemaker-metrics/2022-09-30/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemaker-runtime/2017-05-13/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemakerjobruntime/2026-02-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sagemakertrainingsessionruntime/2025-02-10/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/savingsplans/2019-06-28/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/signer-data/2017-08-25/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ssm-guiconnect/2021-05-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sso-oidc/2019-06-10/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/sts/2011-06-15/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/support-app/2021-08-20/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/synthetics/2017-10-11/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/timestream-write/2018-11-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/transcribe/2017-10-26/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/waf-regional/2016-11-28/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/wafv2/2019-07-29/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/workmailmessageflow/2019-05-01/paginators-1.json"
+      ],
+      "extra_copy_bytes": 1702
+    },
+    {
+      "bytes": 38,
+      "sha256": "b63d599daaa1c26264504425c07ef09b54aa637960d41bd90dfcdf3da22036b6",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/bedrock/2023-04-20/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/bedrock-runtime/2023-09-30/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/eks-auth/2023-11-26/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/keyspaces/2022-02-10/waiters-2.json"
+      ],
+      "extra_copy_bytes": 114
+    },
+    {
+      "bytes": 1839,
+      "sha256": "09ae781733fc684464eff4842a9768295f68838b17efb70730d2f2b5d1cc3510",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2014-05-31/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2014-10-21/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2014-11-06/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2015-04-17/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2015-07-27/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2015-09-17/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-01-13/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 11034
+    },
+    {
+      "bytes": 1126,
+      "sha256": "23bbb88753057e506f1497a672b2c74a7eee3ab11e0c573b79c586ab00f1185f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2014-05-31/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2014-10-21/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2014-11-06/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2015-04-17/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2015-07-27/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2015-09-17/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-01-13/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-01-28/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-08-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-08-20/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-09-07/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-09-29/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-11-25/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2017-03-25/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2017-10-30/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2018-06-18/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2018-11-05/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2019-03-26/paginators-1.json"
+      ],
+      "extra_copy_bytes": 19142
+    },
+    {
+      "bytes": 1184,
+      "sha256": "8f3444a83c5f220d8a6e63d83a60e86200efcbc9960042b4c3f3661280aa8472",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2014-05-31/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2014-10-21/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2014-11-06/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2015-04-17/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2015-07-27/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2015-09-17/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-01-13/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-01-28/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-08-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-08-20/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-09-07/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-09-29/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-11-25/waiters-2.json"
+      ],
+      "extra_copy_bytes": 14208
+    },
+    {
+      "bytes": 1574,
+      "sha256": "c3a4b6c0081640e368136ea73e30347d1827cfe242c29f2257e9e355a538ff79",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-01-28/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-08-01/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-08-20/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-09-07/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-09-29/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2016-11-25/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2017-03-25/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2017-10-30/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2018-06-18/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2018-11-05/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2019-03-26/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 15740
+    },
+    {
+      "bytes": 1184,
+      "sha256": "25ba2acd78e59e2f29fb0895281cf58d18fe985a64af2aae782808d610fb58f0",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2017-03-25/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2017-10-30/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2018-06-18/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/cloudfront/2018-11-05/waiters-2.json"
+      ],
+      "extra_copy_bytes": 3552
+    },
+    {
+      "bytes": 561,
+      "sha256": "53f3e0c70b4f85697c6702e5c588970f8650e22cbad39c789a2613dfc9ccbe73",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/docdb/2014-10-31/service-2.sdk-extras.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/neptune/2014-10-31/service-2.sdk-extras.json"
+      ],
+      "extra_copy_bytes": 561
+    },
+    {
+      "bytes": 2398,
+      "sha256": "f1b62830e333d936f468676d94f86f94c7a5d3be6ad67ec14670a943e05c7357",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/docdb/2014-10-31/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/neptune/2014-10-31/waiters-2.json"
+      ],
+      "extra_copy_bytes": 2398
+    },
+    {
+      "bytes": 1237,
+      "sha256": "182c3315f92da60a6a85f228bf0f778f445bffbe2c629545df05bf8f618e92d4",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2014-09-01/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2014-10-01/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2015-03-01/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2015-04-15/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 3711
+    },
+    {
+      "bytes": 1439,
+      "sha256": "527b343ba57a6485c8d3d89974263bef0f820476deb3fb225b9bc553e6e9135c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2014-10-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2015-03-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2015-04-15/paginators-1.json"
+      ],
+      "extra_copy_bytes": 2878
+    },
+    {
+      "bytes": 11040,
+      "sha256": "50384a60622b22d12ad9ee7abca321eb22dd9ff61fb1f4d8b266a79028ec4779",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2014-10-01/waiters-2.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2015-03-01/waiters-2.json"
+      ],
+      "extra_copy_bytes": 11040
+    },
+    {
+      "bytes": 1391,
+      "sha256": "ceb34a9f8aab26bf7b89655abe6e38a736eacb261b6ebedccd0d8422bf23f407",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2015-10-01/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2016-04-01/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2016-09-15/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 2782
+    },
+    {
+      "bytes": 1793,
+      "sha256": "5689b91de09cd14803c84c982b0de98b3b68949dc8231cffb488445fad53bccf",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2015-10-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2016-04-01/paginators-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/ec2/2016-09-15/paginators-1.json"
+      ],
+      "extra_copy_bytes": 3586
+    },
+    {
+      "bytes": 1242,
+      "sha256": "150e91da7e61f1fffeb09ed4d7c0aae6070385b8716ff056619c977b9e06dcaa",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/elb/2012-06-01/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/elbv2/2015-12-01/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 1242
+    },
+    {
+      "bytes": 1311,
+      "sha256": "9e14b4ae5f7866387c3d1b25815457187d3e5d6f52e3c49ee88147f589222be5",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/es/2015-01-01/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/opensearch/2021-01-01/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 1311
+    },
+    {
+      "bytes": 1361,
+      "sha256": "463ac068f3a4039533884c9cad28326855e10b4dee1370c07fbc2ade01e220f7",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/greengrass/2017-06-07/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/greengrassv2/2020-11-30/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 1361
+    },
+    {
+      "bytes": 1151,
+      "sha256": "0a1871bb707a14891948f77b448a725f4809dff84edbd4b73f459a80a0862aa7",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis-video-archived-media/2017-09-30/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis-video-media/2017-09-30/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesis-video-signaling/2019-12-04/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesisvideo/2017-09-30/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 3453
+    },
+    {
+      "bytes": 1156,
+      "sha256": "00a39008b520b43e737adf61a7d5c69b2c7eb165d9bdd4475f65689aefd17f8b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesisanalytics/2015-08-14/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/kinesisanalyticsv2/2018-05-23/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 1156
+    },
+    {
+      "bytes": 1297,
+      "sha256": "fd557d4689e55430d7775a9697ac056bd11de84f6ef46c56ece9fd75f5836305",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lambda-core/2026-04-30/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lambda-microvms/2025-09-09/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/lambda-web/2025-03-07/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 2594
+    },
+    {
+      "bytes": 1230,
+      "sha256": "51c4b1b1a94c235ec258e18407da79ff6a15ddbca57f46db4d75a260bf8c34a9",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/neptune/2014-10-31/endpoint-rule-set-1.json.gz",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/rds/2014-10-31/endpoint-rule-set-1.json.gz"
+      ],
+      "extra_copy_bytes": 1230
+    },
+    {
+      "bytes": 29749,
+      "sha256": "e8e3ee0a72f29c921f18ef95c616fd65957d92d10a869072bdfda34b0020f836",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/waf/2015-08-24/examples-1.json",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/botocore/data/waf-regional/2016-11-28/examples-1.json"
+      ],
+      "extra_copy_bytes": 29749
+    },
+    {
+      "bytes": 101,
+      "sha256": "1a3368594293c15a983a1f8601e3aa996b3c2b9325cff626d85dfd9bdd5753c4",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/brotli-1.2.1.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/multidict-7.2.1.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 101
+    },
+    {
+      "bytes": 216,
+      "sha256": "c0709b59f69e7daf9f93a4c74b0f6d87d7c952c4ad268ef6e39c1f141aa676e0",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cryptography/hazmat/bindings/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cryptography/hazmat/bindings/openssl/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cryptography/hazmat/decrepit/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cryptography/hazmat/decrepit/ciphers/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cryptography/hazmat/primitives/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/cryptography/hazmat/primitives/asymmetric/__init__.py"
+      ],
+      "extra_copy_bytes": 1080
+    },
+    {
+      "bytes": 110,
+      "sha256": "9064fbe0b5b245466b2f85602e1ebf835d8879597ff6ef5956169dae05d95046",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/defusedxml-0.7.1.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink-21.0.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 110
+    },
+    {
+      "bytes": 787,
+      "sha256": "4d9a6cf568c5f9369237306f5b9c140a05d171b1e7bc4ffdc40ca7047b0cb52a",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch/dsl/_async/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch/dsl/_sync/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch/helpers/vectorstore/_async/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch/helpers/vectorstore/_sync/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch/_async/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch/_sync/__init__.py"
+      ],
+      "extra_copy_bytes": 3935
+    },
+    {
+      "bytes": 87,
+      "sha256": "ccec20e2307acd7da453dd7437e70c6b08e2bc3ead3bc3445af135da37b56d59",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch-9.5.1.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib-1.10.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy-2.19.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/urllib3-2.8.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 261
+    },
+    {
+      "bytes": 10143,
+      "sha256": "5df2a0d87d6c562f0ea11c688ac52532aa28d744cabc7994ff0537f64b3b3320",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elasticsearch-9.5.1.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/elastic_transport-9.4.2.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 10143
+    },
+    {
+      "bytes": 91,
+      "sha256": "2b6eb4118ce7cd7b09601406aa623c553c4476265836f0d9c16f5c061f7efcc0",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/feedparser-6.0.14.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pyopenssl-26.4.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 91
+    },
+    {
+      "bytes": 88,
+      "sha256": "798ee776ec33bfe95d531a736d1971c2f0baf771e0e8f5fc6d60e31078d9fdd9",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/feedparser_sgmllib-2.1.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/readability_lxml-0.9.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 88
+    },
+    {
+      "bytes": 87,
+      "sha256": "5b77e4a649bbfb07fdbc123967eeecd1e5a478cfaca6eefc23c35e6fdf037848",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/filelock-4.2.6.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/itemloaders-1.5.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/parsel-1.12.1.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/platformdirs-4.14.2.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/protego-0.7.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/soupsieve-3.0.4.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/w3lib-2.5.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 522
+    },
+    {
+      "bytes": 101,
+      "sha256": "ee4e96732e7cf222587b995fe4ad3de4d2e0faea014e713e4fc78727dd86e3fe",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/frozenlist-1.8.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pyyaml-6.0.3.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 101
+    },
+    {
+      "bytes": 6,
+      "sha256": "f5fff56626f29e1835a39057e84cdcb0f72f81533f1a3a08cd232ac733eb6753",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hurry_filesize-0.9.dist-info/namespace_packages.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hurry_filesize-0.9.dist-info/top_level.txt"
+      ],
+      "extra_copy_bytes": 6
+    },
+    {
+      "bytes": 330,
+      "sha256": "41383bcc95edb8138d37077ae54bfdcbd2a3b77bf745a8529a9c161146e22303",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/isapi/README.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32-312.dist-info/licenses/isapi/README.txt"
+      ],
+      "extra_copy_bytes": 330
+    },
+    {
+      "bytes": 87,
+      "sha256": "da266b2640c891e0e1d24f528a428ca85b913feb9aea66f822bd40b04478044c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/itemadapter-0.14.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted-26.10.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 87
+    },
+    {
+      "bytes": 1517,
+      "sha256": "fd331af3ccb8776bbe7f317821e5e0b91c2ab7c73464e77425d52204f7b5d980",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/itemloaders-1.5.0.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy-2.19.0.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 1517
+    },
+    {
+      "bytes": 91,
+      "sha256": "5b287efe76740c9628947367d7f84c6b894ceee0de743fd1195c1b9938f222d9",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/jmespath-1.1.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco.text-4.0.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 91
+    },
+    {
+      "bytes": 10036,
+      "sha256": "06564016f47ee90c45c278b860ac871f77abd3b1ec5b71ea00eab81575179c32",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/etree.h",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/lxml/lxml.etree.h"
+      ],
+      "extra_copy_bytes": 10036
+    },
+    {
+      "bytes": 87,
+      "sha256": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newspaper4k-0.9.6.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/redis-8.1.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 87
+    },
+    {
+      "bytes": 161,
+      "sha256": "50bc1e719931dff353a61933ef2fea89acc1794a071670825a72928e80c2663d",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/crawler/spiders/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/scrapy/templates/project/module/spiders/__init__.py"
+      ],
+      "extra_copy_bytes": 161
+    },
+    {
+      "bytes": 11224,
+      "sha256": "5309cc564ca3022dfb594816e9d593bb09cdf34208c1fb8c5ec9afb6c670278c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/dependency_groups.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/dependency_groups.py"
+      ],
+      "extra_copy_bytes": 11224
+    },
+    {
+      "bytes": 11645,
+      "sha256": "843baa95d04cbb49288de9d9fd77ee946e862cb603123e7e46a69e171fa7d06b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/direct_url.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/direct_url.py"
+      ],
+      "extra_copy_bytes": 11645
+    },
+    {
+      "bytes": 2680,
+      "sha256": "ea17c461701ff2ffc817ae7e94569d24e30889e04fdb120ab721178c6d67188b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/errors.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/errors.py"
+      ],
+      "extra_copy_bytes": 2680
+    },
+    {
+      "bytes": 20554,
+      "sha256": "6cbe860d35d98d2b599e7f0ec73feab124e015711b30be9045e678c92940d9cc",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/markers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/markers.py"
+      ],
+      "extra_copy_bytes": 20554
+    },
+    {
+      "bytes": 42059,
+      "sha256": "934149f420a5449e6f376aa61d6f26a0823eb82cc7c6a1c8cde5aa7be43d0f63",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/metadata.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/metadata.py"
+      ],
+      "extra_copy_bytes": 42059
+    },
+    {
+      "bytes": 35232,
+      "sha256": "1bce0a9fe63e42b87e8ced05da272baf16a68aa704b3718405e2735a6112467c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/pylock.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/pylock.py"
+      ],
+      "extra_copy_bytes": 35232
+    },
+    {
+      "bytes": 83054,
+      "sha256": "b4781ce913e5dff9e07906f20585c54c3028e1f7ff56341828e79d522ddbfab6",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/ranges.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/ranges.py"
+      ],
+      "extra_copy_bytes": 83054
+    },
+    {
+      "bytes": 7040,
+      "sha256": "459476eb2107fe30e6b1310051a5bdb44c7d3b7f78e0e87bada268282cba62f5",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/requirements.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/requirements.py"
+      ],
+      "extra_copy_bytes": 7040
+    },
+    {
+      "bytes": 52798,
+      "sha256": "661ad31ddf45ffb861d2626734f4e3d66966029b8fdb79586bb105825d8d9d59",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/specifiers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/specifiers.py"
+      ],
+      "extra_copy_bytes": 52798
+    },
+    {
+      "bytes": 38302,
+      "sha256": "0e717a082a79620d79cf0321b420df15593c4916fcda03c27cb9d82e07ef5d6e",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/tags.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/tags.py"
+      ],
+      "extra_copy_bytes": 38302
+    },
+    {
+      "bytes": 12215,
+      "sha256": "a13742cd9994eeca5adfb0249d126408c478026eb1f48cb97afbf2fe9f28ecc6",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/utils.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/utils.py"
+      ],
+      "extra_copy_bytes": 12215
+    },
+    {
+      "bytes": 39040,
+      "sha256": "558b2fb50fd198c660a4c082f96b8919c565911b6b4b6e07f34b6b60c074be97",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/version.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/version.py"
+      ],
+      "extra_copy_bytes": 39040
+    },
+    {
+      "bytes": 3236,
+      "sha256": "1f025f54c573f1a85740c4fbd908cc1d1fb0c177c14377ebf5f09d6cd5368780",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/_elffile.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/_elffile.py"
+      ],
+      "extra_copy_bytes": 3236
+    },
+    {
+      "bytes": 10000,
+      "sha256": "5b6e84324c42538ab4cdb148e2430fdba36f04427b0efda55bea083a35fa6136",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/_manylinux.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/_manylinux.py"
+      ],
+      "extra_copy_bytes": 10000
+    },
+    {
+      "bytes": 2774,
+      "sha256": "0328fb827b1170c77df4c107d49be8df8d37262103490a61e8acad8a2f9cadff",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/_musllinux.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/_musllinux.py"
+      ],
+      "extra_copy_bytes": 2774
+    },
+    {
+      "bytes": 12639,
+      "sha256": "88a348115209327497e453b635e5db099fd592f9335d710c7313b29cdb30c50c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/_parser.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/_parser.py"
+      ],
+      "extra_copy_bytes": 12639
+    },
+    {
+      "bytes": 30850,
+      "sha256": "b7b595f2e692aeb3697c545b85c24cbbcb4552f2adc6d9059aa82d0877e816b7",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/_ranges.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/_ranges.py"
+      ],
+      "extra_copy_bytes": 30850
+    },
+    {
+      "bytes": 1109,
+      "sha256": "eb48d16c5efca7ccf930a9cd77a700a6b80e69d0891d5d03966526441a8565cb",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/_structures.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/_structures.py"
+      ],
+      "extra_copy_bytes": 1109
+    },
+    {
+      "bytes": 5573,
+      "sha256": "cc25e57c0d564c89e15073471d6e1c264299ca946fb17c0e1e4af54ef7713ee6",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/_tokenizer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/_tokenizer.py"
+      ],
+      "extra_copy_bytes": 5573
+    },
+    {
+      "bytes": 494,
+      "sha256": "6e758cdd0028b2cad74c739b9adc9c9f06f054932306280b878bfe59d39219b5",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/__init__.py"
+      ],
+      "extra_copy_bytes": 494
+    },
+    {
+      "bytes": 51122,
+      "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/licenses/_spdx.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/licenses/_spdx.py"
+      ],
+      "extra_copy_bytes": 51122
+    },
+    {
+      "bytes": 7859,
+      "sha256": "590d12eee73ddbec53b4e9ee5bfc64d9cb3aacb4940e8ebcba260757ce56740b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging/licenses/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging/licenses/__init__.py"
+      ],
+      "extra_copy_bytes": 7859
+    },
+    {
+      "bytes": 3544,
+      "sha256": "70fdb89fc4d4a9a043bf7372b8972bcc883fddff34ab55e9cf80d73875384763",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging-26.3.dist-info/METADATA",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging-26.3.dist-info/METADATA"
+      ],
+      "extra_copy_bytes": 3544
+    },
+    {
+      "bytes": 82,
+      "sha256": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging-26.3.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/more_itertools-10.8.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging-26.3.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/tomli-2.4.0.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/wheel-0.46.3.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/typing_extensions-4.16.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 410
+    },
+    {
+      "bytes": 197,
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging-26.3.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 197
+    },
+    {
+      "bytes": 1344,
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/packaging-26.3.dist-info/licenses/LICENSE.BSD",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging-26.3.dist-info/licenses/LICENSE.BSD"
+      ],
+      "extra_copy_bytes": 1344
+    },
+    {
+      "bytes": 66,
+      "sha256": "cc3f2f0283c2f1a1085637dc90bb45b24456e6c6a255e977fac254036a476867",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PIL/_avif.pyi",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PIL/_imagingmath.pyi",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PIL/_imagingmorph.pyi",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PIL/_imagingtk.pyi",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PIL/_webp.pyi"
+      ],
+      "extra_copy_bytes": 264
+    },
+    {
+      "bytes": 1089,
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/platformdirs-4.14.2.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 1089
+    },
+    {
+      "bytes": 14,
+      "sha256": "6b2e4e30ee3be4f95c67f15bba7f666875bb63a3014e4d145cbe33b47c7722e8",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/propcache/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/yarl/py.typed"
+      ],
+      "extra_copy_bytes": 14
+    },
+    {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/propcache-0.5.4.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pyopenssl-26.4.0.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/s3transfer-0.19.3.dist-info/LICENSE.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/sniffio-1.3.1.dist-info/LICENSE.APACHE2",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/yarl-1.25.1.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 45432
+    },
+    {
+      "bytes": 609,
+      "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/propcache-0.5.4.dist-info/licenses/NOTICE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/yarl-1.25.1.dist-info/licenses/NOTICE"
+      ],
+      "extra_copy_bytes": 609
+    },
+    {
+      "bytes": 92,
+      "sha256": "db07a93359e4e034b8785a58ad6d534ea3dca0635f1e184efe2e66e1c3a299ba",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/PyDispatcher-2.0.7.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/autocommand-2.2.2.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 92
+    },
+    {
+      "bytes": 91,
+      "sha256": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pymysql-1.2.3.dist-info/WHEEL",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/tldextract-5.4.0.dist-info/WHEEL"
+      ],
+      "extra_copy_bytes": 91
+    },
+    {
+      "bytes": 1541,
+      "sha256": "a74d826efb242db087b850348e20abbfd591b51e2081f2048735290913872924",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/License.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32-312.dist-info/licenses/pythonwin/License.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32-312.dist-info/licenses/win32/License.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32/License.txt"
+      ],
+      "extra_copy_bytes": 4623
+    },
+    {
+      "bytes": 873,
+      "sha256": "57ec79bbeab4fd1cf7460a7ad450d2ab01471810459aeae9e75e4c66b472095f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/Scintilla-License.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32-312.dist-info/licenses/pythonwin/Scintilla/License.txt"
+      ],
+      "extra_copy_bytes": 873
+    },
+    {
+      "bytes": 1480,
+      "sha256": "d1852592ced6c1a661de1a4a7071894cbc5ef244ea844c23f48d0b8126271cf3",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/pywin/Demos/app/demoutils.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/pywin/Demos/ocx/demoutils.py"
+      ],
+      "extra_copy_bytes": 1480
+    },
+    {
+      "bytes": 12540,
+      "sha256": "a0fa1e7b8a4230055685e796548ac084a6c0eea395294574093bba72efd9191b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pythonwin/pywin/idle/LICENSE.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32-312.dist-info/licenses/pythonwin/pywin/idle/LICENSE.txt"
+      ],
+      "extra_copy_bytes": 12540
+    },
+    {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/python_dateutil-2.9.0.post0.dist-info/zip-safe",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_distutils/py.typed",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/newsfragments/9746.misc",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/warcio-1.8.2.dist-info/zip-safe"
+      ],
+      "extra_copy_bytes": 3
+    },
+    {
+      "bytes": 1570,
+      "sha256": "fad39c18fc3825fa278db1c86fd52cf88d7c525b3c2fbf7817fa383cbae4d423",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32-312.dist-info/licenses/com/License.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32com/License.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/License.txt"
+      ],
+      "extra_copy_bytes": 3140
+    },
+    {
+      "bytes": 1087,
+      "sha256": "1c4cf44d2fb8bf2d10214d6da80cc9e05502824cc4460f35be4c7bcb4cde53da",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/pywin32-312.dist-info/licenses/com/win32comext/mapi/src/MAPIStubLibrary/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/mapi/MAPIStubLibrary-License.txt"
+      ],
+      "extra_copy_bytes": 1087
+    },
+    {
+      "bytes": 1525,
+      "sha256": "d685397b03e1a53d7e3a74ed4a7e516fdaf9a1c18e65b666f9efb0eb1011c624",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib-1.10.0.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/w3lib-2.5.0.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 1525
+    },
+    {
+      "bytes": 11776,
+      "sha256": "32acc1bc543116cbe2cff10cb867772df2f254ff2634c870aef0b46c4b696fdb",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/cli-32.exe",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/cli.exe"
+      ],
+      "extra_copy_bytes": 11776
+    },
+    {
+      "bytes": 11776,
+      "sha256": "85dae1e95d77845f2cb59bcac3d4afe74bbe4c91a9bcc5bf4a71cd43104dbe7c",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/gui-32.exe",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/gui.exe"
+      ],
+      "extra_copy_bytes": 11776
+    },
+    {
+      "bytes": 2,
+      "sha256": "e6184ce10e266134fdcfa401e8f1a95005bcd4f18d16b62b757323e2833fe9a9",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/autocommand-2.2.2.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/importlib_metadata-8.7.1.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco.text-4.0.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco_context-6.1.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/more_itertools-10.8.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/packaging-26.3.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/platformdirs-4.4.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/tomli-2.4.0.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/wheel-0.46.3.dist-info/INSTALLER",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/zipp-3.23.0.dist-info/INSTALLER"
+      ],
+      "extra_copy_bytes": 22
+    },
+    {
+      "bytes": 1023,
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools-84.2.1.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 2046
+    },
+    {
+      "bytes": 7,
+      "sha256": "d099cddcb7d71f82c845f5cbf9014e18227341664edc42f1e11d5dfe5a2ea103",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco.text-4.0.0.dist-info/top_level.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco_context-6.1.0.dist-info/top_level.txt",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/top_level.txt"
+      ],
+      "extra_copy_bytes": 14
+    },
+    {
+      "bytes": 1076,
+      "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE"
+      ],
+      "extra_copy_bytes": 1076
+    },
+    {
+      "bytes": 12,
+      "sha256": "902a513dd9774bf8ea61865a3ab734fb16bafa5dcaa958cd45773a8c291dffe4",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/newsfragments/.gitignore",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/newsfragments/.gitignore",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/newsfragments/.gitignore",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/newsfragments/.gitignore",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/newsfragments/.gitignore",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/newsfragments/.gitignore",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/newsfragments/.gitignore"
+      ],
+      "extra_copy_bytes": 72
+    },
+    {
+      "bytes": 1415,
+      "sha256": "0914f3c0e91ab0b5653a8447f3bf485b4ec971bad630e6613320f5fc1481c278",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/fake_CAs/thing2-duplicate.pem",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/fake_CAs/thing2.pem"
+      ],
+      "extra_copy_bytes": 1415
+    },
+    {
+      "bytes": 20926,
+      "sha256": "b3c652073b3c75f5ac81381b6f44b8deead065c635c63771a0806e48778bafaa",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32com/HTML/image/pycom_blowing.gif",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/axscript/demos/client/ie/pycom_blowing.gif"
+      ],
+      "extra_copy_bytes": 20926
+    },
+    {
+      "bytes": 198,
+      "sha256": "0486114a785d3c74a9940bd828bf4d04bb90599eba7be427269895580fc00f7f",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/authorization/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/bits/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/taskscheduler/__init__.py"
+      ],
+      "extra_copy_bytes": 396
+    },
+    {
+      "bytes": 139,
+      "sha256": "dd388bf3740ba9de76807a928b7552844018947d3a8555eeaa2cefce7d623d13",
+      "paths": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/axcontrol/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/axdebug/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/axscript/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/directsound/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/internet/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/win32comext/shell/__init__.py"
+      ],
+      "extra_copy_bytes": 695
+    }
+  ],
+  "duplicate_extra_bytes": 1392387,
+  "hashed_files": 7233,
+  "hashed_bytes": 3228311234,
+  "reference_occurrences": 7352,
+  "absolute_path_occurrences": 5233,
+  "preserved_manifest_targets": 759,
+  "git_tracked": 8,
+  "git_ignored": 7227,
+  "deletion_totals": {
+    "safe_to_delete": {
+      "files": 0,
+      "bytes": 0
+    },
+    "delete_after_review": {
+      "files": 726,
+      "bytes": 61954508
+    },
+    "must_keep": {
+      "files": 6597,
+      "bytes": 3166772367
+    }
+  },
+  "errors": []
+}

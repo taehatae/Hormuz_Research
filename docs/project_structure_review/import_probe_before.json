@@ -1,0 +1,120 @@
+{
+  "results": [
+    {
+      "module": "requests",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\requests\\__init__.py",
+      "checks": {
+        "Session_callable": true
+      }
+    },
+    {
+      "module": "bs4",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\bs4\\__init__.py",
+      "checks": {
+        "BeautifulSoup_callable": true
+      }
+    },
+    {
+      "module": "trafilatura",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\AppData\\Roaming\\Python\\Python314\\site-packages\\trafilatura\\__init__.py",
+      "checks": {
+        "extract_callable": true
+      }
+    },
+    {
+      "module": "newsplease",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\newsplease\\__init__.py",
+      "checks": {
+        "from_html_callable": true
+      }
+    },
+    {
+      "module": "langdetect",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\langdetect\\__init__.py",
+      "checks": {
+        "detect_callable": true
+      }
+    },
+    {
+      "module": "boto3",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\boto3\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "botocore",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\botocore\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "twisted",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\twisted\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "twisted.internet.defer",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\twisted\\internet\\defer.py",
+      "checks": {}
+    },
+    {
+      "module": "zope.interface",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\zope\\interface\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "hyperlink",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\hyperlink\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "incremental",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\incremental\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "queuelib",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\queuelib\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "certifi",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\certifi\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "constantly",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\constantly\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "hjson",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\hjson\\__init__.py",
+      "checks": {}
+    },
+    {
+      "module": "ago",
+      "ok": true,
+      "path": "C:\\Users\\황태하\\Hormuz_Research\\hormuz_2026_data\\body_collection_pilot_20261102_01\\vendor\\ago\\__init__.py",
+      "checks": {}
+    }
+  ],
+  "denied_actions": [
+    "socket.bind"
+  ],
+  "all_ok": true
+}

@@ -1,0 +1,12 @@
+﻿current_path,recommended_path,action,reason,affected_references,execution_authorized
+hormuz_textminig.ipynb,hormuz_textminig.ipynb,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_textminig_v2.ipynb,hormuz_textminig_v2.ipynb,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_2026_data/01_newscatcher_raw.csv,hormuz_2026_data/01_newscatcher_raw.csv,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_2026_data/05_extraction_candidates_v2.csv,hormuz_2026_data/05_extraction_candidates_v2.csv,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_2026_data/benchmark_html_cache,hormuz_2026_data/benchmark_html_cache,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_2026_data/body_collection_pilot_20261102_01,hormuz_2026_data/body_collection_pilot_20261102_01,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_2026_data/quality_audit_20261107_01,hormuz_2026_data/quality_audit_20261107_01,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_2026_data/metadata_selection_20261107_01,hormuz_2026_data/metadata_selection_20261107_01,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_2026_data/candidate_status_analysis_20261031,hormuz_2026_data/candidate_status_analysis_20261031,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_2026_data/media_verification_pilot_proposal_20261031,hormuz_2026_data/media_verification_pilot_proposal_20261031,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move
+hormuz_2026_data/ai_label_review_20261031,hormuz_2026_data/ai_label_review_20261031,retain_in_place,보존 해시·절대 경로·폴더 깊이·노트북 실행 문맥 유지,PROJECT_FILE_INVENTORY.csv의 references_requiring_update; path_references.csv,no_move

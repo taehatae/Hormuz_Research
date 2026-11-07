@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "verified_at_utc": "2026-11-07T10:04:20.279359+00:00",
+  "checks": {
+    "all_preexisting_paths_preserved": true,
+    "all_hashed_preexisting_contents_unchanged": true,
+    "all_non_git_preexisting_metadata_unchanged": true,
+    "inventory_exact_baseline_set": true,
+    "inventory_bytes_reconcile": true,
+    "all_proposed_existing_paths_unchanged": true,
+    "classification_totals_reconcile": true,
+    "deletion_list_exact_classification": true,
+    "no_data_collection_or_research_execution": true,
+    "no_final_scan_errors": true,
+    "protected_core_files_must_keep": true,
+    "no_existing_research_file_move_or_delete_or_rename": true,
+    "new_files_only_survey_outputs_or_tool_git_refs": true,
+    "requested_outputs_nonempty": true
+  },
+  "baseline_files": 7323,
+  "baseline_directories": 1617,
+  "baseline_bytes": 3228726875,
+  "hashed_preexisting_files": 7233,
+  "missing_originals": [],
+  "changed_original_contents": [],
+  "changed_original_metadata": [],
+  "read_errors": [],
+  "git_observed_metadata_changes": [],
+  "unexpected_new_files": [],
+  "new_files_before_validation_output": [
+    {
+      "path": "PROJECT_CLEANUP_PLAN.md",
+      "bytes": 23609
+    },
+    {
+      "path": "PROJECT_FILE_INVENTORY.csv",
+      "bytes": 4395859
+    },
+    {
+      "path": "docs/project_structure_review/absolute_path_references.csv",
+      "bytes": 1177858
+    },
+    {
+      "path": "docs/project_structure_review/baseline.json",
+      "bytes": 2348090
+    },
+    {
+      "path": "docs/project_structure_review/content_hashes.json",
+      "bytes": 1230689
+    },
+    {
+      "path": "docs/project_structure_review/deletion_candidates.csv",
+      "bytes": 548804
+    },
+    {
+      "path": "docs/project_structure_review/duplicate_groups.json",
+      "bytes": 159481
+    },
+    {
+      "path": "docs/project_structure_review/filename_groups.json",
+      "bytes": 470481
+    },
+    {
+      "path": "docs/project_structure_review/folder_sizes.csv",
+      "bytes": 150162
+    },
+    {
+      "path": "docs/project_structure_review/git_snapshot_before.json",
+      "bytes": 938
+    },
+    {
+      "path": "docs/project_structure_review/move_plan.csv",
+      "bytes": 3013
+    },
+    {
+      "path": "docs/project_structure_review/path_references.csv",
+      "bytes": 1600229
+    },
+    {
+      "path": "docs/project_structure_review/reference_scan_scope.json",
+      "bytes": 1280888
+    },
+    {
+      "path": "docs/project_structure_review/survey.py",
+      "bytes": 16760
+    },
+    {
+      "path": "docs/project_structure_review/survey_summary.json",
+      "bytes": 179307
+    },
+    {
+      "path": "docs/project_structure_review/validation.json",
+      "bytes": 3877
+    },
+    {
+      "path": "docs/project_structure_review/verify_survey.py",
+      "bytes": 5098
+    },
+    {
+      "path": "docs/project_structure_review/write_plan.py",
+      "bytes": 28424
+    }
+  ],
+  "survey_output_bytes_before_validation": 13623567,
+  "deletion_totals": {
+    "safe_to_delete": {
+      "files": 0,
+      "bytes": 0
+    },
+    "delete_after_review": {
+      "files": 726,
+      "bytes": 61954508
+    },
+    "must_keep": {
+      "files": 6597,
+      "bytes": 3166772367
+    }
+  },
+  "actual_deleted_bytes": 0,
+  "actual_moved_files": 0,
+  "actual_renamed_files": 0,
+  "output_hashes": {
+    "PROJECT_CLEANUP_PLAN.md": "97623ae96e833532638ed832c2c1c167dab8f4205531710c7df749dadfcf8250",
+    "PROJECT_FILE_INVENTORY.csv": "c0eb083ab66d033265555ee84a2e63e9db27d4409b537e0b9e4c52f25c9d7407",
+    "docs/project_structure_review/deletion_candidates.csv": "dc1236d2cef63187c039821ac219cfc76e6f815777f298307a24a38049677a0f",
+    "docs/project_structure_review/move_plan.csv": "d7b2419fad90bf70ebc7d3dd437b3f38f92a05e2d98ebf1bd58e1d2bfff33e6a"
+  },
+  "note": "Git commands were read-only with GIT_OPTIONAL_LOCKS=0. IDE/tool generated refs may appear; no git mutations were issued. .env and .env.example content not read or hashed; stat only."
+}

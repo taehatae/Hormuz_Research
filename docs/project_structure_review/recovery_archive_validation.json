@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "archive": "docs/project_structure_review/vendor_cleanup_recovery.zip",
+  "sha256": "80c59e1d6ad34ab9688ca3d7466d0670cfc06d590c87441f76defcc8d48d773d",
+  "archive_bytes": 1788579,
+  "verified_members": 507,
+  "uncompressed_bytes": 8059320,
+  "scope": "exact preflight eligible file contents; no entire package/data copy"
+}

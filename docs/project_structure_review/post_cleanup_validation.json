@@ -1,0 +1,2748 @@
+{
+  "passed": true,
+  "checks": {
+    "deletion_ledger_covers_exact_726_candidates": true,
+    "all_deleted_exact_authorized_vendor_subset": true,
+    "deleted_files_actually_absent": true,
+    "all_held_candidates_present_and_hash_unchanged": true,
+    "offline_recovery_archive_crc_and_SHA256_verified": true,
+    "no_unapproved_original_missing": true,
+    "no_unapproved_original_content_changed": true,
+    "non_readme_existing_file_metadata_unchanged": true,
+    "required_core_CSVs_preserved": true,
+    "research_CSV_HTML_text_notebooks_preserved": true,
+    "original_survey_artifacts_unchanged": true,
+    "import_and_pure_function_checks_same_before_after": true,
+    "readme_relative_links_resolve": true,
+    "requested_directories_present": true,
+    "no_existing_experiment_code_or_notebook_moved": true
+  },
+  "verified_at_utc": "2026-11-07T10:19:44.200282+00:00",
+  "deleted_files": 507,
+  "deleted_bytes": 8059320,
+  "preserved_candidate_files": 219,
+  "vendor_candidates_held": 215,
+  "recovery_archive": {
+    "passed": true,
+    "archive": "docs/project_structure_review/vendor_cleanup_recovery.zip",
+    "sha256": "80c59e1d6ad34ab9688ca3d7466d0670cfc06d590c87441f76defcc8d48d773d",
+    "archive_bytes": 1788579,
+    "verified_members": 507,
+    "uncompressed_bytes": 8059320,
+    "scope": "exact preflight eligible file contents; no entire package/data copy"
+  },
+  "gross_freed_bytes_less_recovery_archive": 6270741,
+  "before_file_count": 7342,
+  "before_bytes": 3242361241,
+  "before_scope": "Entire recursive project including stage1 survey and initial preflight tools; captured before README change and new directories. No external environments.",
+  "unexpected_missing_originals": [],
+  "unexpected_content_changes": [],
+  "authorized_content_changes": [
+    "README.md"
+  ],
+  "unexpected_metadata_changes": [],
+  "new_current_task_probe_updates": [
+    "docs/project_structure_review/cleanup_probe.py"
+  ],
+  "research_artifact_hashes_verified": 278,
+  "existing_content_hashes_verified": 6726,
+  "historical_manifest_comparisons": [
+    {
+      "manifest": "docs/project_structure_review/content_hashes.json",
+      "comparison": "SHA256_and_existence_read_only_no_existing_validator_executed",
+      "matches_current_snapshot": false,
+      "missing": [
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/ago/tests/test_ago.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/ago/tests/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/certifi/tests/test_certify.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/certifi/tests/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/constantly/test/test_constants.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/constantly/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_bigint_as_string.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_bitsize_int_as_string.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_check_circular.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_decimal.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_decode.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_default.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_dump.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_encode_basestring_ascii.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_errors.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_fail.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_float.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_for_json.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_hjson.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_indent.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_item_sort_key.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_namedtuple.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_pass1.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_pass2.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_pass3.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_recursion.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_scanstring.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_separators.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_tool.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_tuple.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_unicode.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/common.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_common.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_decoded_url.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_hypothesis.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_parse.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_scheme_registration.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_socket.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_url.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/tests/test_pyproject.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/tests/test_update.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/tests/test_version.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/tests/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect/tests/test_detector.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect/tests/test_language.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect/tests/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/examples/commoncrawl.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/examples/downloadfromfile.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/examples/downloadfromurl.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/examples/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib/tests/test_pqueue.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib/tests/test_queue.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib/tests/test_rrqueue.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib/tests/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/runner/test/test_exit.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/runner/test/test_pidfile.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/runner/test/test_runner.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/runner/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/test/test_internet.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/test/test_service.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/twist/test/test_options.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/twist/test/test_twist.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/twist/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/keydata.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/loopback.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/sk_dummy.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_address.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_agent.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_cftp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_channel.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_checkers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_ckeygen.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_conch.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_connection.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_default.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_endpoints.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_filetransfer.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_forwarding.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_helper.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_insults.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_keys.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_knownhosts.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_manhole.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_manhole_tap.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_mixin.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_openssh_compat.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_recvline.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_scripts.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_session.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_ssh.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_tap.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_telnet.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_text.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_transport.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_unix.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_userauth.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_window.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_cramauth.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_cred.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_digestauth.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_simpleauth.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_strcred.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/connectionmixins.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/fakeendpoint.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/modulehelpers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/process_cli.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/process_connectionlost.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/process_gireactornocompat.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/process_helper.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/reactormixins.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_abstract.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_address.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_asyncioreactor.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_base.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_baseprocess.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_cfreactor.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_core.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_default.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_defer_await.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_defer_yieldfrom.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_endpoints.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_epollreactor.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_error.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_fakes.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_fdset.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_filedescriptor.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_gireactor.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_glibbase.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_inlinecb.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_inotify.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_iocp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_kqueuereactor.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_main.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_newtls.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_pollingfile.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_posixbase.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_posixprocess.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_process.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_protocol.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_reactormixins.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_resolver.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_serialport.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_sigchld.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_socket.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_stdio.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_tcp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_testing.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_threads.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_time.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_tls.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_udp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_udp_internals.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_unix.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_win32events.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_win32serialport.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/_posixifaces.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/_win32ifaces.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_buffer.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_capture.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_file.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_filter.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_flatten.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_format.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_global.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_io.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_json.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_legacy.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_levels.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_logger.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_observer.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_stdlib.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_util.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/pop3testserver.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/rfc822.message",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_bounce.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_imap.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_mail.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_mailmail.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_options.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_pop3.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_pop3client.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_scripts.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_smtp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_cache.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_client.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_common.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_dns.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_examples.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_hosts.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_names.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_resolve.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_rfc1982.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_rootresolve.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_server.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_srvconnect.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_tap.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_util.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/test_ethernet.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/test_ip.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/test_rawudp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/test_tuntap.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/persisted/test/test_styles.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/persisted/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/receiver.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/test_base.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/test_nmea.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/test_sentence.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/test_parser.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/test_v1parser.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/test_v2parser.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/test_wrapper.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/test/test_basic.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/test/test_tls.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/deprecatedattributes.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/modules_helpers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/pullpipe.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/strategies.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_appdirs.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_components.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_deprecate.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_fakepwd.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_htmlizer.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_inotify.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_release.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_runtime.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_sendmsg.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_shellcomp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_syslog.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_systemd.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_textattributes.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_tzhelper.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_url.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_urlpath.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_util.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_win32.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_zippath.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_zipstream.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/runner/test/test_inetdconf.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/runner/test/test_procmon.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/runner/test/test_procmontap.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/runner/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/scripts/test/test_scripts.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/scripts/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/test_banana.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/test_jelly.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/test_pb.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/test_pbfailure.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/crash_test_dummy.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/iosim.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/mock_win32process.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/myrebuilder1.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/myrebuilder2.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/plugin_basic.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/plugin_extra1.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/plugin_extra2.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_cmdline.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_echoer.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_fds.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_getargv.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_getenv.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_linger.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_reader.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_signal.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_stdinreader.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_tester.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_tty.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_twisted.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/proto_helpers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/reflect_helper_IE.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/reflect_helper_VE.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/reflect_helper_ZDE.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/ssl_helpers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_consumer.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_halfclose.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_halfclose_buggy.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_halfclose_buggy_write.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_hostpeer.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_lastwrite.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_loseconn.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_producer.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_write.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_writeseq.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/testutils.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_abstract.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_adbapi.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_amp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_application.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_compat.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_context.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_cooperator.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_defer.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_dirdbm.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_error.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_factories.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_failure.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_fdesc.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_finger.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_formmethod.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_ftp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_ftp_options.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_htb.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_ident.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_internet.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_iosim.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_iutils.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_lockfile.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_log.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_logfile.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_loopback.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_main.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_memcache.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_modules.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_monkey.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_paths.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_pcp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_persisted.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_plugin.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_policies.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_postfix.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_process.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_protocols.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_randbytes.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_rebuild.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_reflect.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_roots.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_shortcut.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_sip.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_sni.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_sob.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_socks.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_ssl.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_sslverify.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_stateful.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_stdio.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_strerror.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_strports.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_task.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_tcp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_tcp_internals.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_text.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_threadable.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_threadpool.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_threads.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_tpfile.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_twistd.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_twisted.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_udp.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_unix.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_usage.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/_ca_with_intermediate.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/detests.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/erroneous.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/matchers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/mockcustomsuite.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/mockcustomsuite2.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/mockcustomsuite3.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/mockdoctest.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/moduleself.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/moduletest.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/novars.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/ordertests.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/packages.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/pyunitcases.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/sample.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/scripttest.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/skipping.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/suppression.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_assertions.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_asyncassertions.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_deferred.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_doctest.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_keyboard.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_loader.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_log.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_matchers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_output.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_plugins.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_pyunitcompat.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_reporter.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_runner.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_script.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_skip.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_suppression.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_testcase.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_tests.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_util.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_warning.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/weird.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/matchers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_distreporter.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_disttrial.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_matchers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_options.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_stream.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_worker.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_workerreporter.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_workertrial.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/injectionhelpers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/requesthelper.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_abnf.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_agent.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_cgi.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_client.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_distrib.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_domhelpers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_error.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_flatten.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_html.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_http.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_http2.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_httpauth.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_http_headers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_newclient.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_pages.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_proxy.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_resource.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_script.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_stan.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_static.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_tap.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_template.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_util.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_vhost.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_web.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_webclient.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_websocket.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_web__responses.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_wsgi.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_xml.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_xmlrpc.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/_util.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_basechat.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_basesupport.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_domish.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_irc.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_ircsupport.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_irc_service.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberclient.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabbercomponent.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabbererror.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberjid.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberjstrports.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabbersasl.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabbersaslmechanisms.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberxmlstream.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberxmppstringprep.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_service.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_tap.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_xishutil.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_xmlstream.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_xmpproutertap.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_xpath.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/test_convenience.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/test_memory.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/test_team.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/test_threadworker.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/basemapping.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_builtins.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_collections.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_idatetime.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_import_interfaces.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_io.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_numbers.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/__init__.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/advisory_testing.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/dummy.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/idummy.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/m1.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/odd.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_adapter.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_advice.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_compile_flags.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_coptimizations_declarations_import.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_declarations.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_document.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_element.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_exceptions.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_interface.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_interfaces.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_lookup_concurrency.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_odd_declarations.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_registry.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_ro.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_sorting.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_verify.py",
+          "caused_by_this_cleanup": true
+        },
+        {
+          "path": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/__init__.py",
+          "caused_by_this_cleanup": true
+        }
+      ],
+      "changed": [
+        {
+          "path": "README.md",
+          "expected_authorized_change": true
+        }
+      ]
+    },
+    {
+      "manifest": "hormuz_2026_data/body_collection_pilot_20261102_01/preservation_before.json",
+      "comparison": "SHA256_and_existence_read_only_no_existing_validator_executed",
+      "matches_current_snapshot": false,
+      "missing": [
+        {
+          "path": "hormuz_2026_data/05_article_index_v2.csv",
+          "caused_by_this_cleanup": false
+        }
+      ],
+      "changed": []
+    },
+    {
+      "manifest": "hormuz_2026_data/quality_audit_20261107_01/source_snapshot_before.json",
+      "comparison": "SHA256_and_existence_read_only_no_existing_validator_executed",
+      "matches_current_snapshot": true,
+      "missing": [],
+      "changed": []
+    },
+    {
+      "manifest": "hormuz_2026_data/metadata_selection_20261107_01/input_hashes_before.json",
+      "comparison": "SHA256_and_existence_read_only_no_existing_validator_executed",
+      "matches_current_snapshot": true,
+      "missing": [],
+      "changed": []
+    }
+  ],
+  "package_RECORD_intentional_missing_members": [
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/ago-0.1.1.dist-info/RECORD",
+      "intentionally_missing_members": 2,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/ago/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/ago/tests/test_ago.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/certifi-2026.10.23.dist-info/RECORD",
+      "intentionally_missing_members": 2,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/certifi/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/certifi/tests/test_certify.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/constantly-23.10.4.dist-info/RECORD",
+      "intentionally_missing_members": 2,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/constantly/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/constantly/test/test_constants.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson-3.1.0.dist-info/RECORD",
+      "intentionally_missing_members": 26,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_bigint_as_string.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_bitsize_int_as_string.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_check_circular.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_decimal.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_decode.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_default.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_dump.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_encode_basestring_ascii.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_errors.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_fail.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_float.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_for_json.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_hjson.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_indent.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_item_sort_key.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_namedtuple.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_pass1.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_pass2.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_pass3.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_recursion.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_scanstring.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_separators.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_tool.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_tuple.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hjson/tests/test_unicode.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink-21.0.0.dist-info/RECORD",
+      "intentionally_missing_members": 9,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/common.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_common.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_decoded_url.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_hypothesis.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_parse.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_scheme_registration.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_socket.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/hyperlink/test/test_url.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental-24.11.0.dist-info/RECORD",
+      "intentionally_missing_members": 4,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/tests/test_pyproject.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/tests/test_update.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/incremental/tests/test_version.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect-1.0.9.dist-info/RECORD",
+      "intentionally_missing_members": 3,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect/tests/test_detector.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/langdetect/tests/test_language.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/news_please-1.6.16.dist-info/RECORD",
+      "intentionally_missing_members": 4,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/examples/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/examples/commoncrawl.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/examples/downloadfromfile.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/newsplease/examples/downloadfromurl.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib-1.10.0.dist-info/RECORD",
+      "intentionally_missing_members": 4,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib/tests/test_pqueue.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib/tests/test_queue.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/queuelib/tests/test_rrqueue.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted-26.10.0.dist-info/RECORD",
+      "intentionally_missing_members": 421,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/test_convenience.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/test_memory.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/test_team.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/_threads/test/test_threadworker.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/runner/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/runner/test/test_exit.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/runner/test/test_pidfile.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/runner/test/test_runner.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/test/test_internet.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/test/test_service.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/twist/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/twist/test/test_options.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/application/twist/test/test_twist.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/keydata.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/loopback.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/sk_dummy.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_address.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_agent.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_cftp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_channel.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_checkers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_ckeygen.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_conch.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_connection.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_default.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_endpoints.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_filetransfer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_forwarding.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_helper.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_insults.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_keys.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_knownhosts.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_manhole.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_manhole_tap.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_mixin.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_openssh_compat.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_recvline.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_scripts.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_session.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_ssh.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_tap.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_telnet.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_text.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_transport.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_unix.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_userauth.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/conch/test/test_window.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_cramauth.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_cred.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_digestauth.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_simpleauth.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/cred/test/test_strcred.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/_posixifaces.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/_win32ifaces.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/connectionmixins.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/fakeendpoint.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/modulehelpers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/process_cli.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/process_connectionlost.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/process_gireactornocompat.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/process_helper.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/reactormixins.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_abstract.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_address.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_asyncioreactor.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_base.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_baseprocess.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_cfreactor.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_core.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_default.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_defer_await.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_defer_yieldfrom.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_endpoints.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_epollreactor.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_error.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_fakes.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_fdset.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_filedescriptor.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_gireactor.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_glibbase.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_inlinecb.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_inotify.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_iocp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_kqueuereactor.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_main.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_newtls.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_pollingfile.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_posixbase.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_posixprocess.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_process.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_protocol.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_reactormixins.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_resolver.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_serialport.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_sigchld.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_socket.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_stdio.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_tcp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_testing.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_threads.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_time.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_tls.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_udp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_udp_internals.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_unix.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_win32events.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/internet/test/test_win32serialport.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_buffer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_capture.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_file.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_filter.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_flatten.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_format.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_global.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_io.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_json.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_legacy.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_levels.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_logger.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_observer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_stdlib.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/logger/test/test_util.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/pop3testserver.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/rfc822.message",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_bounce.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_imap.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_mail.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_mailmail.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_options.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_pop3.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_pop3client.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_scripts.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/mail/test/test_smtp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_cache.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_client.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_common.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_dns.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_examples.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_hosts.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_names.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_resolve.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_rfc1982.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_rootresolve.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_server.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_srvconnect.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_tap.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/names/test/test_util.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/test_ethernet.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/test_ip.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/test_rawudp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/pair/test/test_tuntap.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/persisted/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/persisted/test/test_styles.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/receiver.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/test_base.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/test_nmea.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/positioning/test/test_sentence.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/test_parser.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/test_v1parser.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/test_v2parser.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/haproxy/test/test_wrapper.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/test/test_basic.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/protocols/test/test_tls.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/deprecatedattributes.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/modules_helpers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/pullpipe.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/strategies.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_appdirs.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_components.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_deprecate.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_fakepwd.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_htmlizer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_inotify.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_release.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_runtime.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_sendmsg.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_shellcomp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_syslog.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_systemd.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_textattributes.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_tzhelper.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_url.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_urlpath.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_util.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_win32.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_zippath.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/python/test/test_zipstream.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/runner/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/runner/test/test_inetdconf.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/runner/test/test_procmon.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/runner/test/test_procmontap.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/scripts/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/scripts/test/test_scripts.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/test_banana.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/test_jelly.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/test_pb.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/spread/test/test_pbfailure.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/_ca_with_intermediate.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/crash_test_dummy.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/iosim.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/mock_win32process.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/myrebuilder1.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/myrebuilder2.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/plugin_basic.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/plugin_extra1.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/plugin_extra2.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_cmdline.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_echoer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_fds.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_getargv.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_getenv.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_linger.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_reader.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_signal.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_stdinreader.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_tester.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_tty.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/process_twisted.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/proto_helpers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/reflect_helper_IE.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/reflect_helper_VE.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/reflect_helper_ZDE.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/ssl_helpers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_consumer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_halfclose.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_halfclose_buggy.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_halfclose_buggy_write.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_hostpeer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_lastwrite.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_loseconn.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_producer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_write.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/stdio_test_writeseq.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_abstract.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_adbapi.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_amp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_application.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_compat.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_context.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_cooperator.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_defer.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_dirdbm.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_error.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_factories.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_failure.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_fdesc.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_finger.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_formmethod.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_ftp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_ftp_options.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_htb.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_ident.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_internet.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_iosim.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_iutils.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_lockfile.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_log.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_logfile.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_loopback.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_main.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_memcache.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_modules.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_monkey.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_paths.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_pcp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_persisted.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_plugin.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_policies.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_postfix.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_process.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_protocols.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_randbytes.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_rebuild.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_reflect.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_roots.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_shortcut.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_sip.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_sni.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_sob.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_socks.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_ssl.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_sslverify.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_stateful.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_stdio.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_strerror.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_strports.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_task.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_tcp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_tcp_internals.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_text.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_threadable.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_threadpool.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_threads.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_tpfile.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_twistd.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_twisted.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_udp.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_unix.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/test_usage.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/test/testutils.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/matchers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_distreporter.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_disttrial.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_matchers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_options.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_stream.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_worker.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_workerreporter.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/_dist/test/test_workertrial.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/detests.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/erroneous.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/matchers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/mockcustomsuite.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/mockcustomsuite2.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/mockcustomsuite3.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/mockdoctest.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/moduleself.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/moduletest.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/novars.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/ordertests.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/packages.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/pyunitcases.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/sample.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/scripttest.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/skipping.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/suppression.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_assertions.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_asyncassertions.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_deferred.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_doctest.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_keyboard.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_loader.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_log.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_matchers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_output.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_plugins.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_pyunitcompat.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_reporter.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_runner.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_script.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_skip.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_suppression.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_testcase.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_tests.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_util.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/test_warning.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/trial/test/weird.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/_util.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/injectionhelpers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/requesthelper.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_abnf.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_agent.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_cgi.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_client.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_distrib.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_domhelpers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_error.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_flatten.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_html.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_http.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_http2.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_http_headers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_httpauth.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_newclient.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_pages.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_proxy.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_resource.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_script.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_stan.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_static.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_tap.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_template.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_util.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_vhost.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_web.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_web__responses.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_webclient.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_websocket.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_wsgi.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_xml.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/web/test/test_xmlrpc.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_basechat.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_basesupport.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_domish.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_irc.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_irc_service.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_ircsupport.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberclient.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabbercomponent.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabbererror.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberjid.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberjstrports.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabbersasl.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabbersaslmechanisms.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberxmlstream.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_jabberxmppstringprep.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_service.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_tap.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_xishutil.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_xmlstream.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_xmpproutertap.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/twisted/words/test/test_xpath.py"
+      ],
+      "record_modified": false
+    },
+    {
+      "record": "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope_interface-8.7.dist-info/RECORD",
+      "intentionally_missing_members": 30,
+      "files": [
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/basemapping.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_builtins.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_collections.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_idatetime.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_import_interfaces.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_io.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/common/tests/test_numbers.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/__init__.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/advisory_testing.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/dummy.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/idummy.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/m1.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/odd.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_adapter.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_advice.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_compile_flags.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_coptimizations_declarations_import.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_declarations.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_document.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_element.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_exceptions.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_interface.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_interfaces.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_lookup_concurrency.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_odd_declarations.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_registry.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_ro.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_sorting.py",
+        "hormuz_2026_data/body_collection_pilot_20261102_01/vendor/zope/interface/tests/test_verify.py"
+      ],
+      "record_modified": false
+    }
+  ],
+  "package_RECORD_integrity_claimed": false,
+  "original_survey_output_hash_checks": {
+    "PROJECT_CLEANUP_PLAN.md": true,
+    "PROJECT_FILE_INVENTORY.csv": true,
+    "docs/project_structure_review/deletion_candidates.csv": true,
+    "docs/project_structure_review/move_plan.csv": true
+  },
+  "missing_readme_links": [],
+  "new_network_requests": 0,
+  "network_bind_attempts_blocked": 1,
+  "existing_analysis_or_extractor_runs": 0,
+  "git_history_or_config_commands_issued": false,
+  "committed": false,
+  "pushed": false,
+  "limitations": [
+    "Imports and small pure local helper functions tested; no full extractor integration, COM registration or package test suite run.",
+    "One optional local socket.bind attempt during imports was denied by audit hook; no external requests permitted.",
+    "Selected package self-tests no longer fully available; dist-info RECORD deliberately remains a historical installed-file list.",
+    "The root README changed with explicit user authorization; stage1 preservation verification cannot pass unchanged against current snapshot."
+  ],
+  "after_file_count": 6853,
+  "after_bytes": 3240256580,
+  "after_directories": 1619,
+  "net_project_bytes_reduced": 2104661,
+  "new_files_since_before": [
+    "docs/project_structure_review/CLEANUP_EXECUTION_REPORT.md",
+    "docs/project_structure_review/cleanup_preflight.json",
+    "docs/project_structure_review/deletion_execution_ledger.csv",
+    "docs/project_structure_review/execute_cleanup.py",
+    "docs/project_structure_review/execution_before.json",
+    "docs/project_structure_review/finalize_cleanup.py",
+    "docs/project_structure_review/import_probe_after.json",
+    "docs/project_structure_review/import_probe_before.json",
+    "docs/project_structure_review/import_probe_execution_before.json",
+    "docs/project_structure_review/post_cleanup_validation.json",
+    "docs/project_structure_review/probe_correction.json",
+    "docs/project_structure_review/recovery_archive_validation.json",
+    "docs/project_structure_review/runtime_reference_details.json",
+    "docs/project_structure_review/vendor_cleanup_recovery.zip",
+    "hormuz_2026_data/corpus/README.md",
+    "hormuz_2026_data/runs/README.md",
+    "notebooks/README.md",
+    "scripts/README.md"
+  ]
+}
