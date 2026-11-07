@@ -59,3 +59,8 @@ hormuz_2026_data/
 - 실험 폴더 깊이, CSV/JSON에 저장된 절대 경로, 기존 해시 manifest를 임의로 고치지 않는다. 승인된 README 변경·패키지 정리로 과거 스냅샷과 차이가 생기면 실행 보고서에 남기며, 과거 검증을 통과한 것처럼 기록하지 않는다.
 - 프로젝트 수준의 완전한 의존성 lock은 아직 없다. 과거 실행 환경 버전은 [environment.json](hormuz_2026_data/body_collection_pilot_20261102_01/environment.json)과 설치 로그를 참고한다. `vendor/` 전체를 불필요한 캐시로 간주하지 않는다.
 - `.env`에는 비밀 설정이 있을 수 있다. 내용을 출력하거나 Git에 추가하지 않는다. `.gitignore`는 `.env`와 `hormuz_2026_data/` 전체를 제외한다. 데이터 폴더 내부의 코드·보고서도 자동으로 Git 백업되지 않는다는 점에 유의한다. commit/push와 원문 공개는 별도 작업이다.
+
+
+## Fixed-200 runner: limited parallel HTTP
+
+The existing `scripts/body_pilot_200.py` uses 4 HTTP workers by default; `--workers N` changes the limit. Per-host requests remain serial, with shared robots and rate controls. A single manager writes state/results and runs extraction. Default invocation remains offline dry-run; live collection still needs separate approval and domain-policy evidence. See [parallelization report](hormuz_2026_data/runs/body_pilot_200_20261107_01/parallelization_20261108_01/PARALLELIZATION_REPORT.md).
