@@ -50,3 +50,8 @@ hormuz_2026_data/
 # =========================
 *.log
 *.tmp
+
+# =========================
+# Archived (moved, not deleted) files
+# =========================
+_archive/
