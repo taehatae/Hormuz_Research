@@ -17,9 +17,27 @@ import numpy as np
 import pandas as pd
 
 from allocation import allocate, headroom, simulate_cross_block, week_blocks
-from common import load_candidates, load_config, project_path
+from common import load_candidates, load_config, load_gap_days, project_path
 
-PLAN_COLUMNS = ["article_id", "url", "domain", "published_date", "nc_paid_content", "nc_country"]
+
+def estimate_missing(daily_counts: pd.Series, gap: pd.Series, window: int) -> pd.DataFrame:
+    """Rough missing-volume estimate for gap days: the baseline is the median (and the
+    25th/75th percentiles as a low/high band) of non-gap days within a centred window;
+    the window widens (x2, x4) where it contains no non-gap day."""
+    normal = daily_counts.where(~gap)
+    est = pd.DataFrame(index=daily_counts.index)
+    for name, q in (("baseline_mid", 0.5), ("baseline_low", 0.25), ("baseline_high", 0.75)):
+        val = pd.Series(np.nan, index=daily_counts.index)
+        for w in (window, window * 2 + 1, window * 4 + 1):
+            r = normal.rolling(w, center=True, min_periods=1).quantile(q)
+            val = val.fillna(r)
+        est[name] = val
+    for name in ("mid", "low", "high"):
+        est[f"missing_{name}"] = np.where(gap, (est[f"baseline_{name}"] - daily_counts).clip(lower=0), 0.0)
+    return est
+
+PLAN_COLUMNS = ["article_id", "url", "domain", "published_date", "nc_paid_content", "nc_country",
+                "nc_published_date_precision"]
 EXAMPLE_DATES = ["2026-02-14", "2026-02-15", "2026-02-16", "2026-05-02", "2026-05-03",
                  "2026-05-07", "2026-05-08", "2026-08-31"]
 
@@ -122,8 +140,12 @@ def main() -> None:
                     last_week_days=len(blocks[-1]), daily_floor=f, quota_sum=int(quota.sum()))
         strata_info.append(info)
 
+    gapdays = load_gap_days(cfg).set_index("date")
     weeks = pd.DataFrame(week_rows)
     daily = pd.DataFrame(day_rows)
+    daily["collection_gap_type"] = daily["date"].map(gapdays["collection_gap_type"])
+    weeks["gap_days"] = [int(daily[(daily["week_id"] == w) & (daily["collection_gap_type"] != "none")].shape[0])
+                         for w in weeks["week_id"]]
     scen = pd.DataFrame(scen_rows)
     weeks.to_csv(out / "week_allocation.csv", index=False, encoding="utf-8-sig")
     daily.to_csv(out / "daily_allocation.csv", index=False, encoding="utf-8-sig")
@@ -178,6 +200,39 @@ def main() -> None:
                .reset_index().replace({"low_day": {True: "low_day (<30% of 7-day median)", False: "other days"}}))
     mid_cmp["days"] = mid_cmp["days"].astype(int)
 
+    # ---- collection limits: gap days, missing estimate, source skew, timezone ----
+    gc = cfg["gap_days"]
+    gap_soh = gapdays.index[gapdays["gap_soh"]].tolist()
+    gap_hs = gapdays.index[gapdays["gap_hs"]].tolist()
+    all_daily = df.groupby(df["date"].map(lambda d: d.isoformat())).size().reindex(gapdays.index, fill_value=0)
+    est = estimate_missing(all_daily, gapdays["collection_gap_day"].astype(bool), int(gc["missing_estimate_window_days"]))
+    est["month"] = est.index.str[:7]
+    est["rows"] = all_daily
+    miss_m = est.groupby("month").agg(rows=("rows", "sum"), missing_low=("missing_low", "sum"),
+                                       missing_mid=("missing_mid", "sum"), missing_high=("missing_high", "sum")).reset_index()
+    miss_m["gap_days"] = [int(gapdays.loc[gapdays.index.str[:7] == m, "collection_gap_day"].sum()) for m in miss_m["month"]]
+    miss_m["missing_mid_pct_of_estimated_total"] = 100 * miss_m["missing_mid"] / (miss_m["rows"] + miss_m["missing_mid"])
+    tot = {k: float(miss_m[k].sum()) for k in ["rows", "missing_low", "missing_mid", "missing_high"]}
+    miss_m = miss_m[["month", "gap_days", "rows", "missing_low", "missing_mid", "missing_high",
+                     "missing_mid_pct_of_estimated_total"]]
+    for col in ["rows", "missing_low", "missing_mid", "missing_high"]:
+        miss_m[col] = miss_m[col].round().astype(int)
+
+    prec = pop["nc_published_date_precision"].replace("", "(blank)")
+    is_gap = pop["collection_gap_day"].astype(bool)
+    skew = pd.DataFrame([{
+        "days": lbl, "articles": int(m.sum()),
+        "date_precision_share_pct": round(100 * (prec[m] == "date").mean(), 1),
+        "top10_domain_share_pct": round(100 * pop.loc[m, "domain_key"].value_counts().head(10).sum() / max(m.sum(), 1), 1),
+    } for lbl, m in (("collection_gap_day", is_gap), ("other days", ~is_gap))])
+    gap_top = (pop[is_gap]["domain_key"].value_counts().head(10).rename("gap_day_articles").reset_index())
+    other_share = pop[~is_gap]["domain_key"].value_counts(normalize=True)
+    gap_top["gap_day_share_pct"] = 100 * gap_top["gap_day_articles"] / is_gap.sum()
+    gap_top["other_day_share_pct"] = 100 * gap_top["domain_key"].map(other_share).fillna(0)
+    prec_counts_all = df["nc_published_date_precision"].replace("", "(blank)").value_counts().to_dict()
+    prec_counts_pop = prec.value_counts().to_dict()
+    supp_log = project_path(cfg["supplement"]["output_dir"]) / "requests.jsonl"
+
     # ---- summary ----
     summary = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -198,6 +253,11 @@ def main() -> None:
         "strata": strata_info,
         "scenarios": scen_rows,
         "zero_candidate_days": zero_days,
+        "gap_days_strait_of_hormuz": len(gap_soh), "gap_days_hormuz_strait": len(gap_hs),
+        "gap_type_counts": gapdays["collection_gap_type"].value_counts().to_dict(),
+        "estimated_missing_articles": {k: round(v) for k, v in tot.items()},
+        "published_date_precision_candidates": prec_counts_all,
+        "published_date_precision_population": prec_counts_pop,
         "nc_paid_content_recorded_only": pop["nc_paid_content"].replace("", "(blank)").value_counts().to_dict(),
     }
     (out / "plan_summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
@@ -210,7 +270,7 @@ def main() -> None:
         "candidates_per_target": round(s["candidates"] / s["target"], 2), "shortfall_at_plan": s["shortfall"],
     } for s in strata_info])
     week_view = weeks[["week_id", "week_start", "week_end", "days", "candidates", "quota", "floor_secured",
-                       "remainder_by_shuffle", "headroom_candidates_per_quota"]
+                       "remainder_by_shuffle", "headroom_candidates_per_quota", "gap_days"]
                       + [f"moved_out_{pct(p)}" for p in scen_p]]
     ex = daily[daily["date"].isin(EXAMPLE_DATES)][["date", "week_id", "candidates", "share_published_00_00_00",
                                                     "daily_floor_secured", "expected_successes_plan"]]
@@ -248,39 +308,81 @@ def main() -> None:
         "- 후보 수가 하루걸러 크게 오르내림(위상은 월 중간에 바뀌기도 함). `median_adjacent_day_ratio` = 인접한 두 날 "
         "후보 수의 큰 값/작은 값의 월별 중앙값.", "",
         md_table(osc), "",
-        "- 후보가 적은 날은 발행 시각이 정확히 00:00:00인 기사 비중이 매우 높다. git 기록의 원 수집 코드"
-        "(`bb85a6c:hormuz_2026_news_textmining_filtered.ipynb`)는 `from_`/`to_`에 시각 없는 `YYYY-MM-DD`를 넘기고, "
-        "결과가 9,000건을 넘으면 날짜 구간을 중간점에서 재귀 분할했다. API가 `to_` 날짜를 그날 00:00:00으로 해석했다면 "
-        "각 분할 구간의 마지막 날은 자정 기사만 들어가게 되어 이 패턴과 맞는다(추정, API 동작은 미검증).", "",
+        "- 후보가 적은 날은 발행 시각이 정확히 00:00:00인 기사 비중이 매우 높다. 원인은 원 수집 로그로 확인했다(2절).", "",
         md_table(mid_cmp), "",
-        "## 2. 사전 제외", "",
+        "## 2. 수집 한계", "",
+        "### 2.1 원인", "",
+        f"원 수집 노트북(`{gc['source_notebook']}`, git `bb85a6c`에서 복원, 실행 로그 포함)은 검색어 "
+        f"{' / '.join('`' + q + '`' for q in gc['queries'].values())}를 **따로** 요청했고, `from_`/`to_`에 **시각 없는 날짜만** 넘겼다. "
+        f"결과가 {gc['split_threshold_hits']:,}건을 넘으면 구간을 **[시작, 중간] / [중간+1, 끝]**으로 재귀 분할했다. "
+        "이때 각 구간은 마지막 날 00:00:00까지만 받아, **구간 마지막 날의 00:00:00 이후 기사가 어느 구간에도 포함되지 않았다**.",
+        "- 로그 검증: 마지막 단계 구간들의 hits 합 = 원본 CSV 행 수(440,260). 하루짜리 구간 52개의 hits와 그날 자정 기사 수의 "
+        "상관 0.999. 두 검색어 모두 공백인 날은 자정 외 기사가 0건.", "",
+        "### 2.2 공백일 (검색어별)", "",
+        f"목록 파일: `{gc['csv']}` (생성: `collection/gap_days.py`). 기사별로 `collection_gap_day`, `collection_gap_type`"
+        "(none / soh_only / both) 컬럼을 붙여 최종 CSV까지 전달한다.", "",
+        f"- `\"Strait of Hormuz\"` 공백일 **{len(gap_soh)}일**: " + ", ".join(gap_soh),
+        f"- `\"Hormuz Strait\"` 공백일 **{len(gap_hs)}일** (모두 위 목록과 겹침 → `both`): " + ", ".join(gap_hs),
+        f"- 유형별 일수: {summary['gap_type_counts']}", "",
+        "### 2.3 추정 누락 규모와 오차", "",
+        f"공백일마다 앞뒤 {gc['missing_estimate_window_days']}일 창(정상일이 없으면 창을 넓힘) 안의 정상 수집일 기사 수를 기준값으로 보고 "
+        "`기준값 − 실제 수`를 누락으로 추정했다. 중간값=중앙값 기준, 하한/상한=25/75 백분위 기준. 대상은 사전 제외 전 후보 전체(URL 중복 제거 후). "
+        "공백일이 연속으로 많은 3~4월은 기준이 되는 정상일이 적어 오차가 크다. 실제 보도량의 요일 효과·사건 효과는 반영하지 못하는 거친 추정이다.", "",
+        md_table(miss_m), "",
+        f"- 합계: 보유 {tot['rows']:,.0f}건, 추정 누락 약 **{tot['missing_mid']:,.0f}건** "
+        f"(범위 {tot['missing_low']:,.0f} ~ {tot['missing_high']:,.0f}건).", "",
+        "### 2.4 공백일 기사의 언론사 치우침", "",
+        "공백일에 남은 기사는 주로 발행 시각 없이 날짜만 있는 기사(`nc_published_date_precision = date`, 00:00:00으로 기록)와 "
+        "`\"Hormuz Strait\"` 검색 결과다. date 정밀도 기사는 일부 언론사에 몰려 있어 공백일 표본은 그쪽으로 치우친다. "
+        "주 단위 할당은 날짜별 분량만 맞출 뿐 이 구성 차이는 바로잡지 못한다(사전 제외 후 모집단 기준).", "",
+        md_table(skew), "",
+        "공백일 기사 상위 10개 도메인과 다른 날 비중:", "",
+        md_table(gap_top), "",
+        "### 2.5 시간대", "",
+        f"- `nc_published_date_precision` 분포(후보 전체): {prec_counts_all}",
+        f"- `timezone unknown` {prec_counts_all.get('timezone unknown', 0):,}건은 시간대 정보가 없는데 UTC로 간주해 날짜를 잘랐다. "
+        "실제 시간대에 따라 하루 앞뒤로 어긋날 수 있다. `date` 정밀도 기사는 시각이 없어 00:00:00으로 기록돼 있다.", "",
+        "### 2.6 보충 수집을 하지 않은 이유", "",
+        "- 공백일을 시각 포함 범위(`YYYY/mm/dd HH:MM:SS`)로 재요청하는 코드(`collection/supplement_fetch.py`)를 만들었으나, "
+        f"2026-11-08 하루치 테스트 요청이 HTTP 403(7일 체험판 만료)으로 거부됐다(기록: `{supp_log.relative_to(project_path('.')).as_posix()}`).",
+        "- NewsCatcher의 과거 기사 조회는 Enterprise 요금제에서만 가능하다(사용자 확인).",
+        "- 연구 목적상 시계열 분석보다 1~8월 전 기간 포괄과 언론사·국가 다양성이 중요하므로, 공백은 한계로 기록하고 진행한다. "
+        "접근이 생기면 `supplement_fetch.py`로 보충 수집을 재개한다.", "",
+        "## 3. 사전 제외", "",
         f"제외 {int(excl.sum()):,}건 → 모집단 **{len(pop):,}건**. 도메인 상한 단위(호스트에서 www.만 제거) "
         f"{summary['distinct_domain_keys_cap_unit']:,}개, 요청 간격 단위(등록 도메인) {summary['distinct_rate_limit_keys']:,}개.", "",
         md_table(excl_pat_tbl), "",
-        "## 3. 층별 요약", "", md_table(strata_tbl), "",
-        "## 4. 주별 할당", "",
+        "## 4. 층별 요약", "", md_table(strata_tbl), "",
+        "## 5. 주별 할당", "",
         "`floor_secured` = 하루 하한으로 확보하는 건수의 주 합계, `remainder_by_shuffle` = 주 전체 셔플 순서로 채우는 나머지. "
         "`moved_out_pNN` = 성공률 NN% 가정 시 그 주 후보로 채우지 못해 다른 주로 넘어가는 건수.", "",
         md_table(week_view), "",
-        "## 5. 성공률 가정별 재배분 규모 (계획용 추정)", "",
+        "## 6. 성공률 가정별 재배분 규모 (계획용 추정)", "",
         "모든 시도가 성공률 p로 성공한다고 가정. `daily_floor_short_filled_in_same_week` = 그날 후보로 하한을 못 채워 "
         "같은 주 다른 날이 메우는 건수, `moved_to_other_weeks` = 주 전체로도 못 채워 가까운 주로 넘어가는 건수, "
         "`unresolved_in_stratum` = 층 안 어느 주로도 못 메우는 건수.", "",
         md_table(scen), "",
-        "## 6. 예시 날짜 (계획상 기대 성공 건수)", "",
+        "## 7. 예시 날짜 (계획상 기대 성공 건수)", "",
         "`expected_successes_plan` = 하루 하한 + 주 나머지 × (그날 하한 외 후보 / 주 하한 외 후보). 모든 시도가 성공한다고 볼 때의 기대값. "
         "전체 표는 `plan/daily_allocation.csv`.", "",
         md_table(ex), "",
         "### 월별 후보 비중 vs 기대 성공 비중", "", md_table(month_tbl), "",
-        f"## 7. 도메인 상한({cap}건, 호스트에서 www.만 제거한 단위) 예상", "",
+        f"## 8. 도메인 상한({cap}건, 호스트에서 www.만 제거한 단위) 예상", "",
         "가정: 모든 도메인의 성공률이 같다고 볼 때의 기대 성공 건수. 실제로는 도메인별 실패율에 따라 달라진다.", "",
         f"- 상한 초과 예상: **{len(over)}개** (초과분 합계 약 {excess:,.0f}건), 상한의 "
         f"{int(cfg['plan_report']['domain_cap_warn_fraction'] * 100)}% 이상 근접: {len(near)}개", "",
         md_table(dom_view(pd.concat([over, near]))) if len(over) + len(near) else "(없음)", "",
-        f"## 8. 요청 간격 단위(등록 도메인, {interval}초) 상위 10개", "",
+        f"## 9. 요청 간격 단위(등록 도메인, {interval}초) 상위 10개", "",
         "전체 목록은 `plan/rate_limit_domains.csv`.", "", md_table(rl_view), "",
-        "## 9. 기록만 하는 값 (필터 미사용)", "",
+        "## 10. 기록만 하는 값 (필터 미사용)", "",
         f"- nc_paid_content: {summary['nc_paid_content_recorded_only']}", "",
+        "## 11. 후처리(5단계) 계획", "",
+        "- 근사 중복(통신사 재게재 등): MinHash로 그룹을 찾아 그룹 ID만 부여, 삭제하지 않음. 처리 방식은 결과를 보고 결정.",
+        "- 최종 분포: 층별·일별·월별, 도메인 수와 상위 도메인 점유율, nc_country(참고), 원 모집단과 비교, 할당 부족 날짜, "
+        "실패 사유 집계, 자동 제외 도메인과 그 모집단 비중, `collection_gap_type`별 분포.",
+        f"- 국가 검증: 최종 표본에서 기사 수 기준 상위 도메인(누적 약 "
+        f"{int(cfg['postprocess']['country_verification']['domain_coverage_share'] * 100)}%까지)의 언론사 소재국 검증 목록을 만들고 "
+        "nc_country와 대조한다. 검증 방법은 그 단계에서 정한다.", "",
     ]
     (out / "PLAN_REPORT.md").write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps({k: summary[k] for k in ["population_after_exclusion", "domains_expected_over_cap",

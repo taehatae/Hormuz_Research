@@ -1,0 +1,13 @@
+{
+  "source_notebook": "methods/hormuz_2026_news_textmining_filtered.ipynb",
+  "leaf_hits_total": 440260,
+  "soh_leaves": 117,
+  "soh_gap_days": 117,
+  "hs_leaves": 9,
+  "hs_gap_days": 9,
+  "gap_type_counts": {
+    "none": 126,
+    "soh_only": 108,
+    "both": 9
+  }
+}

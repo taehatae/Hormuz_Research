@@ -4,7 +4,7 @@
   "input_columns": [
     "article_id", "url", "domain", "title", "published_date",
     "nc_word_count", "nc_content_snippet", "nc_paid_content",
-    "nc_country", "nc_source_name"
+    "nc_country", "nc_source_name", "nc_published_date_precision"
   ],
   "date_column": "published_date",
   "date_timezone_assumption": "UTC",
@@ -62,6 +62,25 @@
     "min_body_words": 150,
     "required_keyword": "hormuz",
     "snippet_match_chars": 120
+  },
+
+  "gap_days": {
+    "csv": "collection/collection_gap_days.csv",
+    "source_notebook": "methods/hormuz_2026_news_textmining_filtered.ipynb",
+    "log_marker": "결과가 많아 날짜를 분할합니다",
+    "split_threshold_hits": 9000,
+    "queries": {"soh": "\"Strait of Hormuz\"", "hs": "\"Hormuz Strait\""},
+    "missing_estimate_window_days": 7
+  },
+
+  "postprocess": {
+    "near_duplicate": {"method": "minhash", "action": "assign_group_id_only"},
+    "country_verification": {
+      "domain_coverage_share": 0.80,
+      "coverage_basis": "final_sample_article_count",
+      "compare_with": "nc_country",
+      "method": "to_be_decided_at_stage_5"
+    }
   },
 
   "supplement": {

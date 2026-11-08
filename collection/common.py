@@ -90,4 +90,22 @@ def load_candidates(cfg: dict, columns: list[str] | None = None) -> pd.DataFrame
     df["domain_key"] = df["domain"].map(lambda h: domain_key(h, strip))
     df["rate_limit_key"] = df["domain"].map(registrable_domain)
     df["excluded_by"] = df["domain"].map(lambda h: excluded_pattern(h, cfg["excluded_domains"]))
+    add_gap_columns(df, cfg)
     return df
+
+
+def load_gap_days(cfg: dict) -> pd.DataFrame:
+    """Per-day gap list built by gap_days.py from the original collection log."""
+    path = project_path(cfg["gap_days"]["csv"])
+    if not path.exists():
+        raise FileNotFoundError(f"{path} missing; run collection/gap_days.py first")
+    return pd.read_csv(path, dtype={"date": str})
+
+
+def add_gap_columns(df: pd.DataFrame, cfg: dict) -> None:
+    """collection_gap_day (bool) and collection_gap_type (none/soh_only/both) by article date.
+    Dates outside the gap table (should not occur) get NA so they are visible, not silently 'none'."""
+    g = load_gap_days(cfg).set_index("date")
+    key = df["date"].map(lambda d: d.isoformat() if pd.notna(d) else None)
+    df["collection_gap_day"] = key.map(g["collection_gap_day"])
+    df["collection_gap_type"] = key.map(g["collection_gap_type"])
