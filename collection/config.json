@@ -51,7 +51,12 @@
     "retry_on_status": [429, 500, 502, 503, 504],
     "robots_timeout_sec": 10,
     "domain_consecutive_block_limit": 5,
-    "save_html_gzip": true
+    "blocked_failure_reasons": ["http_401", "http_403", "http_451", "http_429", "cloudflare_challenge"],
+    "save_html_gzip": true,
+    "html_dir": "html",
+    "max_html_bytes": 15000000,
+    "accept_header": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.5",
+    "robots_user_agent_token": "HormuzNewsResearchBot"
   },
 
   "extract": {
@@ -61,7 +66,21 @@
     "with_metadata": true,
     "min_body_words": 150,
     "required_keyword": "hormuz",
-    "snippet_match_chars": 120
+    "snippet_match_chars": 120,
+    "snippet_window_step": 10,
+    "language_detect_chars": 3000,
+    "boilerplate_share_threshold": 0.5,
+    "paywall_patterns": [
+      "subscribe to (continue|read)", "to continue reading", "already a subscriber", "subscribers? only",
+      "for subscribers", "subscription required", "become a (member|subscriber)", "unlock (this|full) (article|story)",
+      "this (article|content) is (for|available to) (paid )?(subscribers|members)", "start your (free )?trial",
+      "you have reached your (free )?(article )?limit", "read the full (article|story) (with|by subscribing)"
+    ],
+    "boilerplate_patterns": [
+      "\\bcookies?\\b", "privacy policy", "accept all", "manage (your )?(preferences|consent)",
+      "sign in", "log ?in", "create (a|an) (free )?account", "register (now|for free|to)", "enable javascript",
+      "ad ?blocker", "are you a robot", "verify you are human"
+    ]
   },
 
   "gap_days": {
@@ -104,8 +123,12 @@
   },
 
   "runs": {
-    "trial_attempts": 100,
-    "pilot_attempts": 2000,
-    "progress_log_every": 500
+    "db": "collection.sqlite3",
+    "stages": {"smoke": 100, "pilot": 2000, "main": null},
+    "progress_log_every": 500,
+    "dispatch_scan_limit": 300,
+    "anomaly_check_after": 20,
+    "anomaly_max_pre_request_skip_share": 0.8,
+    "anomaly_min_fetch_ok": 1
   }
 }
