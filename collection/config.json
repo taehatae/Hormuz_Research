@@ -1,0 +1,72 @@
+{
+  "input_csv": "hormuz_2026_data/05_extraction_candidates_v2.csv",
+  "output_dir": "hormuz_2026_data/body_collection_v3",
+  "input_columns": [
+    "article_id", "url", "domain", "title", "published_date",
+    "nc_word_count", "nc_content_snippet", "nc_paid_content",
+    "nc_country", "nc_source_name"
+  ],
+  "date_column": "published_date",
+  "date_timezone_assumption": "UTC",
+  "research_period": {"start": "2026-01-01", "end": "2026-08-31"},
+
+  "excluded_domains": [
+    "wn.com", "msn.com", "yahoo.com", "newsbreak.com", "headtopics.com",
+    "ground.news", "dailyhunt.in", "custommapposter.com", "news-pravda.com"
+  ],
+
+  "sampling": {
+    "target_success_total": 40000,
+    "random_seed": 2026,
+    "strata": [
+      {"name": "pre_war",  "start": "2026-01-01", "end": "2026-02-27", "target": 2000,  "daily_floor": 5},
+      {"name": "post_war", "start": "2026-02-28", "end": "2026-08-31", "target": 38000, "daily_floor": 20}
+    ],
+    "allocation_unit": "week_block",
+    "block_days": 7,
+    "within_block_order": "daily_floor_first_then_block_shuffle",
+    "shortfall_fill": ["same_block_other_days", "nearest_block_alternating"],
+    "nearest_block_previous_first": true,
+    "domain_cap_share": 0.01,
+    "domain_cap_unit": "host_without_www",
+    "domain_key_strip_www": true
+  },
+
+  "plan_report": {
+    "low_headroom_ratio": 3.0,
+    "domain_cap_warn_fraction": 0.75,
+    "success_rate_scenarios": [0.3, 0.5, 0.7]
+  },
+
+  "fetch": {
+    "user_agent": "HormuzNewsResearchBot/0.3 (academic text-mining research; non-commercial)",
+    "per_domain_min_interval_sec": 2.0,
+    "rate_limit_unit": "registrable_domain",
+    "tldextract_use_bundled_suffix_list_only": true,
+    "max_workers": 8,
+    "connect_timeout_sec": 10,
+    "read_timeout_sec": 30,
+    "max_retries": 2,
+    "backoff_base_sec": 2.0,
+    "retry_on_status": [429, 500, 502, 503, 504],
+    "robots_timeout_sec": 10,
+    "domain_consecutive_block_limit": 5,
+    "save_html_gzip": true
+  },
+
+  "extract": {
+    "extractor": "trafilatura",
+    "include_comments": false,
+    "favor_precision": true,
+    "with_metadata": true,
+    "min_body_words": 150,
+    "required_keyword": "hormuz",
+    "snippet_match_chars": 120
+  },
+
+  "runs": {
+    "trial_attempts": 100,
+    "pilot_attempts": 2000,
+    "progress_log_every": 500
+  }
+}
