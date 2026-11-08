@@ -64,6 +64,26 @@
     "snippet_match_chars": 120
   },
 
+  "supplement": {
+    "output_dir": "hormuz_2026_data/supplement_20261108",
+    "api_url": "https://v3-api.newscatcherapi.com/api/search",
+    "api_key_env": "NEWSCATCHER_API_KEY",
+    "dotenv_path": ".env",
+    "request_body_fixed": {
+      "lang": "en",
+      "exclude_duplicates": true,
+      "sort_by": "date",
+      "page_size": 1000
+    },
+    "datetime_format": "%Y/%m/%d %H:%M:%S",
+    "day_start_time": "00:00:00",
+    "day_end_time": "23:59:59",
+    "split_threshold_hits": 9000,
+    "timeout_sec": 90,
+    "max_retries": 5,
+    "page_sleep_sec": 0.3
+  },
+
   "runs": {
     "trial_attempts": 100,
     "pilot_attempts": 2000,
