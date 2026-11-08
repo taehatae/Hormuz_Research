@@ -12,6 +12,9 @@ ATTEMPT_COLUMNS = [
     "language_detected", "body_sha1", "stratum", "date", "week_id", "domain", "domain_key", "rate_limit_key",
     "attempted_at", "stage", "request_sent", "fetch_attempts", "elapsed_sec", "content_type", "html_path",
     "paywall_share", "boilerplate_share", "title_extracted", "extractor_version",
+    "hormuz_mention_count", "strait_of_hormuz_count",
+    "title_has_hormuz", "page_type_suspect", "sentence_count", "title_body_overlap", "body_near_title",
+    "non_alpha_ratio", "over_10000_words", "code_token_density", "judged_with",
 ]
 
 SCHEMA = f"""
@@ -34,6 +37,10 @@ class Store:
         self.con = sqlite3.connect(path, check_same_thread=False, isolation_level=None)
         self.con.execute("PRAGMA journal_mode=WAL")
         self.con.executescript(SCHEMA)
+        existing = {r[1] for r in self.con.execute("PRAGMA table_info(attempts)")}
+        for c in ATTEMPT_COLUMNS:  # forward-compatible: add columns introduced after the DB was created
+            if c not in existing:
+                self.con.execute(f"ALTER TABLE attempts ADD COLUMN {c}")
         self.lock = threading.Lock()
 
     def close(self) -> None:

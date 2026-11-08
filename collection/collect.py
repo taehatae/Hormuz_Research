@@ -32,6 +32,7 @@ from sampling import build_frame, stratum_neighbours
 from store import Store, now
 
 EXTRACTOR_VERSION = f"trafilatura {trafilatura.__version__}"
+JUDGE_VERSION = "criteria_v2"  # v2: 100 words, en, ratio>=0.5, sentence-level boilerplate, code_or_markup, page types
 
 
 class Runner:
@@ -43,7 +44,7 @@ class Runner:
         self.pop, self.weeks = build_frame(cfg)
         self.cap = int(round(cfg["sampling"]["domain_cap_share"] * cfg["sampling"]["target_success_total"]))
         self.budget = self.rc["stages"][stage]
-        self.block_reasons = set(self.fc["blocked_failure_reasons"]) | {"paywall"}
+        self.block_reasons = set(self.fc["domain_skip_failure_reasons"])
         self.prev_first = bool(cfg["sampling"]["nearest_block_previous_first"])
         self._restore()
 
@@ -69,7 +70,7 @@ class Runner:
         self.stage_stats = Counter()
 
     def _update_consec(self, dom: str, reason: str | None, record_event: bool = True) -> None:
-        if reason in ("domain_skipped_after_failures", "domain_cap", "robots_disallow"):
+        if reason in ("domain_skipped_after_failures", "domain_cap", "robots_disallow", "pre_excluded_domain"):
             return
         if reason in self.block_reasons:
             self.consec[dom] += 1
@@ -168,10 +169,11 @@ class Runner:
             rec["extract_status"] = "not_attempted"
             return rec, None
         rec["html_path"] = self.fetcher.save_html(p["article_id"], f["content"])
-        ex = extract_and_judge(f["content"], f["final_url"] or p["url"], p["nc_content_snippet"],
+        ex = extract_and_judge(f["content"], p["url"], f["final_url"], p["title"], p["nc_content_snippet"],
                                p["nc_word_count"], self.ec, set())
         body = ex.pop("body")
         rec.update(ex)
+        rec["judged_with"] = JUDGE_VERSION
         rec["attempted_at"] = now()
         return rec, body
 

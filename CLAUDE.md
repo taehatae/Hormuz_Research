@@ -55,7 +55,7 @@ nc_paid_content, nc_country, nc_source_name, nc_published_date_precision`
 ## 확정된 설계
 
 ### 사전 제외 도메인 (재게시·애그리게이터·비뉴스)
-`wn.com, msn.com, yahoo.com, newsbreak.com, headtopics.com, ground.news, dailyhunt.in, custommapposter.com, news-pravda.com`
+`wn.com, msn.com, yahoo.com, newsbreak.com, headtopics.com, ground.news, dailyhunt.in, custommapposter.com, news-pravda.com, biztoc.com`
 — 서브도메인 포함 접미사 매칭. 제외 건수와 도메인별 건수를 리포트에 남긴다.
 
 ### 표본 할당
@@ -72,28 +72,45 @@ nc_paid_content, nc_country, nc_source_name, nc_published_date_precision`
 ### 요청 (fetch)
 - `requests` 사용. User-Agent는 연구용 클라이언트임을 밝히는 일반적인 이름이며 이메일은 넣지 않는다.
 - **같은 등록 도메인**(tldextract 내장 목록 기준, 예: `indiatimes.com`)에는 최소 2초 간격. 동시성은 도메인 간 분산.
+- 동시 작업 16개, 연결 타임아웃 10초, 읽기 타임아웃 20초.
 - 재시도: 5xx, 429, timeout, 일시적 연결 오류만 지수 백오프로 최대 2회.
-- 도메인 자동 제외(실제 결과 기반): 한 도메인에서 연속 5건이 모두 blocked/paywall이면 그 도메인의 나머지를 건너뛰고
-  `domain_skipped_after_failures`로 기록한다.
+- 도메인 자동 제외(실제 결과 기반): 한 도메인에서 연속 5건이 모두 `http_403`·`cloudflare_challenge`·`paywall`이면
+  그 도메인의 나머지를 건너뛰고 `domain_skipped_after_failures`로 기록한다. 그 밖의 실패(`code_or_markup`, `partial_body`,
+  `http_429`, `http_401` 등)는 이 집계에 넣지 않는다.
 - 성공적으로 받은 HTML은 gzip으로 저장한다(config로 끌 수 있음).
 
 ### 추출과 성공 판정
 - 추출기는 **trafilatura 단독**: `include_comments=False, favor_precision=True, with_metadata=True`.
-- **성공** = 모두 만족:
-  1. 본문 150단어 이상
-  2. 본문에 `hormuz` 포함(대소문자 무시)
-  3. 페이월·구독·쿠키·로그인 안내 문구 위주가 아님
-  4. 정규화한 본문 해시가 이미 성공한 기사와 같지 않음(완전 중복 제거)
-- **기록만 하는 품질 지표**(성공 기준 아님. 파일럿 결과를 보고 반영 여부 결정):
+- **성공** = 아래를 모두 만족(파일럿 후 확정, `criteria_v2`). 위에서부터 처음 걸린 항목이 `failure_reason`:
+  1. URL 경로에 `/topic/`, `/tag/`, `/tags/`, `/category/`가 없음 → 있으면 `non_article_page`(받은 뒤 판정)
+  2. 본문 대부분이 코드·CSS·마크업이 아님(코드 토큰 100단어당 5개 미만) → `code_or_markup`
+  3. 페이월·구독 안내 문구 위주가 아님(문장 단위 단어 비중 50% 미만, 100단어 미만이면서 페이월 문구가 있으면 페이월) → `paywall`
+  4. 쿠키·로그인·동의 등 안내 문구 위주가 아님(문장 단위) → `boilerplate_only`
+  5. 본문 **100단어** 이상 → `too_short`
+  6. `words_ratio_to_nc` ≥ 0.5 (nc_word_count가 없거나 0이면 적용하지 않음) → `partial_body`
+  7. 본문에 `hormuz` 포함(대소문자 무시) → `no_hormuz`
+  8. `language_detected` = `en` → `not_english`
+  9. 정규화한 본문 해시가 이미 성공한 기사와 같지 않음(완전 중복 제거) → `exact_duplicate`
+- 라이브 블로그(URL에 `/live/`, `/live-updates/`, `/liveblog/`, `/live-news/` 등)는 `page_type_suspect = live`로 표시만 하고 판정은 그대로.
+- **기록만 하는 품질 지표**(성공 기준 아님):
   `words_ratio_to_nc`(추출 단어 수 / nc_word_count), `snippet_match`(snippet 앞 약 120자를 공백·따옴표 정규화한 뒤 본문 포함 여부,
-  미포함 시 가장 비슷한 구간과의 유사도), `language_detected`.
+  미포함 시 가장 비슷한 구간과의 유사도), `language_detected`,
+  `hormuz_mention_count`(본문 내 "hormuz" 등장 횟수), `strait_of_hormuz_count`("strait of hormuz" 또는 "hormuz strait" 등장 횟수),
+  `title_has_hormuz`(NewsCatcher 제목에 "hormuz" 포함) — 모두 대소문자 무시,
+  `sentence_count`, `title_body_overlap`(제목 단어 중 본문 첫 100단어에 나오는 비율), `body_near_title`(본문이 제목과 거의 같음),
+  `non_alpha_ratio`(공백 제외 문자 중 알파벳·숫자·일반 구두점이 아닌 비율), `over_10000_words`, `code_token_density`,
+  `paywall_share`, `boilerplate_share`, `page_type_suspect`.
+- 성공 기준을 바꾸면 저장된 HTML로 다시 판정한다(`python collection/rejudge.py`, 실행 전 DB 백업, 변경 내역은 `rejudge_log`).
+  관련성(호르무즈 언급 횟수·제목 포함)은 성공 기준이 아니라 분석 단계 변수다.
 
 ### 기록
 - 시도한 모든 URL을 한 줄씩 즉시 기록(jsonl 또는 SQLite). 중단 후 재개할 수 있어야 한다.
   필드: `article_id, url, final_url, http_status, fetch_status, extract_status, failure_reason, robots_note, body_word_count,
-  words_ratio_to_nc, snippet_match, has_hormuz, language_detected, body_sha1, stratum, date, domain, attempted_at`
-- `failure_reason` 예: `http_403, http_404, cloudflare_challenge, paywall, timeout, too_short, no_hormuz, boilerplate_only,
-  exact_duplicate, robots_disallow, domain_skipped_after_failures, domain_cap`
+  words_ratio_to_nc, snippet_match, has_hormuz, hormuz_mention_count, strait_of_hormuz_count, title_has_hormuz, language_detected,
+  body_sha1, stratum, date, domain, attempted_at` + 위의 기록용 품질 지표
+- `failure_reason` 예: `http_403, http_404, cloudflare_challenge, paywall, timeout, non_article_page, code_or_markup, boilerplate_only,
+  too_short, partial_body, no_hormuz, not_english, exact_duplicate, robots_disallow, domain_skipped_after_failures, domain_cap,
+  pre_excluded_domain`(수집 후 사전 제외 목록에 추가된 도메인)
 - 최종 CSV: 원본 컬럼 + `body, body_word_count`, 품질 지표, `extractor_version, extracted_at`,
   `collection_gap_day, collection_gap_type, nc_published_date_precision`.
 

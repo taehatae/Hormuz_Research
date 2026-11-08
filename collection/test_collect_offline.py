@@ -66,16 +66,60 @@ class Tests(unittest.TestCase):
     def setUpClass(cls):
         cls.cfg = load_config()
 
+    def judge(self, html, url="https://x.test/news/a", title="Tanker traffic in Hormuz", snippet="", nc="200",
+              hashes=frozenset()):
+        return extract_and_judge(html, url, None, title, snippet, nc, self.cfg["extract"], set(hashes))
+
     def test_extract_success_and_paywall(self):
-        ec = self.cfg["extract"]
-        ok = extract_and_judge(ARTICLE, "https://x.test/a", "Paragraph 0: shipping through the Strait of Hormuz",
-                               "200", ec, set())
+        ok = self.judge(ARTICLE, snippet="Paragraph 0: shipping through the Strait of Hormuz")
         self.assertEqual(ok["extract_status"], "success", ok["failure_reason"])
         self.assertTrue(ok["snippet_contained"])
-        dup = extract_and_judge(ARTICLE, "https://x.test/a", "", "200", ec, {ok["body_sha1"]})
+        self.assertTrue(ok["title_has_hormuz"])
+        self.assertGreaterEqual(ok["sentence_count"], 12)
+        self.assertFalse(ok["over_10000_words"])
+        dup = self.judge(ARTICLE, hashes={ok["body_sha1"]})
         self.assertEqual(dup["failure_reason"], "exact_duplicate")
-        pw = extract_and_judge(PAYWALL, "https://x.test/b", "", "500", ec, set())
+        pw = self.judge(PAYWALL, nc="500")
         self.assertEqual(pw["failure_reason"], "paywall")
+
+    def test_new_criteria(self):
+        # words ratio: 192 body words vs nc 1000 -> partial; nc missing -> rule not applied
+        self.assertEqual(self.judge(ARTICLE, nc="1000")["failure_reason"], "partial_body")
+        self.assertEqual(self.judge(ARTICLE, nc="")["extract_status"], "success")
+        self.assertEqual(self.judge(ARTICLE, nc="0")["extract_status"], "success")
+        # listing page by URL path; live blogs only flagged
+        self.assertEqual(self.judge(ARTICLE, url="https://x.test/topic/iran")["failure_reason"], "non_article_page")
+        live = self.judge(ARTICLE, url="https://x.test/live-news/iran-war-08-08")
+        self.assertEqual((live["extract_status"], live["page_type_suspect"]), ("success", "live"))
+        # 100-word floor
+        short = ("<html><body><article>" + "".join(
+            f"<p>Sentence {i} about the Strait of Hormuz and shipping lanes today.</p>" for i in range(11))
+                 + "</article></body></html>").encode()
+        r = self.judge(short, nc="")
+        self.assertTrue(100 <= r["body_word_count"] < 150, r["body_word_count"])
+        self.assertEqual(r["extract_status"], "success")
+        # one long paragraph mentioning 'sign in' once is not boilerplate (sentence-level share)
+        longp = ("<html><body><article><p>" + " ".join(
+            f"Tankers waited near the Strait of Hormuz on day {i} as insurers reviewed cover." for i in range(25))
+                 + " Readers can sign in to save articles.</p></article></body></html>").encode()
+        self.assertEqual(self.judge(longp, nc="")["extract_status"], "success")
+        # code / CSS body
+        css = ("<html><body><article><p>" + " ".join(
+            ".btn{font-size:17px;max-width:500px;} @media (min-width: 768px){.share{box-sizing:border-box;}}"
+            for _ in range(30)) + " Hormuz</p></article></body></html>").encode()
+        self.assertEqual(self.judge(css, nc="")["failure_reason"], "code_or_markup")
+        # language
+        fr = ("<html><body><article>" + "".join(
+            f"<p>Le détroit d'Ormuz (Hormuz) reste fermé aux pétroliers selon les autorités, jour {i}.</p>"
+            for i in range(15)) + "</article></body></html>").encode()
+        self.assertEqual(self.judge(fr, nc="")["failure_reason"], "not_english")
+
+    def test_mention_counts(self):
+        from extract import mention_counts
+        self.assertEqual(mention_counts("The Strait of Hormuz... HORMUZ STRAIT and hormuz island; strait  of\nhormuz"), (4, 3))
+        ok = self.judge(ARTICLE)
+        self.assertEqual((ok["hormuz_mention_count"], ok["strait_of_hormuz_count"]), (12, 12))
+        self.assertEqual(ok["extract_status"], "success")  # recorded only, not a criterion
 
     def test_snippet_similarity(self):
         c, s = snippet_match("The strait of hormuz is closed to tanker traffic today, officials said on monday",

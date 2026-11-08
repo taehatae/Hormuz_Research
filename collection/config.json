@@ -12,7 +12,7 @@
 
   "excluded_domains": [
     "wn.com", "msn.com", "yahoo.com", "newsbreak.com", "headtopics.com",
-    "ground.news", "dailyhunt.in", "custommapposter.com", "news-pravda.com"
+    "ground.news", "dailyhunt.in", "custommapposter.com", "news-pravda.com", "biztoc.com"
   ],
 
   "sampling": {
@@ -43,15 +43,16 @@
     "per_domain_min_interval_sec": 2.0,
     "rate_limit_unit": "registrable_domain",
     "tldextract_use_bundled_suffix_list_only": true,
-    "max_workers": 8,
+    "max_workers": 16,
     "connect_timeout_sec": 10,
-    "read_timeout_sec": 30,
+    "read_timeout_sec": 20,
     "max_retries": 2,
     "backoff_base_sec": 2.0,
     "retry_on_status": [429, 500, 502, 503, 504],
     "robots_timeout_sec": 10,
     "domain_consecutive_block_limit": 5,
     "blocked_failure_reasons": ["http_401", "http_403", "http_451", "http_429", "cloudflare_challenge"],
+    "domain_skip_failure_reasons": ["http_403", "cloudflare_challenge", "paywall"],
     "save_html_gzip": true,
     "html_dir": "html",
     "max_html_bytes": 15000000,
@@ -64,7 +65,14 @@
     "include_comments": false,
     "favor_precision": true,
     "with_metadata": true,
-    "min_body_words": 150,
+    "min_body_words": 100,
+    "required_language": "en",
+    "min_words_ratio_to_nc": 0.5,
+    "code_token_density_per_100_words": 5.0,
+    "non_article_path_patterns": ["/topic/", "/tag/", "/tags/", "/category/"],
+    "live_path_patterns": ["/live/", "/live-updates/", "/liveblog/", "/live-blog/", "/live-news/", "-live-updates-", "-liveblog-", "-live-blog-"],
+    "title_overlap_head_words": 100,
+    "over_words_flag": 10000,
     "required_keyword": "hormuz",
     "snippet_match_chars": 120,
     "snippet_window_step": 10,
