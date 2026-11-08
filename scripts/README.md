@@ -1,5 +1,3 @@
-# 신규 운영 코드
+# Shared research modules
 
-앞으로 작성할 수집 후보 선정·수집·품질 검증 코드를 저장한다. 아직 운영 코드를 이곳으로 이식하거나 새 수집을 실행하지 않았다. 기존 실험 코드는 원래 위치를 유지한다.
-
-프로젝트 루트·입력·새 출력 경로를 명시적으로 받아 기존 자료 덮어쓰기를 방지한다. 현재 진입점은 [프로젝트 안내](../README.md)다.
+The live collection entry point is section 28 of the root hormuz_textminig_v2.ipynb (settings cell 59, execution cell 60). body_pilot_200.py supplies shared automatic access, storage and recovery primitives; its CLI reads status only. candidate_selection_rules.py and select_distributed_candidates.py reproduce existing metadata classification. prepare_body_pilot_200.py reproduces the historical fixed sample without creating approval files. Existing offline regression tests are retained; do not execute historical crawlers as import checks.

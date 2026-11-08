@@ -26,8 +26,8 @@ class RobotsRegression(unittest.TestCase):
             def close(self):pass
         with patch('body_pilot_200.threading.Timer',Timer),patch('http.client.HTTPConnection',Conn),self.assertRaises(p.ReviewNeeded):
             p.NativeTransport(p.default_config()).get_validated('http://example.org/mock',1000,dict(host='example.org',port=80,scheme='http',path='/mock',ip='93.184.216.34'))
-    def test_unreviewed_or_denied_terms_before_DNS(self):
-        for policy,exc in [({},p.ReviewNeeded),({'terms_reviewed':True,'allowed':False},p.PolicyBlocked)]:
+    def test_confirmed_restrictions_before_DNS(self):
+        for policy,exc in [({'restriction_type':'conditional_unresolved'},p.ReviewNeeded),({'restriction_type':'prohibited'},p.PolicyBlocked)]:
             g,t,c=gateway([]);g.policies={'example.org':policy};calls=[]
             g.guard=p.URLGuard(resolver=lambda h,port:calls.append(h))
             with self.assertRaises(exc):g.article('https://example.org/mock/1')
@@ -52,7 +52,7 @@ class RobotsRegression(unittest.TestCase):
         for code in [404,410]:
             g,t,c=gateway([(code,{},b''),(200,{'content-type':'text/html'},HTML)])
             self.assertEqual(g.article('https://example.org/mock/1').status,200)
-        for code,exc in [(401,p.PolicyBlocked),(403,p.PolicyBlocked),(429,p.RetryLater),(503,p.RetryLater)]:
+        for code,exc in [(401,p.ReviewNeeded),(403,p.ReviewNeeded),(429,p.RetryLater),(503,p.RetryLater)]:
             g,t,c=gateway([(code,{},b'')])
             with self.assertRaises(exc):g.article('https://example.org/mock/1')
             self.assertEqual(len(t.calls),1)
@@ -91,6 +91,13 @@ class RobotsRegression(unittest.TestCase):
 class OutcomeRegression(unittest.TestCase):
     setUp=fixtures.StateTests.setUp
     tearDown=fixtures.StateTests.tearDown
+    def test_legacy_robots_block_can_recheck_but_still_obeys_disallow(self):
+        rows=self.store.load();rows[0].update(status='policy_blocked',error_type='robots_HTTP_403',attempts='1');self.store.save(rows)
+        g,t,c=gateway([(200,{},b'User-agent: *\nDisallow: /')])
+        p.Engine(self.out,self.rows,p.default_config(),g,store=self.store,now=c.now).step(rows[0]['article_id'])
+        state=self.store.load()[0]
+        self.assertEqual(state['error_type'],'robots_disallowed');self.assertEqual(state['status'],'policy_blocked')
+        self.assertEqual(state['attempts'],'2');self.assertEqual(t.calls,['https://example.org/robots.txt'])
     def run_page(self,body='Short synthetic Strait of Hormuz.',language='en',prob=.99,items=None):
         g,t,c=gateway(items or [(404,{},b''),(200,{'content-type':'text/html'},HTML)])
         def extracted(h,u,title,config):
@@ -141,7 +148,7 @@ class OutcomeRegression(unittest.TestCase):
         self.assertTrue(r['outcome']['short_body_suspected']);self.assertTrue(r['outcome']['human_review_required'])
         self.assertTrue((self.out/r['chosen_text_path']).exists())
     def test_summary_separates_policy_error_unattempted(self):
-        g,t,c=gateway([]);g.policies={}
+        g,t,c=gateway([]);g.policies={'example.org':{'restriction_type':'conditional_unresolved'}}
         p.Engine(self.out,self.rows,p.default_config(),g,store=self.store,now=c.now).step(self.rows[0]['article_id'])
         s=p.summarize_run(self.out,self.rows)['metrics']
         self.assertEqual(s['processing_attempted_URLs']['count'],1);self.assertEqual(s['article_HTTP_started_URLs']['count'],0)

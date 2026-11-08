@@ -4,7 +4,7 @@ from pathlib import Path
 from unittest.mock import patch
 from body_pilot_200 import (URLGuard,PolicyBlocked,ReviewNeeded,RetryLater,Response,
     Gateway,Engine,StateStore,keyword_metrics,quality_metrics,access_check,
-    default_config,load_locked_pilot,extract_html,validate_approval,NativeTransport)
+    default_config,load_locked_pilot,extract_html,NativeTransport)
 
 HTML=b'<html><head><title>Mock Strait of Hormuz report</title></head><body><article><h1>Mock Strait of Hormuz report</h1><p>This is a synthetic fixture about ships in the Strait of Hormuz. It is not a collected news article.</p></article></body></html>'
 def queue():
@@ -20,10 +20,10 @@ class FakeTransport:
         if not self.items:raise AssertionError('unexpected mock request: '+url)
         status,headers,body=self.items.pop(0)
         return Response(url,status,headers,body)
-def approval(rows):return {r['domain']:dict(terms_reviewed=True,allowed=True,evidence='synthetic mock policy') for r in rows}
+def fixture_restrictions(rows):return {}  # no known restrictions in synthetic fixtures
 def gateway(items,clock=None):
     c=clock or Clock();t=FakeTransport(items)
-    g=Gateway(default_config(),t,URLGuard(resolver=lambda h,p:['93.184.216.34']),approval(queue()),c.now,c.sleep)
+    g=Gateway(default_config(),t,URLGuard(resolver=lambda h,p:['93.184.216.34']),fixture_restrictions(queue()),c.now,c.sleep)
     return g,t,c
 
 class URLTests(unittest.TestCase):
@@ -88,21 +88,40 @@ class PolicyTests(unittest.TestCase):
         with self.assertRaises(PolicyBlocked):g.article('https://example.org/mock/1')
         self.assertEqual(t.calls,['https://example.org/robots.txt'])
     def test_robots_403_is_not_missing_allow(self):
-        g,t,c=gateway([(403,{},b'')])
-        with self.assertRaises(PolicyBlocked):g.article('https://example.org/mock/1')
-        self.assertEqual(len(t.calls),1)
-    def test_unknown_terms_prevents_robots_too(self):
-        g,t,c=gateway([]);g.policies={}
-        with self.assertRaises(ReviewNeeded):g.article('https://example.org/mock/1')
-        self.assertEqual(t.calls,[])
+        for code in (401,403):
+            g,t,c=gateway([(code,{},b'')])
+            with self.assertRaisesRegex(ReviewNeeded,'robots_HTTP_'+str(code)):g.article('https://example.org/mock/1')
+            with self.assertRaises(ReviewNeeded):g.article('https://example.org/mock/2')
+            self.assertEqual(len(t.calls),1)
+            self.assertNotIn('example.org',g.blocked)
+    def test_legacy_robots_HTTP_block_rechecked_without_changing_saved_evidence(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'network.json'
+            before=json.dumps({'blocked':{'example.org':'robots_HTTP_403','other.example':'article_HTTP_403','denied.example':'robots_disallowed'}})
+            path.write_text(before,encoding='utf-8')
+            g,t,c=gateway([(200,{},b'User-agent: *\nDisallow: /')]);g.bind_state(path)
+            self.assertEqual(path.read_text('utf-8'),before)
+            self.assertNotIn('example.org',g.blocked)
+            self.assertIn('other.example',g.blocked);self.assertIn('denied.example',g.blocked)
+            with self.assertRaisesRegex(PolicyBlocked,'robots_disallowed'):g.article('https://example.org/mock/1')
+            self.assertEqual(len(t.calls),1)
+    def test_article_403_remains_access_denial_not_robots_rule(self):
+        g,t,c=gateway([(404,{},b''),(403,{},b'')])
+        with self.assertRaisesRegex(PolicyBlocked,'article_HTTP_403'):g.article('https://example.org/mock/1')
+        with self.assertRaises(PolicyBlocked):g.article('https://example.org/mock/2')
+        self.assertEqual(len(t.calls),2)
+    def test_missing_manual_review_reaches_automatic_robots(self):
+        g,t,c=gateway([(200,{},b'User-agent: *\nDisallow: /')]);g.policies={}
+        with self.assertRaises(PolicyBlocked):g.robots_allowed('https://example.org/mock/1')
+        self.assertEqual(t.calls,['https://example.org/robots.txt'])
     def test_redirect_safety_and_downgrade(self):
         g,t,c=gateway([(404,{},b''),(302,{'location':'http://127.0.0.1/x'},b'')])
         with self.assertRaises(PolicyBlocked):g.article('https://example.org/mock/1')
         self.assertEqual(len(t.calls),2)
-    def test_cross_host_redirect_needs_separate_terms(self):
-        g,t,c=gateway([(404,{},b''),(302,{'location':'https://other.example/a'},b'')])
-        with self.assertRaises(ReviewNeeded):g.article('https://example.org/mock/1')
-        self.assertEqual(len(t.calls),2)
+    def test_cross_host_redirect_checks_target_robots(self):
+        g,t,c=gateway([(404,{},b''),(302,{'location':'https://other.example/a'},b''),(200,{},b'User-agent: *\nDisallow: /')])
+        with self.assertRaises(PolicyBlocked):g.article('https://example.org/mock/1')
+        self.assertEqual(len(t.calls),3)
     def test_rate_limit_includes_robots(self):
         g,t,c=gateway([(404,{},b''),(200,{'content-type':'text/html'},HTML)])
         g.article('https://example.org/mock/1');self.assertGreaterEqual(c.t,1002.)
@@ -199,8 +218,6 @@ class StateTests(unittest.TestCase):
         def forbidden(*a):raise AssertionError('do not extract paid gate')
         Engine(self.out,self.rows,default_config(),Page(),store=self.store,extractor=forbidden).step(self.rows[0]['article_id'])
         self.assertEqual(self.store.load()[0]['status'],'policy_blocked')
-    def test_execution_requires_hash_bound_separate_approval(self):
-        with self.assertRaises(PolicyBlocked):validate_approval({},'abc',self.rows)
 
 if __name__=='__main__':
     with patch('socket.getaddrinfo',side_effect=AssertionError('offline tests: DNS forbidden')),patch('socket.create_connection',side_effect=AssertionError('offline tests: network forbidden')):

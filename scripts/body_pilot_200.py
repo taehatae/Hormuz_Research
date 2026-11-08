@@ -1,4 +1,4 @@
-"""Fixed-200 pilot runner. Default is offline dry-run; live requires later approval.
+"""Shared collection primitives and read-only fixed-200 status inspection.
 
 No project notebook/pilot is imported. Redirects stay inside the active article
 chain; discovered links are never scheduled. Real transport pins a verified
@@ -207,10 +207,16 @@ class NativeTransport:
             if 'r' in locals():r.close()
             conn.close()
 
+def recheckable_robots_failure(reason):
+    """An unreadable robots endpoint is not evidence of a Disallow rule."""
+    return reason in {'robots_HTTP_401','robots_HTTP_403'}
+
 class Gateway:
-    def __init__(self,config,transport,guard,policies,now=time.time,sleep=time.sleep):
-        self.c=config;self.transport=transport;self.guard=guard;self.policies=policies;self.now=now;self.sleep=sleep
-        self.last={};self.failures={};self.cooldown={};self.blocked={};self.robots={};self.robot_intervals={};self.state_path=None;self.request_log=[]
+    def __init__(self,config,transport,guard,policies=None,now=time.time,sleep=time.sleep,url_restrictions=None):
+        restrictions=load_access_restrictions() if policies is None else {}
+        self.c=config;self.transport=transport;self.guard=guard;self.policies=restrictions.get('domains',{}) if policies is None else policies;self.now=now;self.sleep=sleep
+        self.url_restrictions=restrictions.get('urls',{}) if url_restrictions is None else url_restrictions
+        self.last={};self.failures={};self.cooldown={};self.blocked={};self.robots={};self.robots_unavailable={};self.robot_intervals={};self.state_path=None;self.request_log=[]
         self._local=threading.local();self._shared=threading.RLock();self._domains={};self.writer=None
         self.context={};self.journal_path=None;self._request_id=0
     @property
@@ -234,6 +240,9 @@ class Gateway:
         if self.state_path.exists():
             d=jread(path)
             for k in ['last','failures','cooldown','blocked','robot_intervals']:setattr(self,k,d.get(k,{}))
+            # Retire only the old HTTP-to-Disallow conflation, in memory. Keep
+            # the historical request journal and all explicit prohibitions.
+            self.blocked={host:reason for host,reason in self.blocked.items() if not recheckable_robots_failure(reason)}
     def persist(self):
         if self.state_path:
             # Snapshot on the manager, so an older worker cannot overwrite newer state.
@@ -248,15 +257,19 @@ class Gateway:
         self.write(commit)
     def policy(self,host):
         if host in self.blocked:raise PolicyBlocked(self.blocked[host])
-        p=self.policies.get(host,{})
-        if not p.get('terms_reviewed'):raise ReviewNeeded('site_terms_not_reviewed:'+host)
-        if not p.get('allowed'):raise PolicyBlocked('site_terms_not_permitted:'+host)
-        if not p.get('evidence'):raise ReviewNeeded('site_terms_review_evidence_missing:'+host)
+        # Absence of a manual review/approval is not an access prohibition.
+        # This does not label the site "approved": live robots and HTTP checks
+        # still run, and concrete unresolved restrictions remain review.
+        restriction=self.policies.get(host,self.policies.get(host.removeprefix('www.'),self.policies.get('www.'+host,{})))
+        if restriction.get('restriction_type')=='prohibited':raise PolicyBlocked('confirmed_domain_restriction:'+host)
+        if restriction.get('restriction_type')=='conditional_unresolved':raise ReviewNeeded('access_condition_unresolved:'+host)
+        if host in self.robots_unavailable:raise ReviewNeeded(self.robots_unavailable[host])
         if self.cooldown.get(host,0)>self.now():raise RetryLater('domain_circuit_or_cooldown',self.cooldown[host])
     def one(self,url,limit,kind):
         host=self.guard.check(url,resolve=False)['host']
         with self.domain_lock(host):return self._one(url,limit,kind)
     def _one(self,url,limit,kind):
+        if kind=='article' and url in self.url_restrictions:raise PolicyBlocked('confirmed_URL_restriction')
         info=self.guard.check(url,resolve=False);host=info['host'];self.policy(host)
         try:target=self.guard.check(url)
         except (OSError,socket.gaierror) as e:
@@ -284,6 +297,11 @@ class Gateway:
         self.record(kind=kind,phase='response',host=host,request_id=request_id,http_status=r.status)
         self.persist()
         if r.status in {401,403}:
+            if kind=='robots':
+                # Do not request an article without readable robots, or keep
+                # retrying the endpoint for every URL in this invocation.
+                self.robots_unavailable[host]=f'robots_HTTP_{r.status}'
+                raise ReviewNeeded(self.robots_unavailable[host])
             self.blocked[host]=f'{kind}_HTTP_{r.status}';self.persist();raise PolicyBlocked(self.blocked[host])
         if r.status==429 or 500<=r.status<=599:
             delay=60. if r.status==429 else self.c['backoff_base_sec']
@@ -335,6 +353,7 @@ class Gateway:
     def article(self,url):
         initial=url;seen=set()
         for hop in range(self.c['max_redirects']+1):
+            if url in self.url_restrictions:raise PolicyBlocked('confirmed_URL_restriction')
             self.context['redirect_hop']=hop
             info=self.guard.check(url,resolve=False);self.policy(info['host'])
             if url in seen:raise ReviewNeeded('redirect_loop')
@@ -588,7 +607,7 @@ class Engine:
     def step(self,aid,prepared=None):
         if aid not in self.rows:raise ValueError('Article not in fixed200 allowlist')
         allstate=self.store.load();state=next(r for r in allstate if r['article_id']==aid);meta=self.rows[aid]
-        if state['status'] in TERMINAL or (state['status']=='running' and prepared is None):return
+        if (state['status'] in TERMINAL and not recheckable_robots_failure(state['error_type'])) or (state['status']=='running' and prepared is None):return
         if state['next_retry_at'] and timestamp(state['next_retry_at'])>self.now():return
         if state['status']=='error' and not state['next_retry_at']:return
         hp=self.out/'html'/f'{aid}.html';prov=hp.with_suffix('.json');resultpath=self.out/'results'/f'{aid}.json'
@@ -731,13 +750,12 @@ class Engine:
             if interrupted:raise KeyboardInterrupt
         finally:self.gateway.writer=previous_writer
 
-def validate_approval(d,queue_sha,rows):
-    if d.get('approved') is not True or d.get('queue_sha256')!=queue_sha or d.get('article_count')!=200 or not d.get('approved_by') or not d.get('approved_at'):
-        raise PolicyBlocked('Later explicit user approval bound to fixed200 queue is required')
-    try:approved_at=datetime.fromisoformat(d['approved_at'])
-    except Exception as e:raise PolicyBlocked('Invalid approval timestamp') from e
-    if approved_at.tzinfo is None:raise PolicyBlocked('Approval must have explicit timezone')
-    return d.get('domain_policies',{})
+def load_access_restrictions(path=None):
+    """Read preserved prohibitions/conditional constraints, never an allowlist."""
+    path=Path(path) if path is not None else ROOT/'hormuz_2026_data/confirmed_access_restrictions.json'
+    if not path.exists():return {'domains':{},'urls':{}}
+    facts=jread(path)
+    return {'domains':facts.get('domains',{}),'urls':facts.get('urls',{})}
 def load_locked_pilot(out):
     out=Path(out).resolve();lock=jread(out/'pilot_lock.json')
     for name,h in lock['immutable_hashes'].items():
@@ -752,27 +770,13 @@ def load_locked_pilot(out):
     return rows,jread(out/'pilot_config.json')
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--run-dir',type=Path,required=True);p.add_argument('--execute',action='store_true');p.add_argument('--approval-file',type=Path);p.add_argument('--workers',type=int,default=4);args=p.parse_args()
-    if args.workers<1:p.error('--workers must be positive')
-    token=_NO_NETWORK.set(not args.execute)
+    # The notebook is the sole live entry point. Keep this module's CLI useful
+    # for read-only status inspection without maintaining another collector.
+    p=argparse.ArgumentParser(description='Read-only pilot status; collect from hormuz_textminig_v2.ipynb');p.add_argument('--run-dir',type=Path,required=True);args=p.parse_args()
+    token=_NO_NETWORK.set(True)
     try:
         if not args.run_dir.resolve().is_relative_to(ROOT/'hormuz_2026_data/runs') or not args.run_dir.name.startswith('body_pilot_200_'):raise PolicyBlocked('Runtime output must be a dedicated body_pilot_200 run')
         rows,c=load_locked_pilot(args.run_dir)
-        if not args.execute:
-            print(json.dumps(dict(mode='offline_dry_run',URL_count=len(rows),states=dict(collections.Counter(r['status'] for r in StateStore(args.run_dir,rows).load())),HTTP_requests=0,HTML_downloads=0,actual_news_extractions=0,summary=summarize_run(args.run_dir,rows)),ensure_ascii=False,indent=2));return
-        if not args.approval_file:raise PolicyBlocked('--approval-file required; preparation is not execution approval')
-        policies=validate_approval(jread(args.approval_file),sha(args.run_dir/'pilot_200_queue.csv'),rows)
-        lock=args.run_dir/'.execution.lock'
-        try:fd=os.open(lock,os.O_CREAT|os.O_EXCL|os.O_WRONLY)
-        except FileExistsError:raise PolicyBlocked('Execution lock exists; inspect PID and interrupt checkpoint before manual recovery')
-        try:
-            with os.fdopen(fd,'w') as f:f.write(json.dumps(dict(pid=os.getpid(),started_at=iso(time.time()))))
-            gateway=Gateway(c,NativeTransport(c),URLGuard(),policies);store=StateStore(args.run_dir,rows);store.recover_running();engine=Engine(args.run_dir,rows,c,gateway,store=store)
-            # One bounded pass. Future due retries need a separate resumed pass.
-            engine.run_parallel(workers=args.workers)
-            print(json.dumps(dict(mode='fixed200_one_pass_complete',states=dict(collections.Counter(r['status'] for r in store.load()))),ensure_ascii=False,indent=2))
-        finally:
-            try:write_summary(args.run_dir,rows)
-            finally:lock.unlink()
+        print(json.dumps(dict(mode='offline_dry_run',URL_count=len(rows),states=dict(collections.Counter(r['status'] for r in StateStore(args.run_dir,rows).load())),HTTP_requests=0,HTML_downloads=0,actual_news_extractions=0,summary=summarize_run(args.run_dir,rows)),ensure_ascii=False,indent=2))
     finally:_NO_NETWORK.reset(token)
 if __name__=='__main__':main()

@@ -61,6 +61,12 @@ hormuz_2026_data/
 - `.env`에는 비밀 설정이 있을 수 있다. 내용을 출력하거나 Git에 추가하지 않는다. `.gitignore`는 `.env`와 `hormuz_2026_data/` 전체를 제외한다. 데이터 폴더 내부의 코드·보고서도 자동으로 Git 백업되지 않는다는 점에 유의한다. commit/push와 원문 공개는 별도 작업이다.
 
 
-## Fixed-200 runner: limited parallel HTTP
+## Active collection entry point
 
-The existing `scripts/body_pilot_200.py` uses 4 HTTP workers by default; `--workers N` changes the limit. Per-host requests remain serial, with shared robots and rate controls. A single manager writes state/results and runs extraction. Default invocation remains offline dry-run; live collection still needs separate approval and domain-policy evidence. See [parallelization report](hormuz_2026_data/runs/body_pilot_200_20261107_01/parallelization_20261108_01/PARALLELIZATION_REPORT.md).
+Use section 28 of [hormuz_textminig_v2.ipynb](hormuz_textminig_v2.ipynb): settings cell 59, then execution cell 60. Change ARTICLE_LIMIT and keep RESUME=True. Do not Run All. Existing preprocessing, benchmark, candidate order and collection records remain preserved.
+
+Only Fundus and Trafilatura are active extractors. Supported publishers use Fundus first; other publishers use Trafilatura, with same-HTML fallback where applicable. The current tool runtime's Fundus dependency problem is documented, not repaired by cleanup.
+
+There is no separate manual domain approval CSV/JSON. Automatic access checks still enforce [confirmed restrictions](hormuz_2026_data/confirmed_access_restrictions.json), robots, public DNS/IP, redirects, request spacing, 403/429 cooldowns and no CAPTCHA/login/paywall bypass. Unclear concrete constraints or robots rules remain review. Absence of a review is not recorded as permission.
+
+`scripts/body_pilot_200.py` provides shared primitives. Its CLI is read-only status inspection; it is not another live collection entry point. `scripts/prepare_body_pilot_200.py` is retained only to reproduce the historical fixed sample and does not generate approval templates. Old policy-only review results are not changed by cleanup; the next explicit notebook execution may requeue only never-requested manual-gate failures, preserving their full history in SQLite.

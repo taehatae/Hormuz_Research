@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 import body_pilot_200 as p
-from test_body_pilot_200 import queue, Clock, HTML, approval
+from test_body_pilot_200 import queue, Clock, HTML, fixture_restrictions
 
 p._OFFLINE_PROCESS=True
 
@@ -27,7 +27,7 @@ class ParallelTests(unittest.TestCase):
         self.store.save=tracked
 
     def engine(self,transport):
-        g=p.Gateway(p.default_config(),transport,p.URLGuard(resolver=lambda h,port:['93.184.216.34']),approval(self.rows),self.clock.now,self.clock.sleep)
+        g=p.Gateway(p.default_config(),transport,p.URLGuard(resolver=lambda h,port:['93.184.216.34']),fixture_restrictions(self.rows),self.clock.now,self.clock.sleep)
         # Synthetic gate keeps extractor dependencies outside scheduling tests.
         return p.Engine(self.out,self.rows,p.default_config(),g,self.store,now=self.clock.now)
 
@@ -91,8 +91,8 @@ class ParallelTests(unittest.TestCase):
         articles=[u for u in calls if not u.endswith('/robots.txt')]
         self.assertEqual(len(articles),4);self.assertEqual(len(set(articles)),4)
 
-    def test_unreviewed_policy_no_dns_and_invalid_workers(self):
-        self.setup_run();engine=self.engine(None);engine.gateway.policies={}
+    def test_confirmed_restriction_no_dns_and_invalid_workers(self):
+        self.setup_run();engine=self.engine(None);engine.gateway.policies={r['domain']:{'restriction_type':'prohibited'} for r in self.rows}
         with patch.object(engine.gateway.guard,'resolver',side_effect=AssertionError('DNS forbidden')):
             engine.run_parallel(progress=lambda x:None)
         self.assertFalse(engine.gateway.request_log)
@@ -108,7 +108,7 @@ class ParallelTests(unittest.TestCase):
                     starts.wait(timeout=5)
                     return p.Response(url,302,{'location':'https://target.example.org/'+url.rsplit('/',1)[-1]},b'')
                 return p.Response(url,200,{'content-type':'text/html'},HTML)
-        engine=self.engine(Transport());engine.gateway.policies['target.example.org']=dict(terms_reviewed=True,allowed=True,evidence='mock')
+        engine=self.engine(Transport());engine.gateway.policies.pop('target.example.org',None)  # automatic robots checks apply
         with patch.object(p,'access_check',return_value='gate_text_signal_review'):engine.run_parallel(progress=lambda x:None)
         target=[(u,t) for u,t in calls if 'target.example.org' in u]
         self.assertEqual(len(target),5)

@@ -94,10 +94,7 @@ def main():
         for d in ['html','texts','results','robots']: (out/d).mkdir(exist_ok=True)
         lock=dict(immutable_hashes={n:pilot.sha(out/n) for n in ['pilot_200_queue.csv','pilot_config.json']},code_hashes={'scripts/body_pilot_200.py':pilot.sha(ROOT/'scripts/body_pilot_200.py')})
         pilot.atomic_json(out/'pilot_lock.json',lock)
-        policies={d:dict(terms_reviewed=False,allowed=False,evidence='') for d in sorted({r['domain'] for r in selected})}
-        pilot.atomic_json(out/'execution_approval_TEMPLATE.json',dict(approved=False,approved_by='',approved_at='',article_count=200,queue_sha256=pilot.sha(out/'pilot_200_queue.csv'),domain_policies=policies,
-            note='NOT authorization. Only fill/copy after later explicit user approval and per-domain terms review. robots checked only during actual authorized execution.'))
-        log(out,'fixed200_selected',months=dict(sorted(Counter(r['month'] for r in selected).items())),domains=len(policies),replacements=len(replacements))
+        log(out,'fixed200_selected',months=dict(sorted(Counter(r['month'] for r in selected).items())),domains=len({r['domain'] for r in selected}),replacements=len(replacements))
         # Offline tests use synthetic memory HTML and temporary fixture stores.
         stream=io.StringIO()
         suite=unittest.defaultTestLoader.discover(str(ROOT/'scripts'),pattern='test_body_pilot_200.py')
@@ -143,7 +140,7 @@ def main():
             mock_tests=dict(run=tests.testsRun,failures=len(tests.failures),errors=len(tests.errors),real_article_successes_counted=0),
             protected_files=len(protected),source_changes=changes,actual_original_CSV_hashes={r:dict(before=protected[r],after=after_hashes.get(r)) for r in ['hormuz_2026_data/01_newscatcher_raw.csv','hormuz_2026_data/05_extraction_candidates_v2.csv']},
             installed_versions=versions,HTTP_requests=0,robots_requests=0,HTML_downloads=0,actual_news_body_extractions=0,synthetic_fixture_extractions=True,
-            total_preparation_sec=round(time.perf_counter()-START,3),live_approval_granted=False,
+            total_preparation_sec=round(time.perf_counter()-START,3),network_executed=False,
             limitations=['DNS public-IP and site terms/robots of actual200 domains are NOT checked yet','Synthetic extraction tests do not prove real article extraction quality','Historical API code settings not uniquely tied to the current raw CSV by an original collection-run manifest'])
         pilot.atomic_json(out/'validation.json',val)
         write_docs(out,selected,val)
@@ -189,9 +186,9 @@ def write_docs(out,rows,v):
           '향후 활용 가능한 영어 본문 20,000건 이상은 사용자 전달 최소 목표다. 이번에는 고정200 URL의 기술적 가능성을 시험할 준비만 했다. 200개의 성공률을 전체 원자료의 확보율로 일반화하거나 고정 연구 가설을 만들지 않는다.',
           '', '## 실행 전','',
           '1. 별도 사용자 실행 승인을 받는다. 준비 승인을 실제 요청 승인으로 재해석하지 않는다. 큐/config/runner hash를 pilot_lock.json과 비교한다.',
-          '2. execution_approval_TEMPLATE.json은 approved=false인 비승인 양식이다. 이후 명시 승인에 근거해 별도 approval 파일을 만들고 approved_by/approved_at(시간대 포함)/큐 SHA/정확히200개를 기록한다. 양식 자체는 승인으로 쓰지 않는다.',
-          '3. 각 도메인 이용 조건/접근 정책을 검토해 domain_policies의 terms_reviewed, allowed, evidence를 기록한다. robots 허용은 이용 조건 검토·법적 사용 허가와 다르다. 미확인은 요청 전에 review이며 robots 요청도 하지 않는다. 리디렉션으로 다른 도메인이 등장하면 그 도메인도 별도 근거가 필요하다.',
-          '4. 기본 실행은 dry-run이며 DNS·기사·robots 요청이 없다. 실제 실행에는 --execute와 --approval-file이 모두 필요하다. 현재 실행하지 않았다.',
+          'Live collection uses the notebook and automatic access checks; no manual approval file is generated. Robots, known restrictions, DNS/IP and HTTP limits remain enforced.',
+          'Live collection uses the notebook and automatic access checks; no manual approval file is generated. Robots, known restrictions, DNS/IP and HTTP limits remain enforced.',
+          'Live collection: use section 28 settings and execution cells in hormuz_textminig_v2.ipynb. This fixed-pilot CLI only reads status; no approval file is used.',
           '', '## 실제 요청 시 동작','',
           '- 동시성1, 기본 도메인 최소2초, robots Crawl-delay/Request-rate가 더 보수적이면 그 값을 적용한다. robots 요청도 같은 rate limiter를 사용한다. 원본 URL의 scheme/host/port/credential/query를 검사하고 DNS의 모든 IP가 public인지 확인한다. localhost·사설/링크로컬·내부/예약 호스트·혼합 DNS·자격증명 URL은 차단한다.',
           '- 검증 IP에 연결을 고정해 DNS 재해석을 피하고 HTTPS 원래 호스트의 SNI/인증서 검증을 유지한다. 프록시 환경·인증·쿠키 jar를 사용하지 않는다. 명확한 User-Agent를 사용한다. HTTP로 주어진 URL을 임의로 HTTPS로 바꾸지 않으며 HTTPS→HTTP 리디렉션은 차단한다.',
@@ -227,8 +224,8 @@ def write_docs(out,rows,v):
             '', '## 현재 허용되는 오프라인 점검','', '프로젝트 루트에서:', '', '```powershell','$env:PYTHONDONTWRITEBYTECODE="1"',f'python -B scripts/body_pilot_200.py --run-dir {rel}','python -B -m unittest discover -s scripts -p test_body_pilot_200.py -v','```','',
             f'모의 테스트 {v["mock_tests"]["run"]}개 통과. mock_test_results.log와 mock_test_warnings.json을 확인한다. 실제 설치된 trafilatura/news-please를 합성 HTML로 호출했지만 실제 기사 성공 사례는 0건이다. 테스트 중 외부 DNS/네트워크는 차단했고 임시 mock 출력은 이 파일의 실제 article 폴더와 분리했다.',
             '', '## 별도 사용자 승인 후에만','',
-            '현재 execution_approval_TEMPLATE.json의 approved=false를 유지한다. 향후 승인이 있으면 별도 승인 파일에 큐 SHA/200개/승인자·시각과 도메인별 이용 조건 근거를 기록한다. robots는 실제 실행 시 확인한다. 승인 파일이 없거나 hash가 다르면 실행이 거절된다.',
-            '', '```powershell',f'python -B scripts/body_pilot_200.py --run-dir {rel} --execute --approval-file <나중에_승인된_파일.json>','```','',
+            'Live collection uses the notebook and automatic access checks; no manual approval file is generated. Robots, known restrictions, DNS/IP and HTTP limits remain enforced.',
+            'Live collection: use section 28 settings and execution cells in hormuz_textminig_v2.ipynb. This fixed-pilot CLI only reads status; no approval file is used.',
             '위 실제 실행 명령은 이번에 실행하지 않았다. terms 미확인 도메인과 새 redirect 도메인은 review/차단되므로 200개가 모두 요청/성공한다고 보장하지 않는다. serial one-pass이고 due 전 오류는 보류된다. 재개는 같은 명령에서 terminal 결과를 건너뛰며 입력 큐는 바꾸지 않는다.',
             '', '## 결과 확인','',
             'pilot_state.csv의 pending/running/done/review/error/policy_blocked, events.jsonl, request_activity.json, 결과 JSON의 HTTP/HTML/추출/언어/키워드/품질·중복 항목을 구분해 집계한다. attempt는 논리 시도이며 robots/redirect 실제 응답 활동과 다를 수 있다. html/은 원 HTML, texts/는 추출기별 전체 텍스트, results/는 검토 정보, robots/는 정책 응답이다. 자동 통과를 최종 정답/20,000건 목표 달성으로 세지 않는다.',
