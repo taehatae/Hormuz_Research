@@ -97,6 +97,10 @@ def country_steps(succ: pd.DataFrame, cv: dict, dest) -> list[str]:
                                       nc_country=("nc", mode_str),
                                       nc_country_values=("nc", lambda x: ";".join(sorted(set(x.replace("", "(blank)"))))[:80]),
                                       nc_source_name=("nc_source_name", mode_str)).sort_values("articles", ascending=False)
+    # Generic-use ccTLDs (.ly, .co, .me ... are also used by real national outlets): not auto-assigned,
+    # flagged so steps 2 and 3 can check them; the ccTLD country is kept only as a hint.
+    dom["generic_cctld"] = dom["tld"].isin(set(cv["generic_cctlds"]) | set(cv["non_country_tlds"]))
+    dom["cctld_country_hint"] = np.where(dom["generic_cctld"], dom["tld"].map(lambda t: remap.get(t, t.upper())), "")
     a1 = s[s["step1"] != ""]
     d1 = dom[dom["step1"] != ""]
 
@@ -125,6 +129,12 @@ def country_steps(succ: pd.DataFrame, cv: dict, dest) -> list[str]:
          + ", ".join(f".{k} {v}" for k, v in excluded_generic['tld'].value_counts().items()) + ")",
          f"- nc_country 일치율(nc_country가 unknown·빈 값이 아닌 경우): 기사 기준 {agree(a1, 'step1')}, "
          f"도메인 기준(도메인별 최빈 nc_country) {agree(d1c.rename(columns={'ncm': 'nc'}), 'step1')}", "",
+         f"#### 범용 ccTLD로 분류돼 자동 배정하지 않은 도메인: {int(dom['generic_cctld'].sum()):,}개 "
+         f"(기사 {int(dom.loc[dom['generic_cctld'], 'articles'].sum()):,}건) — 2·3단계에서 확인", "",
+         "실제 그 나라 언론일 수 있으므로(.ly 리비아, .co 콜롬비아, .me 몬테네그로 등) `generic_cctld=True`와 "
+         "`cctld_country_hint`(ccTLD가 가리키는 국가, 참고용)를 CSV에 남긴다. nc_country가 힌트와 같으면 그 나라 언론일 가능성이 높다.", "",
+         md(dom[dom["generic_cctld"]].reset_index()[["domain_key", "articles", "tld", "cctld_country_hint", "nc_country",
+                                                      "nc_source_name"]].head(40)), "",
          "1단계 배정과 nc_country 최빈값이 다른 도메인 (상위 15):", "",
          md(mism.reset_index()[["domain_key", "articles", "step1", "ncm", "nc_country_values", "nc_source_name"]]
             .rename(columns={"ncm": "nc_country_mode"})), "",
@@ -141,14 +151,15 @@ def country_steps(succ: pd.DataFrame, cv: dict, dest) -> list[str]:
          f"이들이 표본의 {cum.iloc[min(999, len(cum) - 1)] if len(cum) else 0:.1f}% 차지).",
          "- 한계: 위키데이터에 없는 소규모 사이트·블로그·콘텐츠 농장은 찾지 못한다. 한 항목에 국가가 여러 개이거나 "
          "모회사 국가가 들어간 경우가 있어 결과를 그대로 쓰지 않고 표시해 검토해야 한다.",
-         "- 확인 필요: Wikimedia의 User-Agent 정책은 연락처(URL 또는 이메일)를 넣도록 요구한다. 현재 원칙(이메일 미포함)과 "
-         "충돌하므로, 연락처로 쓸 프로젝트 URL이 있는지 또는 예외로 할지 정해야 한다.", "",
+         f"- User-Agent: Wikidata 요청에만 연락처 URL을 넣은 `{cv['wikidata_user_agent']}`를 쓴다(원칙의 예외, 사용자 승인). "
+         "뉴스 사이트 요청의 User-Agent는 바꾸지 않는다. 실행은 사용자 지시 후.", "",
          "### 3단계: 수작업 확인 목록", "",
          f"- 1단계 후 남은 도메인 중 기사 수 상위 {cv['step3_top_n']}개: `postprocess/country_step3_manual_top200.csv` "
          f"(이들이 표본의 {cum.iloc[min(int(cv['step3_top_n']) - 1, len(cum) - 1)] if len(cum) else 0:.1f}% 차지). "
          "2단계를 실행하면 그 결과로 국가가 정해진 도메인을 빼고 다시 뽑는다.",
          "- 단계별 nc_country 일치율: 1단계는 위와 같음. 2·3단계는 실행 후 같은 방식으로 계산한다.", "",
-         md(top_rest.head(30).reset_index()[["domain_key", "articles", "tld", "nc_country", "nc_country_values", "nc_source_name"]]),
+         md(top_rest.head(30).reset_index()[["domain_key", "articles", "tld", "generic_cctld", "cctld_country_hint",
+                                             "nc_country", "nc_country_values", "nc_source_name"]]),
          "", f"전체 도메인별 단계 정보: `postprocess/country_steps_domains.csv`", ""]
     return L
 

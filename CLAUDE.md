@@ -20,6 +20,7 @@ NewsCatcher로 모은 기사 메타데이터(URL·제목·날짜·언론사 등)
 
 - **요청 전 추측으로 수집을 막지 않는다.** 수집 가능 여부는 실제 요청 결과로만 판단한다.
   사전 제외는 아래 "사전 제외 도메인"뿐이다.
+- **User-Agent 예외**: Wikidata(국가 검증 2단계) 요청에만 Wikimedia 정책에 따라 연락처 URL(https://github.com/taehatae/Hormuz_Research)을 넣는다(config `wikidata_user_agent`). 뉴스 사이트 요청의 User-Agent에는 넣지 않는다.
 - **robots.txt**: 정상적으로 받아왔고 해당 경로를 명시적으로 `Disallow`한 경우에만 수집하지 않고
   `robots_disallow`로 기록한다. robots.txt가 없거나(4xx) 받아오지 못한 경우(5xx, timeout 등)는 사유만 기록하고 진행한다.
 - **차단·페이월은 우회하지 않는다.** Cloudflare 챌린지, 403, 페이월 등은 그대로 기록만 한다.

@@ -121,6 +121,7 @@
       "cctld_to_iso2": {"uk": "GB"},
       "step3_top_n": 200,
       "wikidata_endpoint": "https://query.wikidata.org/sparql",
+      "wikidata_user_agent": "HormuzNewsResearchBot/0.3 (academic text-mining research; https://github.com/taehatae/Hormuz_Research)",
       "wikidata_batch_domains": 100,
       "wikidata_url_variants_per_domain": 8,
       "wikidata_pause_sec": 2
