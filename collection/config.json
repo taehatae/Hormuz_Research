@@ -16,11 +16,11 @@
   ],
 
   "sampling": {
-    "target_success_total": 40000,
+    "target_success_total": 50000,
     "random_seed": 2026,
     "strata": [
-      {"name": "pre_war",  "start": "2026-01-01", "end": "2026-02-27", "target": 2000,  "daily_floor": 5},
-      {"name": "post_war", "start": "2026-02-28", "end": "2026-08-31", "target": 38000, "daily_floor": 20}
+      {"name": "pre_war",  "start": "2026-01-01", "end": "2026-02-27", "target": 2500,  "daily_floor": 5},
+      {"name": "post_war", "start": "2026-02-28", "end": "2026-08-31", "target": 47500, "daily_floor": 20}
     ],
     "allocation_unit": "week_block",
     "block_days": 7,
@@ -137,6 +137,15 @@
     "dispatch_scan_limit": 300,
     "anomaly_check_after": 20,
     "anomaly_max_pre_request_skip_share": 0.8,
-    "anomaly_min_fetch_ok": 1
+    "anomaly_min_fetch_ok": 1,
+    "anomaly_window_records": 500,
+    "anomaly_min_window_success_rate": 0.2,
+    "anomaly_max_window_pre_request_skip_share": 0.8,
+    "anomaly_max_consecutive_network_errors": 100,
+    "anomaly_max_consecutive_runner_errors": 5,
+    "min_free_disk_gb": 5,
+    "disk_check_every_records": 200,
+    "progress_log_interval_sec": 3600,
+    "progress_log_file": "logs/main_progress.log"
   }
 }

@@ -51,6 +51,13 @@ class FakeFetcher:
 
     def fetch(self, url, rl_key):
         self.requests += 1
+        if getattr(self, "mode", None) == "timeout":
+            return {"http_status": None, "final_url": None, "fetch_status": "timeout", "failure_reason": "timeout",
+                    "content": None, "attempts": 3, "content_type": None, "elapsed_sec": 0.0}
+        if getattr(self, "mode", None) == "unique":
+            body = ARTICLE.replace(b"Tanker traffic", url.encode()[-60:].replace(b"&", b" "))
+            return {"http_status": 200, "final_url": url, "fetch_status": "ok", "failure_reason": None,
+                    "content": body, "attempts": 1, "content_type": "text/html", "elapsed_sec": 0.0}
         if rl_key[0] in "abcdef":
             return {"http_status": 403, "final_url": url, "fetch_status": "blocked", "failure_reason": "http_403",
                     "content": None, "attempts": 1, "content_type": "text/html", "elapsed_sec": 0.0}
@@ -165,6 +172,39 @@ class Tests(unittest.TestCase):
             for x in skipped:
                 self.assertEqual(x["request_sent"], 0)
                 self.assertIn(x["rate_limit_key"][0], "abcdef")
+
+
+    def _runner(self, td, stage, mode, **runs):
+        cfg = copy.deepcopy(self.cfg)
+        cfg["fetch"]["max_workers"] = 4
+        cfg["output_dir"] = str(Path(td).relative_to(project_path(".")) if Path(td).is_relative_to(project_path(".")) else td)
+        cfg["runs"].update(runs)
+        store = Store(Path(td) / "t.sqlite3")
+        self.addCleanup(store.close)
+        fake = FakeFetcher()
+        fake.mode = mode
+        r = collect.Runner(cfg, stage, store, fetcher=fake, log=lambda *a: None)
+        r.out = Path(td)
+        r.progress_path = Path(td) / "progress.log"
+        return r, store
+
+    def test_main_stops_exactly_at_total_target(self):
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:
+            r, store = self._runner(td, "main", "unique", anomaly_window_records=10_000)
+            r.total_target = 12
+            summary = r.run()
+            rows = store.attempts()
+            self.assertEqual(summary["stop_reason"], "target_reached")
+            self.assertEqual(sum(x["extract_status"] == "success" for x in rows), 12)
+            self.assertIn("FINAL", (Path(td) / "progress.log").read_text(encoding="utf-8"))
+
+    def test_anomaly_stop_on_network_errors(self):
+        with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:
+            r, store = self._runner(td, "main", "timeout", anomaly_max_consecutive_network_errors=30,
+                                    anomaly_check_after=10, anomaly_min_fetch_ok=0)
+            summary = r.run()
+            self.assertIn("consecutive timeouts", summary["stop_reason"])
+            self.assertLess(summary["records"], 60)
 
 
 if __name__ == "__main__":

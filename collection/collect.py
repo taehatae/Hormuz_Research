@@ -17,9 +17,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import sys
 import time
-from collections import Counter, defaultdict
+from collections import Counter, defaultdict, deque
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from pathlib import Path
 
@@ -46,6 +47,13 @@ class Runner:
         self.budget = self.rc["stages"][stage]
         self.block_reasons = set(self.fc["domain_skip_failure_reasons"])
         self.prev_first = bool(cfg["sampling"]["nearest_block_previous_first"])
+        self.total_target = int(cfg["sampling"]["target_success_total"])
+        self.out = out
+        self.window = deque(maxlen=int(self.rc["anomaly_window_records"]))
+        self.net_err_streak = 0
+        self.runner_err_streak = 0
+        self.progress_path = out / self.rc["progress_log_file"]
+        self._last_disk_check = -10 ** 9
         self._restore()
 
     # ---------- state ----------
@@ -199,6 +207,13 @@ class Runner:
         self.stage_stats["requests_sent"] += int(rec.get("request_sent") or 0)
         self.stage_stats["fetch_ok"] += int(rec.get("fetch_status") == "ok")
         self.stage_stats["success"] += int(rec.get("extract_status") == "success")
+        if inflight:  # skip records written by the dispatcher are not network outcomes
+            self.window.append((int(rec.get("request_sent") or 0), int(rec.get("extract_status") == "success")))
+            fs = rec.get("fetch_status")
+            self.net_err_streak = self.net_err_streak + 1 if fs in ("timeout", "connection_error") else 0
+            self.runner_err_streak = self.runner_err_streak + 1 if fs == "error" else 0
+        else:
+            self.window.append((0, 0))
 
     def _anomaly(self) -> str | None:
         s = self.stage_stats
@@ -208,15 +223,65 @@ class Runner:
             return f"most records skipped before any request ({s['records'] - s['requests_sent']}/{s['records']})"
         if s["fetch_ok"] < self.rc["anomaly_min_fetch_ok"]:
             return f"no successful fetch in {s['records']} records"
+        rc = self.rc
+        if len(self.window) == self.window.maxlen:
+            n = len(self.window)
+            sent = sum(x[0] for x in self.window)
+            succ = sum(x[1] for x in self.window)
+            if succ / n < rc["anomaly_min_window_success_rate"]:
+                return f"success rate dropped to {succ / n:.1%} over the last {n} records"
+            if (n - sent) / n > rc["anomaly_max_window_pre_request_skip_share"]:
+                return f"{n - sent}/{n} of the last records were skipped before any request"
+        if self.net_err_streak >= rc["anomaly_max_consecutive_network_errors"]:
+            return f"{self.net_err_streak} consecutive timeouts/connection errors (network down?)"
+        if self.runner_err_streak >= rc["anomaly_max_consecutive_runner_errors"]:
+            return f"{self.runner_err_streak} consecutive runner errors"
+        if s["records"] - self._last_disk_check >= rc["disk_check_every_records"]:
+            self._last_disk_check = s["records"]
+            free_gb = shutil.disk_usage(self.out).free / 1e9
+            if free_gb < rc["min_free_disk_gb"]:
+                return f"free disk space {free_gb:.1f} GB < {rc['min_free_disk_gb']} GB"
         return None
+
+    def _progress_report(self, final: bool = False, reason: str | None = None) -> None:
+        """Hourly (and final) fulfilment log: strata, weeks, cumulative success rate."""
+        rows = self.store.attempts("extract_status, request_sent")
+        n = len(rows)
+        succ = sum(r["extract_status"] == "success" for r in rows)
+        sent = sum(int(r["request_sent"] or 0) for r in rows)
+        strata = defaultdict(lambda: [0, 0])
+        weeks = []
+        for w in self.weeks:
+            strata[w.stratum][0] += self.succ_week[w.week_id]
+            strata[w.stratum][1] += w.target
+            weeks.append(f"{w.week_id}:{self.succ_week[w.week_id]}/{w.target}")
+        lines = [f"=== {now()} {'FINAL' if final else 'hourly'} stage={self.stage}"
+                 + (f" stop_reason={reason}" if reason else ""),
+                 f"successes {succ:,}/{self.total_target:,} ({100 * succ / self.total_target:.1f}%) | records {n:,} | "
+                 f"cumulative success rate {100 * succ / max(n, 1):.1f}% of records, {100 * succ / max(sent, 1):.1f}% of requests | "
+                 f"this stage: {self.stage_count:,} records, {self.stage_stats['success']:,} successes",
+                 "strata: " + " ".join(f"{k} {v[0]:,}/{v[1]:,} ({100 * v[0] / max(v[1], 1):.1f}%)" for k, v in strata.items()),
+                 "weeks: " + " ".join(weeks),
+                 f"domains skipped after failures: {len(self.skipped_domains)} | domains at cap: "
+                 f"{sum(v >= self.cap for v in self.succ_dom.values())}", ""]
+        self.progress_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(self.progress_path, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
 
     def run(self) -> dict:
         t0 = time.monotonic()
         self.store.event(self.stage, "stage_start", json.dumps({"budget": self.budget, "already": self.stage_count}))
-        budget_left = lambda: self.budget is None or self.stage_count + sum(self.inflight_week.values()) < self.budget
+        def budget_left() -> bool:
+            inflight = sum(self.inflight_week.values())
+            if sum(self.succ_week.values()) + inflight >= self.total_target:
+                return False  # never exceed the overall success target
+            return self.budget is None or self.stage_count + inflight < self.budget
         futures = {}
         rr = 0
         stop_reason = None
+        log_every = self.rc["progress_log_interval_sec"]
+        last_log = time.monotonic()
+        self._progress_report()
         with ThreadPoolExecutor(max_workers=self.fc["max_workers"]) as pool:
             while True:
                 dispatched = False
@@ -238,6 +303,9 @@ class Runner:
                     self.tried.add(p["article_id"])  # reserve
                     futures[pool.submit(self._work, row)] = row
                     dispatched, tries = True, 0
+                if time.monotonic() - last_log >= log_every:
+                    self._progress_report()
+                    last_log = time.monotonic()
                 if futures:
                     done, _ = wait(list(futures), timeout=0.5, return_when=FIRST_COMPLETED)
                     for fut in done:
@@ -263,7 +331,8 @@ class Runner:
                         self._transfer_deficits()
                     continue
                 if not budget_left():
-                    stop_reason = stop_reason or "budget_reached"
+                    stop_reason = stop_reason or ("target_reached" if sum(self.succ_week.values()) >= self.total_target
+                                                  else "budget_reached")
                     break
                 self._transfer_deficits()
                 if not dispatched:
@@ -286,6 +355,7 @@ class Runner:
                 self.tried.discard(rec["article_id"])
                 self._finish(row, rec, body)
         elapsed = round(time.monotonic() - t0, 1)
+        self._progress_report(final=True, reason=stop_reason)
         stats = {k: int(self.stage_stats.get(k, 0)) for k in ("records", "requests_sent", "fetch_ok", "success")}
         summary = {"stage": self.stage, "stop_reason": stop_reason, "elapsed_sec": elapsed, **stats}
         self.store.event(self.stage, "stage_end", json.dumps(summary))
@@ -315,12 +385,16 @@ def status(cfg: dict) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--stage", choices=["smoke", "pilot", "main"], default=None)
+    ap.add_argument("--stage", choices=["smoke", "pilot", "main", "report"], default=None)
     ap.add_argument("--config", type=Path, default=None)
     args = ap.parse_args()
     cfg = load_config(args.config)
     if args.stage is None:
         status(cfg)
+        return
+    if args.stage == "report":  # post-processing report, no network
+        from postprocess import main as postprocess_main
+        postprocess_main(cfg)
         return
     store = Store(project_path(cfg["output_dir"]) / cfg["runs"]["db"])
     summary = Runner(cfg, args.stage, store).run()
