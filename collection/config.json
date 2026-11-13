@@ -115,7 +115,15 @@
       "domain_coverage_share": 0.80,
       "coverage_basis": "final_sample_article_count",
       "compare_with": "nc_country",
-      "method": "to_be_decided_at_stage_5"
+      "method": "to_be_decided_at_stage_5",
+      "generic_cctlds": ["tv", "io", "co", "me", "ai", "fm", "ly", "gg", "to", "cc", "ws", "la", "nu", "sh", "ac", "vc"],
+      "non_country_tlds": ["eu", "su"],
+      "cctld_to_iso2": {"uk": "GB"},
+      "step3_top_n": 200,
+      "wikidata_endpoint": "https://query.wikidata.org/sparql",
+      "wikidata_batch_domains": 100,
+      "wikidata_url_variants_per_domain": 8,
+      "wikidata_pause_sec": 2
     }
   },
 

@@ -73,6 +73,86 @@ def mode_str(s: pd.Series) -> str:
     return s.value_counts().index[0] if len(s) else ""
 
 
+def country_steps(succ: pd.DataFrame, cv: dict, dest) -> list[str]:
+    """Staged country (outlet location) verification preparation. No network.
+    Step 1: country-code TLD -> country (generic-use ccTLDs excluded). Step 2: plan only (Wikidata).
+    Step 3: top remaining domains for manual checking."""
+    generic = set(cv["generic_cctlds"]) | set(cv["non_country_tlds"])
+    remap = {k.lower(): v.upper() for k, v in cv["cctld_to_iso2"].items()}
+
+    def tld(d: str) -> str:
+        last = (d or "").rsplit(".", 1)[-1].lower()
+        return "" if last.isdigit() else last
+
+    def step1(d: str) -> str:
+        t = tld(d)
+        if len(t) == 2 and t.isalpha() and t not in generic:
+            return remap.get(t, t.upper())
+        return ""
+
+    nc = succ["nc_country"].fillna("").replace({"unknown": ""})
+    s = succ.assign(nc=nc, tld=succ["domain_key"].map(tld), step1=succ["domain_key"].map(step1))
+    n = len(s)
+    dom = s.groupby("domain_key").agg(articles=("article_id", "size"), tld=("tld", "first"), step1=("step1", "first"),
+                                      nc_country=("nc", mode_str),
+                                      nc_country_values=("nc", lambda x: ";".join(sorted(set(x.replace("", "(blank)"))))[:80]),
+                                      nc_source_name=("nc_source_name", mode_str)).sort_values("articles", ascending=False)
+    a1 = s[s["step1"] != ""]
+    d1 = dom[dom["step1"] != ""]
+
+    def agree(df: pd.DataFrame, col: str, ref: str = "nc") -> str:
+        x = df[(df[ref] != "") & (df[col] != "")]
+        return f"{(x[col] == x[ref]).mean() * 100:.1f}% ({int((x[col] == x[ref]).sum()):,}/{len(x):,})" if len(x) else "n/a"
+
+    d1c = d1.rename(columns={"nc_country": "ncm"})
+    excluded_generic = s[s["tld"].isin(generic) & (s["tld"].str.len() == 2)]
+    mism = d1c[(d1c["ncm"] != "") & (d1c["ncm"] != d1c["step1"])].head(15)
+    rest = dom[dom["step1"] == ""]
+    by_tld = rest.groupby("tld").agg(domains=("articles", "size"), articles=("articles", "sum")).sort_values("articles", ascending=False)
+    batch = int(cv["wikidata_batch_domains"])
+    nreq = int(np.ceil(len(rest) / batch))
+    top_rest = rest.head(int(cv["step3_top_n"]))
+    dom.to_csv(dest / "country_steps_domains.csv", encoding="utf-8-sig")
+    top_rest.to_csv(dest / "country_step3_manual_top200.csv", encoding="utf-8-sig")
+    cum = (100 * rest["articles"].cumsum() / max(n, 1))
+
+    L = ["## 9. 국가 검증 단계식 준비 (실행 전 결과만, 네트워크 미사용)", "",
+         "### 1단계: 국가 ccTLD 자동 배정", "",
+         f"- 범용 ccTLD로 보고 제외: {', '.join('.' + t for t in cv['generic_cctlds'])} / 국가가 아닌 TLD: "
+         f"{', '.join('.' + t for t in cv['non_country_tlds'])} / 변환: " + ", ".join(f".{k}→{v}" for k, v in remap.items()),
+         f"- 국가가 정해지는 도메인 **{len(d1):,}개 / {len(dom):,}개**, 기사 **{len(a1):,}건 / {n:,}건 ({100 * len(a1) / max(n, 1):.1f}%)**",
+         f"- 범용 ccTLD라서 제외된 기사: {len(excluded_generic):,}건 ("
+         + ", ".join(f".{k} {v}" for k, v in excluded_generic['tld'].value_counts().items()) + ")",
+         f"- nc_country 일치율(nc_country가 unknown·빈 값이 아닌 경우): 기사 기준 {agree(a1, 'step1')}, "
+         f"도메인 기준(도메인별 최빈 nc_country) {agree(d1c.rename(columns={'ncm': 'nc'}), 'step1')}", "",
+         "1단계 배정과 nc_country 최빈값이 다른 도메인 (상위 15):", "",
+         md(mism.reset_index()[["domain_key", "articles", "step1", "ncm", "nc_country_values", "nc_source_name"]]
+            .rename(columns={"ncm": "nc_country_mode"})), "",
+         "### 2단계 후보: Wikidata 대조 (검토만, 요청하지 않음)", "",
+         f"- 대상: 1단계 후 남은 도메인 **{len(rest):,}개**, 기사 **{int(rest['articles'].sum()):,}건 "
+         f"({100 * rest['articles'].sum() / max(n, 1):.1f}%)**", "", md(by_tld.head(12).reset_index()), "",
+         "- 방법(안): Wikidata SPARQL에서 공식 웹사이트(P856)가 도메인과 일치하는 항목을 찾고, 국가를 P17(국가) → 없으면 "
+         "P495(원산국) → P159(본사 소재지)의 P17 순으로 읽는다. URL은 표기가 제각각이라 도메인마다 "
+         f"`http(s)://`, `www.` 유무, 끝 `/` 유무 조합 {cv['wikidata_url_variants_per_domain']}개를 VALUES로 넣어 정확히 일치시키고, "
+         "서브도메인(예: edition.cnn.com)은 등록 도메인으로 한 번 더 찾는다.",
+         f"- 예상 요청 수: 도메인 {batch}개씩 묶으면 **약 {nreq:,}회**(서브도메인 재조회 포함 시 최대 약 {nreq * 2:,}회), "
+         f"요청 간 {cv['wikidata_pause_sec']}초 쉬면 약 {nreq * 2 * (cv['wikidata_pause_sec'] + 3) / 60:.0f}분 이내. "
+         f"상위 도메인만 하면 줄어든다(예: 남은 도메인 중 상위 1,000개 = 약 {int(np.ceil(1000 / batch))}회, "
+         f"이들이 표본의 {cum.iloc[min(999, len(cum) - 1)] if len(cum) else 0:.1f}% 차지).",
+         "- 한계: 위키데이터에 없는 소규모 사이트·블로그·콘텐츠 농장은 찾지 못한다. 한 항목에 국가가 여러 개이거나 "
+         "모회사 국가가 들어간 경우가 있어 결과를 그대로 쓰지 않고 표시해 검토해야 한다.",
+         "- 확인 필요: Wikimedia의 User-Agent 정책은 연락처(URL 또는 이메일)를 넣도록 요구한다. 현재 원칙(이메일 미포함)과 "
+         "충돌하므로, 연락처로 쓸 프로젝트 URL이 있는지 또는 예외로 할지 정해야 한다.", "",
+         "### 3단계: 수작업 확인 목록", "",
+         f"- 1단계 후 남은 도메인 중 기사 수 상위 {cv['step3_top_n']}개: `postprocess/country_step3_manual_top200.csv` "
+         f"(이들이 표본의 {cum.iloc[min(int(cv['step3_top_n']) - 1, len(cum) - 1)] if len(cum) else 0:.1f}% 차지). "
+         "2단계를 실행하면 그 결과로 국가가 정해진 도메인을 빼고 다시 뽑는다.",
+         "- 단계별 nc_country 일치율: 1단계는 위와 같음. 2·3단계는 실행 후 같은 방식으로 계산한다.", "",
+         md(top_rest.head(30).reset_index()[["domain_key", "articles", "tld", "nc_country", "nc_country_values", "nc_source_name"]]),
+         "", f"전체 도메인별 단계 정보: `postprocess/country_steps_domains.csv`", ""]
+    return L
+
+
 def main(cfg: dict | None = None) -> None:
     cfg = cfg or load_config()
     pc = cfg["postprocess"]
@@ -251,6 +331,7 @@ def main(cfg: dict | None = None) -> None:
           f"### 기사 {pc['few_articles_country_threshold']}건 미만 국가: {len(few)}개", "",
           ", ".join(f"{r.nc_country}({r.articles})" for r in few.itertuples()), ""]
 
+    L += country_steps(succ, pc["country_verification"], dest)
     rep = "\n".join(L)
     (dest / "POSTPROCESS_REPORT.md").write_text(rep, encoding="utf-8")
     print(f"wrote {dest / 'POSTPROCESS_REPORT.md'} ({len(rep):,} chars)")
