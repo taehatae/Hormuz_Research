@@ -30,6 +30,9 @@ NewsCatcher로 모은 기사 메타데이터(URL·제목·날짜·언론사 등)
 - 스크립트는 `--stage` 인자로 단계를 받는다. **인자 없이 실행하면 네트워크 요청을 보내지 않는다.**
 - 기존 데이터 파일은 수정·덮어쓰기·삭제하지 않는다. 새 산출물은 새 경로에 쓴다. 정리가 필요하면 삭제하지 않고 `_archive/`로 옮긴다.
 - API 키는 `.env`에서 읽고 출력·기록하지 않는다.
+- **커밋하는 파일에는 로컬 절대 경로(드라이브 문자나 사용자 홈 폴더로 시작하는 경로)를 쓰지 않고 프로젝트 기준 상대 경로를 쓴다.**
+  커밋 전 검사 훅(`.githooks/pre-commit`: 로컬 사용자 경로, `.env`, 실제 API 키 값 차단)과 nbstripout(커밋할 때만 노트북 출력 제거)을 쓴다.
+  새로 clone한 경우 `git config core.hooksPath .githooks`와 `nbstripout --install --attributes .gitattributes`로 다시 켠다.
 - **NewsCatcher API에는 요청하지 않는다**(보충 수집 보류 중, 아래 참고). 사용자가 재개를 지시할 때만 요청한다.
 
 ## 폴더와 자료
@@ -41,7 +44,7 @@ NewsCatcher로 모은 기사 메타데이터(URL·제목·날짜·언론사 등)
 | `hormuz_2026_data/01_newscatcher_raw.csv` | NewsCatcher 원본 440,260행. 읽기 전용, 검증용 |
 | `hormuz_2026_data/body_collection_v3/` | **모든 본문 수집 산출물** (경로는 config `output_dir`) |
 | `hormuz_2026_data/supplement_20261108/` | 보충 수집 요청 기록 (현재 403 기록 1건) |
-| `methods/hormuz_2026_news_textmining_filtered.ipynb` | 원 NewsCatcher 수집 노트북 (git `bb85a6c`에서 복원, 실행 로그 포함). 읽기 전용 |
+| `methods/hormuz_2026_news_textmining_filtered.ipynb` | 원 NewsCatcher 수집 노트북 (git `bb85a6c`에서 복원, 실행 로그 포함). 읽기 전용. **로컬 전용(git 관리 밖, `.gitignore`의 `methods/*.ipynb`)** — 없으면 `git show bb85a6c:hormuz_2026_news_textmining_filtered.ipynb`로 복원 |
 | `hormuz_textminig_v2.ipynb` | **1~15절만** 참고 가능 (URL 정규화·중복 제거 규칙 등) |
 
 **참고·재사용하지 않는 것**

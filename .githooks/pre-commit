@@ -1,0 +1,4 @@
+#!/bin/sh
+# Blocks commits that add local user paths, .env files or actual API key values.
+# Enable once per clone:  git config core.hooksPath .githooks
+exec python "$(git rev-parse --show-toplevel)/.githooks/check_staged.py"

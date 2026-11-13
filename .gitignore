@@ -55,3 +55,8 @@ hormuz_2026_data/
 # Archived (moved, not deleted) files
 # =========================
 _archive/
+
+# =========================
+# Local-only notebooks (execution logs kept locally, not committed)
+# =========================
+methods/*.ipynb
