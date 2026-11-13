@@ -101,7 +101,16 @@
   },
 
   "postprocess": {
-    "near_duplicate": {"method": "minhash", "action": "assign_group_id_only"},
+    "near_duplicate": {"method": "minhash", "action": "assign_group_id_only",
+                       "num_perm": 128, "shingle_words": 5, "jaccard_threshold": 0.8, "seed": 2026},
+    "review_domains": ["newsy-today.com", "briefingwire.com", "bitget.com", "indiavision.com",
+                       "poncacitynews.com", "theava.com"],
+    "review_examples_per_domain": 3,
+    "top_domains_n": 30,
+    "partial_body_min_words": 300,
+    "partial_body_examples": 10,
+    "few_articles_country_threshold": 30,
+    "country_cum_shares": [0.8, 0.9],
     "country_verification": {
       "domain_coverage_share": 0.80,
       "coverage_basis": "final_sample_article_count",

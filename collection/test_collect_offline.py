@@ -145,6 +145,7 @@ class Tests(unittest.TestCase):
         cfg = copy.deepcopy(self.cfg)
         cfg["fetch"]["max_workers"] = 4
         with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as td:
+            cfg["output_dir"] = td  # absolute: progress logs etc. never touch the real output folder
             store = Store(Path(td) / "t.sqlite3")
             self.addCleanup(store.close)
             fake = FakeFetcher()
@@ -177,14 +178,13 @@ class Tests(unittest.TestCase):
     def _runner(self, td, stage, mode, **runs):
         cfg = copy.deepcopy(self.cfg)
         cfg["fetch"]["max_workers"] = 4
-        cfg["output_dir"] = str(Path(td).relative_to(project_path(".")) if Path(td).is_relative_to(project_path(".")) else td)
+        cfg["output_dir"] = td  # absolute: progress logs etc. never touch the real output folder
         cfg["runs"].update(runs)
         store = Store(Path(td) / "t.sqlite3")
         self.addCleanup(store.close)
         fake = FakeFetcher()
         fake.mode = mode
         r = collect.Runner(cfg, stage, store, fetcher=fake, log=lambda *a: None)
-        r.out = Path(td)
         r.progress_path = Path(td) / "progress.log"
         return r, store
 
