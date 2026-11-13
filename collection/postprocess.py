@@ -3,7 +3,7 @@
   python collection/collect.py --stage report
 
 Writes to <output_dir>/postprocess/:
-  POSTPROCESS_REPORT.md, near_duplicate_groups.csv, week_fulfilment.csv, domain_summary.csv,
+  POSTPROCESS_REPORT.md, near_duplicate_groups.csv, week_fulfilment.csv, domain_summary.csv, skipped_domains.csv,
   country_verification_domains.csv, country_distribution_nc.csv
 """
 from __future__ import annotations
@@ -164,6 +164,76 @@ def country_steps(succ: pd.DataFrame, cv: dict, dest) -> list[str]:
     return L
 
 
+def skipped_domain_analysis(att: pd.DataFrame, ev: pd.DataFrame, pop: pd.DataFrame, cfg: dict) -> pd.DataFrame:
+    """One row per auto-skipped domain: blocked from the start vs blocked after successes.
+
+    Request start time is approximated as attempted_at (recorded after extraction) minus elapsed_sec
+    (which includes rate-limit waits and retries), so intervals are accurate to about a second.
+    Intervals are measured within the rate-limit key (registrable domain), the unit the 2-second gap applies to.
+    robots.txt requests are not in `attempts` and are not counted.
+    """
+    block = set(cfg["fetch"]["domain_skip_failure_reasons"])
+    limit = int(cfg["fetch"]["domain_consecutive_block_limit"])
+    sk = (ev[ev["kind"] == "domain_skipped_after_failures"].groupby("detail")
+          .agg(skipped_at=("at", "min"), skip_stage=("stage", "first")).reset_index()
+          .rename(columns={"detail": "domain_key"}))
+    a = att[att["request_sent"].fillna(0).astype(int) == 1].copy()
+    a["done"] = pd.to_datetime(a["attempted_at"], utc=True, format="ISO8601")
+    a["start"] = a["done"] - pd.to_timedelta(pd.to_numeric(a["elapsed_sec"], errors="coerce").fillna(0), unit="s")
+    a["reason"] = a["failure_reason"].where(a["extract_status"] != "success", "success")
+    by_rl = {k: g.sort_values("start") for k, g in a.groupby("rate_limit_key")}
+    popdom = pop.groupby("domain_key").size()
+    runs = pd.to_datetime(ev.loc[ev["kind"] == "stage_start", "at"], utc=True, format="ISO8601").sort_values()
+    rows = []
+    for d in sk.itertuples(index=False):
+        g = a[a["domain_key"] == d.domain_key].sort_values("done")
+        skipped_at = pd.Timestamp(d.skipped_at)
+        before = g[g["done"] <= skipped_at + pd.Timedelta(seconds=1)]
+        n_succ = int((before["reason"] == "success").sum())
+        r = {"domain_key": d.domain_key, "pattern": "blocked_after_success" if n_succ else "blocked_from_start",
+             "skipped_at": d.skipped_at, "skip_stage": d.skip_stage,
+             "requests_before_skip": len(before), "successes_before_skip": n_succ,
+             "last_success_at": before.loc[before["reason"] == "success", "done"].max() if n_succ else pd.NaT,
+             "population_articles": int(popdom.get(d.domain_key, 0)),
+             "requested_articles": len(g),
+             "not_requested_articles": int(popdom.get(d.domain_key, 0)) - len(g)}
+        # the final run of block reasons that triggered the skip (in completion order, as the runner counts it)
+        reasons = before["reason"].tolist()
+        i = len(reasons)
+        while i > 0 and reasons[i - 1] in block:
+            i -= 1
+        streak = before.iloc[i:]
+        r["block_streak_len"] = len(streak)
+        r["block_types"] = " ".join(f"{k}x{v}" for k, v in streak["reason"].value_counts().items())
+        r["http_status_in_streak"] = " ".join(
+            f"{int(float(k))}x{v}" for k, v in streak["http_status"].dropna().value_counts().items())
+        r["http_429_before_skip"] = int((before["reason"] == "http_429").sum())
+        r["blocks_before_streak"] = int(before.iloc[:i]["reason"].isin(block).sum())
+        if len(streak):
+            first = streak.iloc[0]
+            r["first_block_at"] = first["start"].isoformat(timespec="seconds")
+            rl = by_rl.get(first["rate_limit_key"])
+            # only requests from the same run (after the latest stage_start), so a pause between runs is not an interval
+            run_start = runs[runs <= first["start"]].max() if len(runs) else pd.NaT
+            prev = rl[(rl["start"] < first["start"]) & ((rl["start"] >= run_start) if pd.notna(run_start) else True)] \
+                if rl is not None else rl
+            r["run_started_at"] = run_start.isoformat(timespec="seconds") if pd.notna(run_start) else ""
+            r["gap_before_first_block_sec"] = (round((first["start"] - prev["start"].iloc[-1]).total_seconds(), 1)
+                                               if prev is not None and len(prev) else np.nan)
+            last = prev.tail(11)["start"].diff().dt.total_seconds().dropna() if prev is not None else pd.Series()
+            r["median_gap_prev10_sec"] = round(float(last.median()), 1) if len(last) else np.nan
+            r["requests_10min_before_block"] = (int((prev["start"] >= first["start"] - pd.Timedelta(minutes=10)).sum())
+                                                if prev is not None else 0)
+        r["last_success_at"] = r["last_success_at"].isoformat(timespec="seconds") if n_succ else ""
+        r["streak_shorter_than_limit"] = len(streak) < limit  # e.g. concurrency: requests finished out of order
+        rows.append(r)
+    out = pd.DataFrame(rows)
+    if len(out):
+        out["population_share_pct"] = (100 * out["population_articles"] / max(len(pop), 1)).round(3)
+        out = out.sort_values(["pattern", "population_articles"], ascending=[True, False])
+    return out
+
+
 def main(cfg: dict | None = None) -> None:
     cfg = cfg or load_config()
     pc = cfg["postprocess"]
@@ -263,6 +333,35 @@ def main(cfg: dict | None = None) -> None:
           f"자동 건너뛴 도메인 {len(sk)}개, 원 모집단 합계 {int(sk['population_articles'].sum()):,}건 "
           f"({100 * sk['population_articles'].sum() / len(pop):.2f}%)", "",
           md(sk.sort_values("population_articles", ascending=False)), ""]
+
+    # ---------------- 3-1. auto-skipped domains: blocked from the start vs after successes
+    sda = skipped_domain_analysis(att, ev, pop, cfg)
+    sda.to_csv(dest / "skipped_domains.csv", index=False, encoding="utf-8-sig")
+    if len(sda):
+        aft = sda[sda["pattern"] == "blocked_after_success"]
+        beg = sda[sda["pattern"] == "blocked_from_start"]
+        L += ["### 3-1. 자동 건너뛴 도메인 분석: 처음부터 차단 vs 성공하다가 차단", "",
+              f"- 처음부터 차단(건너뛰기 전 성공 0건): {len(beg)}개, 원 모집단 {int(beg['population_articles'].sum()):,}건",
+              f"- **성공하다가 차단**: {len(aft)}개, 원 모집단 {int(aft['population_articles'].sum()):,}건, "
+              f"건너뛰기 전 성공 {int(aft['successes_before_skip'].sum()):,}건, 아직 요청하지 않은 기사 "
+              f"{int(aft['not_requested_articles'].sum()):,}건",
+              "- 첫 차단 시각 = 건너뛰기를 일으킨 마지막 연속 차단 구간의 첫 요청 시작 시각(`attempted_at − elapsed_sec`, 약 1초 오차, UTC). "
+              "직전 요청 간격과 직전 10회 간격 중앙값은 같은 등록 도메인(속도 제한 단위)·같은 실행(마지막 stage_start 이후) 기준이며 "
+              "robots.txt 요청은 포함하지 않는다. 같은 실행 안에 직전 요청이 없으면 빈칸.",
+              "- `blocks_before_streak`: 그 구간 이전에 산발적으로 나온 차단 건수. `streak_shorter_than_limit`: 동시 요청이 순서가 바뀌어 끝나 "
+              "기록상 연속 구간이 기준보다 짧게 보이는 경우", "",
+              "#### 성공하다가 차단된 도메인 (재시도 여부 결정용)", ""]
+        cols = ["domain_key", "population_articles", "requested_articles", "not_requested_articles", "successes_before_skip",
+                "last_success_at", "first_block_at", "gap_before_first_block_sec", "median_gap_prev10_sec",
+                "requests_10min_before_block", "block_types", "http_status_in_streak", "http_429_before_skip",
+                "blocks_before_streak"]
+        L += [md(aft[cols]) if len(aft) else "(없음)", "",
+              "#### 성공하다가 차단된 도메인의 차단 응답 유형 합계", "",
+              md(aft["block_types"].str.split().explode().str.rsplit("x", n=1).str[0].value_counts()
+                 .rename_axis("block_type").reset_index(name="domains_with_type")) if len(aft) else "(없음)", "",
+              "#### 처음부터 차단된 도메인 (원 모집단 기사 수 상위 40개)", "",
+              md(beg[["domain_key", "population_articles", "requests_before_skip", "block_types", "http_429_before_skip"]].head(40)), "",
+              "전체 목록: `postprocess/skipped_domains.csv`", ""]
 
     # ---------------- 4. suspicious domain review
     top = dom.head(pc["top_domains_n"]).copy()
